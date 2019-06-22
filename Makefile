@@ -1,5 +1,17 @@
 OBJS = 0104/dfs.o leetcode/tree.o
 BINS = 0104/dfs
+TESTS = test/tree_test
+
+.PHONY: all
+all: $(BINS) $(TESTS)
+
+.PHONY: check
+check:
+	$(TESTS)
+
+.PHONY: clean
+clean:
+	rm -f $(OBJS) $(BINS) $(TESTS)
 
 0104/dfs: 0104/dfs.o leetcode/tree.o
 	g++ -std=c++11 -o $@ $^
@@ -10,9 +22,5 @@ BINS = 0104/dfs
 leetcode/tree.o: leetcode/tree.cpp
 	g++ -std=c++11 -o $@ -c $?
 
-.PHONY: all
-all: $(BINS)
-
-.PHONY: clean
-clean:
-	rm -f $(OBJS) $(BINS)
+test/tree_test: test/tree_test.cpp leetcode/tree.o
+	g++ -std=c++11 -Igtest/include -Lgtest/lib -lgtest -lgtest_main -o $@ $^

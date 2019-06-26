@@ -13,9 +13,7 @@ TEST(CreateTreeNodeVectorTest, normal_vector) {
   EXPECT_EQ(3, got[0]->val);
   EXPECT_EQ(NULL, got[0]->left);
   EXPECT_EQ(NULL, got[0]->right);
-  EXPECT_EQ(NULL, got[1]->val);
-  EXPECT_EQ(NULL, got[1]->left);
-  EXPECT_EQ(NULL, got[1]->right);
+  EXPECT_EQ(NULL, got[1]);
   DeleteTreeNodeVector(got);
 }
 
@@ -40,6 +38,19 @@ TEST(CreateTreeNodeTest, normal_vector) {
   EXPECT_EQ(NULL, got->right->left->right);
   EXPECT_EQ(NULL, got->right->right->left);
   EXPECT_EQ(NULL, got->right->right->right);
+}
+
+TEST(CreateTreeNodeTest, null_should_be_explict_for_null_parent) {
+  std::vector<int> vec = {3, NULL, 9, NULL, NULL, 10};
+  std::vector<TreeNode*> node_vec = CreateTreeNodeVector(vec);
+  TreeNode* got = CreateTreeNode(node_vec);
+  EXPECT_EQ(3, got->val);
+  EXPECT_EQ(NULL, got->left);
+  EXPECT_EQ(9, got->right->val);
+  EXPECT_EQ(10, got->right->left->val);
+  EXPECT_EQ(NULL, got->right->right);
+  EXPECT_EQ(NULL, got->right->left->left);
+  EXPECT_EQ(NULL, got->right->left->right);
 }
 
 TEST(CreateTreeNodeTest, empty_vector) {

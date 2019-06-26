@@ -1,5 +1,5 @@
-OBJS = 0104/dfs.o leetcode/tree.o
-BINS = 0104/dfs
+OBJS = 0104/dfs.o 0297/bfs.o 0297/dfs.o leetcode/tree.o
+BINS = 0104/dfs 0297/bfs 0297/dfs
 TESTS = test/tree_test
 
 .PHONY: all
@@ -17,6 +17,18 @@ clean:
 	g++ -std=c++11 -o $@ $^
 
 0104/dfs.o: 0104/dfs.cpp
+	g++ -std=c++11 -o $@ -c $?
+
+0297/dfs: 0297/dfs.o leetcode/tree.o
+	g++ -std=c++11 -o $@ $^
+
+0297/dfs.o: 0297/dfs.cpp
+	g++ -std=c++11 -o $@ -c $?
+
+0297/bfs: 0297/bfs.o leetcode/tree.o
+	g++ -std=c++11 -o $@ $^
+
+0297/bfs.o: 0297/bfs.cpp
 	g++ -std=c++11 -o $@ -c $?
 
 leetcode/tree.o: leetcode/tree.cpp

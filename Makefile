@@ -2,6 +2,10 @@ OBJS =
 BINS =
 TESTS =
 
+BINS += 0004/merge_and_sort
+0004/merge_and_sort: 0004/merge_and_sort.cpp
+	g++ -std=c++11 -o $@ $^
+
 BINS += 0049/solution
 0049/solution: 0049/solution.cpp
 	g++ -std=c++11 -o $@ $^

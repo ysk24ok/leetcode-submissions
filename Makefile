@@ -30,6 +30,10 @@ BINS += 0297/dfs
 0297/dfs: 0297/dfs.cpp leetcode/tree.o
 	g++ -std=c++11 -o $@ $^
 
+BINS += 0300/dp
+0300/dp: 0300/dp.cpp
+	g++ -std=c++11 -o $@ $^
+
 OBJS += leetcode/tree.o
 leetcode/tree.o: leetcode/tree.cpp
 	g++ -std=c++11 -o $@ -c $?

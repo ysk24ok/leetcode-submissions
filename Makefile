@@ -280,6 +280,10 @@ BINS += 1284/solution_cpp
 1284/solution_cpp: 1284/solution.cpp
 	g++ $(CFLAGS) -o $@ $^
 
+BINS += 0703/min_heap_cpp
+0703/min_heap_cpp: 0703/min_heap.cpp
+	g++ -std=c++11 -o $@ $^
+
 OBJS += leetcode/tree.o
 leetcode/tree.o: leetcode/tree.cpp
 	g++ $(CFLAGS) -o $@ -c $?

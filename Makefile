@@ -26,6 +26,10 @@ BINS += 0153/binary_search
 0153/binary_search: 0153/binary_search.cpp
 	g++ -std=c++11 -o $@ $^
 
+BINS += 0268/sum
+0268/sum: 0268/sum.cpp
+	g++ -std=c++11 -o $@ $^
+
 BINS += 0297/bfs
 0297/bfs: 0297/bfs.cpp leetcode/tree.o
 	g++ -std=c++11 -o $@ $^

@@ -42,6 +42,10 @@ BINS += 0300/dp
 0300/dp: 0300/dp.cpp
 	g++ -std=c++11 -o $@ $^
 
+BINS += 0849/linear_search
+0849/linear_search: 0849/linear_search.cpp
+	g++ -std=c++11 -o $@ $^
+
 OBJS += leetcode/tree.o
 leetcode/tree.o: leetcode/tree.cpp
 	g++ -std=c++11 -o $@ -c $?

@@ -22,6 +22,10 @@ BINS += 0104/dfs
 0104/dfs: 0104/dfs.cpp leetcode/tree.o
 	g++ -std=c++11 -o $@ $^
 
+BINS += 0151/solution
+0151/solution: 0151/solution.cpp
+	g++ -std=c++11 -o $@ $^
+
 BINS += 0153/binary_search
 0153/binary_search: 0153/binary_search.cpp
 	g++ -std=c++11 -o $@ $^

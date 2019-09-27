@@ -22,6 +22,14 @@ BINS += 0062/dp_two_vec
 0062/dp_two_vec: 0062/dp_two_vec.rs
 	rustc -o $@ $^
 
+BINS += 0063/dp_matrix
+0063/dp_matrix: 0063/dp_matrix.cpp
+	g++ -std=c++11 -o $@ $^
+
+BINS += 0063/dp_two_vec
+0063/dp_two_vec: 0063/dp_two_vec.rs
+	rustc -o $@ $^
+
 BINS += 0083/linked_list
 0083/linked_list: 0083/linked_list.cpp leetcode/linked_list.o
 	g++ -std=c++11 -o $@ $^

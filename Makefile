@@ -38,6 +38,14 @@ BINS += 0104/dfs
 0104/dfs: 0104/dfs.cpp leetcode/tree.o
 	g++ -std=c++11 -o $@ $^
 
+BINS += 0139/dp
+0139/dp: 0139/dp.cpp
+	g++ -std=c++11 -o $@ $^
+
+BINS += 0139/dfs
+0139/dfs: 0139/dfs.cpp
+	g++ -std=c++11 -o $@ $^
+
 BINS += 0151/solution
 0151/solution: 0151/solution.cpp
 	g++ -std=c++11 -o $@ $^

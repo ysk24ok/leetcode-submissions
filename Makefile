@@ -74,6 +74,22 @@ BINS += 0849/linear_search
 0849/linear_search: 0849/linear_search.cpp
 	g++ -std=c++11 -o $@ $^
 
+BINS += 1221/solution
+1221/solution: 1221/solution.cpp
+	g++ -std=c++11 -o $@ $^
+
+BINS += 1222/solution
+1222/solution: 1222/solution.cpp
+	g++ -std=c++11 -o $@ $^
+
+BINS += 1223/solution
+1223/solution: 1223/solution.cpp
+	g++ -std=c++11 -o $@ $^
+
+BINS += 1224/solution
+1224/solution: 1224/solution.cpp
+	g++ -std=c++11 -o $@ $^
+
 OBJS += leetcode/tree.o
 leetcode/tree.o: leetcode/tree.cpp
 	g++ -std=c++11 -o $@ -c $?

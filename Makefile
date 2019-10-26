@@ -6,6 +6,14 @@ BINS += 0004/merge_and_sort
 0004/merge_and_sort: 0004/merge_and_sort.cpp
 	g++ -std=c++11 -o $@ $^
 
+BINS += 0018/brute_force
+0018/brute_force: 0018/brute_force.cpp
+	g++ -std=c++11 -o $@ $^
+
+BINS += 0018/recursive_2sum
+0018/recursive_2sum: 0018/recursive_2sum.cpp
+	g++ -std=c++11 -o $@ $^
+
 BINS += 0049/solution
 0049/solution: 0049/solution.cpp
 	g++ -std=c++11 -o $@ $^

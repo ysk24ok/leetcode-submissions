@@ -48,10 +48,14 @@ BINS += 0089/recursion
 
 BINS += 0104/dfs
 0104/dfs: 0104/dfs.cpp leetcode/tree.o
-	g++ -std=c++11 -o $@ $^
+	g++ -std=c++11 -g -fsanitize=address,leak -o $@ $^
 
 BINS += 0139/dp
 0139/dp: 0139/dp.cpp
+	g++ -std=c++11 -o $@ $^
+
+BINS += 0129/dfs
+0129/dfs: 0129/dfs.cpp leetcode/tree.o
 	g++ -std=c++11 -o $@ $^
 
 BINS += 0139/dfs

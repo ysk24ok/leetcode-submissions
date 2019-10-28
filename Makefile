@@ -42,6 +42,10 @@ BINS += 0083/linked_list
 0083/linked_list: 0083/linked_list.cpp leetcode/linked_list.o
 	g++ -std=c++11 -o $@ $^
 
+BINS += 0089/recursion
+0089/recursion: 0089/recursion.cpp
+	g++ -std=c++11 -o $@ $^
+
 BINS += 0104/dfs
 0104/dfs: 0104/dfs.cpp leetcode/tree.o
 	g++ -std=c++11 -o $@ $^

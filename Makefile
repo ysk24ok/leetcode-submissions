@@ -108,6 +108,22 @@ BINS += 1224/solution
 1224/solution: 1224/solution.cpp
 	g++ $(CFLAGS) -o $@ $^
 
+BINS += 1237/solution
+1237/solution: 1237/solution.cpp
+	g++ $(CFLAGS) -o $@ $^
+
+BINS += 1238/solution
+1238/solution: 1238/solution.cpp
+	g++ $(CFLAGS) -o $@ $^
+
+BINS += 1239/solution
+1239/solution: 1239/solution.cpp
+	g++ $(CFLAGS) -o $@ $^
+
+BINS += 1240/dp
+1240/dp: 1240/dp.cpp
+	g++ $(CFLAGS) -o $@ $^
+
 OBJS += leetcode/tree.o
 leetcode/tree.o: leetcode/tree.cpp
 	g++ $(CFLAGS) -o $@ -c $?

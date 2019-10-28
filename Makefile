@@ -122,7 +122,7 @@ test/tree_test: test/tree_test.cpp leetcode/tree.o
 all: $(BINS) $(TESTS)
 
 .PHONY: check
-check:
+check: $(TESTS)
 	@$(foreach TEST,$(TESTS),$(TEST);)
 
 .PHONY: clean

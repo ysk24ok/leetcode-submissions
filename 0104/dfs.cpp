@@ -1,5 +1,5 @@
 #include <cassert>
-#include <vector>
+#include <string>
 
 #include "../leetcode/tree.hpp"
 
@@ -12,7 +12,7 @@ class Solution {
   }
 
   int dfs(TreeNode* node) {
-    if (node == NULL) {
+    if (!node) {
       return 0;
     }
     int left_depth = dfs(node->left);
@@ -23,19 +23,21 @@ class Solution {
 
 int main() {
   Solution* sol = new Solution();
-  std::vector<int> vec;
-  std::vector<TreeNode*> node_vec;
+  std::string s;
   TreeNode* node;
+  int got;
 
-  vec = {3, 9, 20, NULL, NULL, 15, 7};
-  node_vec = CreateTreeNodeVector(vec);
-  node = CreateTreeNode(node_vec);
-  assert(sol->maxDepth(node) == 3);
-  DeleteTreeNodeVector(node_vec);
+  s = "3 9 20 # # 15 7 ;";
+  node = CreateTreeNode(s);
+  got = sol->maxDepth(node);
+  DeleteTreeNode(node);
+  assert(got == 3);
 
   node = new TreeNode(0);
   assert(sol->maxDepth(node) == 1);
   delete node;
+
+  assert(sol->maxDepth(nullptr) == 0);
 
   delete sol;
 }

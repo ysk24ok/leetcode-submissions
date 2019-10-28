@@ -1,24 +1,14 @@
+#include <cmath>
+#include <sstream>
+
 #include "tree.hpp"
 
 namespace LeetCode {
 
-std::vector<TreeNode*> CreateTreeNodeVector(const std::vector<int> &vec) {
-  std::vector<TreeNode*> new_vec(vec.size());
-  for (int idx = 0; idx < vec.size(); idx++) {
-    int v = vec[idx];
-    new_vec[idx] = (v) ? new TreeNode(v) : NULL;
-  }
-  return new_vec;
-}
+namespace {
 
-void DeleteTreeNodeVector(std::vector<TreeNode*> &vec) {
-  for (TreeNode* node : vec) {
-    if (node)
-      delete node;
-  }
-}
-
-TreeNode* CreateTreeNode(std::vector<TreeNode*> &vec) {
+TreeNode* CreateTreeNodeFromVector(std::vector<TreeNode*> &vec) {
+  if (vec.size() == 0) return nullptr;
   int power = 0;
   int total = 1;
   TreeNode* parent;
@@ -40,7 +30,34 @@ TreeNode* CreateTreeNode(std::vector<TreeNode*> &vec) {
         parent->left = vec[idx];
     }
   }
-  return (vec.size() > 0) ? vec[0] : 0;
+  return vec[0];
+}
+
+} // namespace
+
+TreeNode* CreateTreeNode(const std::string& str) {
+  if (str.size() == 0) return nullptr;
+  std::istringstream iss(str);
+  std::vector<TreeNode*> vec;
+  std::string s;
+  while (true) {
+    iss >> s;
+    if (s == ";") {
+      break;
+    } else if (s == "#") {
+      vec.push_back(nullptr);
+    } else {
+      vec.push_back(new TreeNode(std::stoi(s)));
+    }
+  }
+  return CreateTreeNodeFromVector(vec);
+}
+
+void DeleteTreeNode(TreeNode* node) {
+  if (!node) return;
+  DeleteTreeNode(node->left);
+  DeleteTreeNode(node->right);
+  delete node;
 }
 
 } // namespace LeetCode

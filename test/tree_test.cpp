@@ -6,58 +6,50 @@
 
 namespace LeetCode {
 
-TEST(CreateTreeNodeVectorTest, normal_vector) {
-  std::vector<int> vec = {3, NULL};
-  std::vector<TreeNode*> got = CreateTreeNodeVector(vec);
-  EXPECT_EQ(2, got.size());
-  EXPECT_EQ(3, got[0]->val);
-  EXPECT_EQ(NULL, got[0]->left);
-  EXPECT_EQ(NULL, got[0]->right);
-  EXPECT_EQ(NULL, got[1]);
-  DeleteTreeNodeVector(got);
+TEST(CreateTreeNodeTest, normal_string) {
+  //      1
+  //     / \
+  //    2   3
+  //   /
+  //  4
+  std::string s("1 2 3 4 ;");
+  TreeNode* got = CreateTreeNode(s);
+  EXPECT_EQ(1, got->val);
+  EXPECT_EQ(2, got->left->val);
+  EXPECT_EQ(3, got->right->val);
+  EXPECT_EQ(4, got->left->left->val);
+  EXPECT_EQ(nullptr, got->left->right);
+  EXPECT_EQ(nullptr, got->right->left);
+  EXPECT_EQ(nullptr, got->right->right);
+  EXPECT_EQ(nullptr, got->left->left->left);
+  EXPECT_EQ(nullptr, got->left->left->right);
+  DeleteTreeNode(got);
 }
 
-TEST(CreateTreeNodeVectorTest, empty_vector) {
-  std::vector<int> vec;
-  std::vector<TreeNode*> got = CreateTreeNodeVector(vec);
-  EXPECT_EQ(0, got.size());
+
+TEST(CreateTreeNodeTest, string_with_empty_node) {
+  //      1
+  //       \
+  //        2
+  //       /
+  //      3
+  std::string s("1 # 2 # # 3 ;");
+  TreeNode* got = CreateTreeNode(s);
+  EXPECT_EQ(1, got->val);
+  EXPECT_EQ(nullptr, got->left);
+  EXPECT_EQ(2, got->right->val);
+  EXPECT_EQ(3, got->right->left->val);
+  EXPECT_EQ(nullptr, got->right->right);
+  EXPECT_EQ(nullptr, got->right->left->left);
+  EXPECT_EQ(nullptr, got->right->left->right);
+  DeleteTreeNode(got);
 }
 
-TEST(CreateTreeNodeTest, normal_vector) {
-  std::vector<int> vec = {3, 9, 20, NULL, NULL, 15, 7};
-  std::vector<TreeNode*> node_vec = CreateTreeNodeVector(vec);
-  TreeNode* got = CreateTreeNode(node_vec);
-  EXPECT_EQ(3, got->val);
-  EXPECT_EQ(9, got->left->val);
-  EXPECT_EQ(20, got->right->val);
-  EXPECT_EQ(NULL, got->left->left);
-  EXPECT_EQ(NULL, got->left->right);
-  EXPECT_EQ(15, got->right->left->val);
-  EXPECT_EQ(7, got->right->right->val);
-  EXPECT_EQ(NULL, got->right->left->left);
-  EXPECT_EQ(NULL, got->right->left->right);
-  EXPECT_EQ(NULL, got->right->right->left);
-  EXPECT_EQ(NULL, got->right->right->right);
-}
-
-TEST(CreateTreeNodeTest, null_should_be_explict_for_null_parent) {
-  std::vector<int> vec = {3, NULL, 9, NULL, NULL, 10};
-  std::vector<TreeNode*> node_vec = CreateTreeNodeVector(vec);
-  TreeNode* got = CreateTreeNode(node_vec);
-  EXPECT_EQ(3, got->val);
-  EXPECT_EQ(NULL, got->left);
-  EXPECT_EQ(9, got->right->val);
-  EXPECT_EQ(10, got->right->left->val);
-  EXPECT_EQ(NULL, got->right->right);
-  EXPECT_EQ(NULL, got->right->left->left);
-  EXPECT_EQ(NULL, got->right->left->right);
-}
-
-TEST(CreateTreeNodeTest, empty_vector) {
-  std::vector<int> vec;
-  std::vector<TreeNode*> node_vec = CreateTreeNodeVector(vec);
-  TreeNode* got = CreateTreeNode(node_vec);
-  EXPECT_EQ(NULL, got);
+TEST(CreateTreeNodeTest, from_empty_string) {
+  std::string s;
+  TreeNode* got = CreateTreeNode(s);
+  EXPECT_EQ(nullptr, got);
+  DeleteTreeNode(got);
 }
 
 } // namespace LeetCode

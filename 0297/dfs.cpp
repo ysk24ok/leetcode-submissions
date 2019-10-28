@@ -1,7 +1,6 @@
 #include <cassert>
 #include <sstream>
 #include <string>
-#include <vector>
 
 #include "../leetcode/tree.hpp"
 
@@ -49,9 +48,8 @@ class Codec {
 int main() {
   Codec codec;
 
-  std::vector<int> v = {1, 2, 3, NULL, NULL, 4, 5};
-  std::vector<TreeNode*> node_vec = CreateTreeNodeVector(v);
-  TreeNode* root = CreateTreeNode(node_vec);
+  string s = "1 2 3 # # 4 5 ;";
+  TreeNode* root = CreateTreeNode(s);
 
   TreeNode* got = codec.deserialize(codec.serialize(root));
   assert(got->val == 1);
@@ -61,10 +59,6 @@ int main() {
   assert(got->left->right == NULL);
   assert(got->right->left->val == 4);
   assert(got->right->right->val == 5);
-  delete got->right->left;
-  delete got->right->right;
-  delete got->right;
-  delete got->left;
-  delete got;
-  DeleteTreeNodeVector(node_vec);
+  DeleteTreeNode(got);
+  DeleteTreeNode(root);
 }

@@ -1,4 +1,4 @@
-#include <cmath>
+#include <string>
 #include <vector>
 
 namespace LeetCode {
@@ -11,11 +11,8 @@ struct TreeNode {
     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
 };
 
-std::vector<TreeNode*> CreateTreeNodeVector(const std::vector<int> &vec);
+TreeNode* CreateTreeNode(const std::string& str);
 
-void DeleteTreeNodeVector(std::vector<TreeNode*> &vec);
-
-TreeNode* CreateTreeNode(std::vector<TreeNode*> &vec);
-
+void DeleteTreeNode(TreeNode* node);
 
 } // namespace LeetCode

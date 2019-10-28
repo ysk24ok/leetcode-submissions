@@ -3,7 +3,6 @@
 #include <queue>
 #include <sstream>
 #include <string>
-#include <vector>
 
 #include "../leetcode/tree.hpp"
 
@@ -67,19 +66,13 @@ class Codec {
 
 int main() {
   Codec codec;
-
-  std::vector<int> v;
-  std::vector<TreeNode*> node_vec;
+  string s;
   TreeNode* root;
   TreeNode* got;
 
-  v = {1, 2, 3, NULL, NULL, 4, 5};
-  node_vec = CreateTreeNodeVector(v);
-  root = CreateTreeNode(node_vec);
-  string d = codec.serialize(root);
-  cout << d << endl;
-  // 1 2 3 # # 4 5 # # # #
-  got = codec.deserialize(d);
+  s = "1 2 3 # # 4 5 ;";
+  root = CreateTreeNode(s);
+  got = codec.deserialize(codec.serialize(root));
   assert(got->val == 1);
   assert(got->left->val == 2);
   assert(got->right->val == 3);
@@ -87,14 +80,9 @@ int main() {
   assert(got->left->right == NULL);
   assert(got->right->left->val == 4);
   assert(got->right->right->val == 5);
-  delete got->right->left;
-  delete got->right->right;
-  delete got->right;
-  delete got->left;
-  delete got;
-  DeleteTreeNodeVector(node_vec);
+  DeleteTreeNode(got);
+  DeleteTreeNode(root);
 
-  // v = "5 2 3 # # 2 4 3 1"
   //      5
   //     / \
   //    2   3
@@ -102,12 +90,9 @@ int main() {
   //      2   4
   //     / \
   //    3   1
-  v = {5, 2, 3, NULL, NULL, 2, 4, NULL, NULL, NULL, NULL, 3, 1};
-  node_vec = CreateTreeNodeVector(v);
-  root = CreateTreeNode(node_vec);
-  string s = codec.serialize(root);
-  cout << s << endl;
-  got = codec.deserialize(s);
+  s = "5 2 3 # # 2 4 # # # # 3 1 ;";
+  root = CreateTreeNode(s);
+  got = codec.deserialize(codec.serialize(root));
   assert(got->val == 5);
   assert(got->left->val == 2);
   assert(got->right->val == 3);
@@ -115,13 +100,9 @@ int main() {
   assert(got->left->right == NULL);
   assert(got->right->left->val == 2);
   assert(got->right->right->val == 4);
-  delete got->right->left;
-  delete got->right->right;
-  delete got->right;
-  delete got->left;
-  delete got;
-  DeleteTreeNodeVector(node_vec);
+  DeleteTreeNode(got);
+  DeleteTreeNode(root);
 
-  got = codec.deserialize(codec.serialize(NULL));
-  assert(got == NULL);
+  got = codec.deserialize(codec.serialize(nullptr));
+  assert(got == nullptr);
 }

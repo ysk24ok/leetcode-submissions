@@ -50,6 +50,10 @@ BINS += 0151/solution
 0151/solution: 0151/solution.cpp
 	g++ -std=c++11 -o $@ $^
 
+BINS += 0151/in_place
+0151/in_place: 0151/in_place.rs
+	rustc -o $@ $^
+
 BINS += 0153/binary_search
 0153/binary_search: 0153/binary_search.cpp
 	g++ -std=c++11 -o $@ $^

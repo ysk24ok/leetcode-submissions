@@ -10,6 +10,10 @@ BINS += 0049/solution
 0049/solution: 0049/solution.cpp
 	g++ -std=c++11 -o $@ $^
 
+BINS += 0051/brute_force
+0051/brute_force: 0051/brute_force.cpp
+	g++ -std=c++11 -o $@ $^
+
 BINS += 0053/dp
 0053/dp: 0053/dp.cpp
 	g++ -std=c++11 -o $@ $^

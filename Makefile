@@ -88,6 +88,14 @@ BINS += 0300/dp
 0300/dp: 0300/dp.cpp
 	g++ $(CFLAGS) -o $@ $^
 
+BINS += 0392/linear_search
+0392/linear_search: 0392/linear_search.cpp
+	g++ $(CFLAGS) -o $@ $^
+
+BINS += 0392/follow_up
+0392/follow_up: 0392/follow_up.cpp
+	g++ $(CFLAGS) -o $@ $^
+
 BINS += 0849/linear_search
 0849/linear_search: 0849/linear_search.cpp
 	g++ $(CFLAGS) -o $@ $^

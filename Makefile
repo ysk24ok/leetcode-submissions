@@ -120,6 +120,22 @@ BINS += 1224/solution
 1224/solution: 1224/solution.cpp
 	g++ $(CFLAGS) -o $@ $^
 
+BINS += 1252/solution
+1252/solution: 1252/solution.cpp
+	g++ $(CFLAGS) -o $@ $^
+
+BINS += 1253/solution
+1253/solution: 1253/solution.cpp
+	g++ $(CFLAGS) -o $@ $^
+
+BINS += 1254/solution
+1254/solution: 1254/solution.cpp
+	g++ $(CFLAGS) -o $@ $?
+
+BINS += 1255/backtracking
+1255/backtracking: 1255/backtracking.cpp
+	g++ $(CFLAGS) -o $@ $^
+
 OBJS += leetcode/tree.o
 leetcode/tree.o: leetcode/tree.cpp
 	g++ $(CFLAGS) -o $@ -c $?

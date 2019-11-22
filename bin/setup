@@ -1,0 +1,25 @@
+#!/bin/bash
+
+if [ $# -ne 3 ]; then
+  echo "Usage: $0 [language] [number] [name]"
+  exit 1
+fi
+language=$1
+number=$2
+name=$3
+
+curdir=$(pwd)
+if [ $language = cpp ]; then
+  mkdir -p $curdir/$number
+  cp $curdir/templates/template.cpp $number/$name.cpp
+  write=$(cat << EOF
+
+BINS += $number/$name
+$number/$name: $number/$name.cpp\n
+EOF
+)
+  echo -e "${write}\t"'g++ $(CFLAGS) -o $@ $?' >> $curdir/Makefile
+else
+  echo "Error: $language is not supported."
+  exit 1
+fi

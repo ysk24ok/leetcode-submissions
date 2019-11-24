@@ -112,6 +112,14 @@ BINS += 0849/linear_search
 0849/linear_search: 0849/linear_search.cpp
 	g++ $(CFLAGS) -o $@ $^
 
+BINS += 0988/bottom_up_dfs
+0988/bottom_up_dfs: 0988/bottom_up_dfs.cpp leetcode/tree.o
+	g++ $(CFLAGS) -o $@ $^
+
+BINS += 0988/top_down_dfs
+0988/top_down_dfs: 0988/top_down_dfs.cpp leetcode/tree.o
+	g++ $(CFLAGS) -o $@ $^
+
 BINS += 1221/solution
 1221/solution: 1221/solution.cpp
 	g++ $(CFLAGS) -o $@ $^

@@ -18,7 +18,7 @@ BINS += $number/$name
 $number/$name: $number/$name.cpp\n
 EOF
 )
-  echo -e "${write}\t"'g++ $(CFLAGS) -o $@ $?' >> $curdir/Makefile
+  echo -e "${write}\t"'g++ $(CFLAGS) -o $@ $^' >> $curdir/Makefile
 else
   echo "Error: $language is not supported."
   exit 1

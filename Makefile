@@ -48,6 +48,14 @@ BINS += 0089/recursion
 0089/recursion: 0089/recursion.cpp
 	g++ $(CFLAGS) -o $@ $^
 
+BINS += 0097/backtracking
+0097/backtracking: 0097/backtracking.cpp
+	g++ $(CFLAGS) -o $@ $^
+
+BINS += 0097/backtracking_with_memoization
+0097/backtracking_with_memoization: 0097/backtracking_with_memoization.cpp
+	g++ $(CFLAGS) -o $@ $^
+
 BINS += 0104/dfs
 0104/dfs: 0104/dfs.cpp leetcode/tree.o
 	g++ $(CFLAGS) -o $@ $^

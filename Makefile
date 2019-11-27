@@ -132,6 +132,10 @@ BINS += 0856/linear_search_with_recursion
 0856/linear_search_with_recursion: 0856/linear_search_with_recursion.cpp
 	g++ $(CFLAGS) -o $@ $?
 
+BINS += 0950/solution
+0950/solution: 0950/solution.cpp
+	g++ $(CFLAGS) -o $@ $^
+
 BINS += 0988/bottom_up_dfs
 0988/bottom_up_dfs: 0988/bottom_up_dfs.cpp leetcode/tree.o
 	g++ $(CFLAGS) -o $@ $^

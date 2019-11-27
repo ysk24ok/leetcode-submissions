@@ -8,18 +8,24 @@ language=$1
 number=$2
 name=$3
 
-curdir=$(pwd)
 if [ $language = cpp ]; then
-  mkdir -p $curdir/$number
-  cp $curdir/templates/template.cpp $number/$name.cpp
-  write=$(cat << EOF
-
-BINS += $number/$name
-$number/$name: $number/$name.cpp\n
-EOF
-)
-  echo -e "${write}\t"'g++ $(CFLAGS) -o $@ $^' >> $curdir/Makefile
+  ext=cpp
+  cmd='g++ $(CFLAGS) -o $@ $^'
+elif [ $language = rust ]; then
+  ext=rs
+  cmd='rustc -o $@ $^'
 else
   echo "Error: $language is not supported."
   exit 1
 fi
+
+curdir=$(pwd)
+mkdir -p $curdir/$number
+cp $curdir/templates/template.$ext $number/$name.$ext
+rule=$(cat << EOF
+\nBINS += $number/${name}_$ext
+$number/${name}_$ext: $number/$name.$ext
+\t$cmd
+EOF
+)
+echo -e "$rule" >> $curdir/Makefile

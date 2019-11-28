@@ -16,6 +16,10 @@ BINS += 0018/recursive_2sum
 0018/recursive_2sum: 0018/recursive_2sum.cpp
 	g++ $(CFLAGS) -o $@ $^
 
+BINS += 0019/two_pass_cpp
+0019/two_pass_cpp: 0019/two_pass.cpp leetcode/linked_list.o
+	g++ $(CFLAGS) -o $@ $^
+
 BINS += 0049/solution
 0049/solution: 0049/solution.cpp
 	g++ $(CFLAGS) -o $@ $^

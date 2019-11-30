@@ -44,6 +44,10 @@ BINS += 0063/dp_two_vec
 0063/dp_two_vec: 0063/dp_two_vec.rs
 	rustc -o $@ $^
 
+BINS += 0073/solution_cpp
+0073/solution_cpp: 0073/solution.cpp
+	g++ $(CFLAGS) -o $@ $^
+
 BINS += 0083/linked_list
 0083/linked_list: 0083/linked_list.cpp leetcode/linked_list.o
 	g++ $(CFLAGS) -o $@ $^

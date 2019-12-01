@@ -132,6 +132,10 @@ BINS += 0799/dp
 0799/dp: 0799/dp.cpp
 	g++ $(CFLAGS) -o $@ $^
 
+BINS += 0802/dfs_cpp
+0802/dfs_cpp: 0802/dfs.cpp
+	g++ $(CFLAGS) -o $@ $^
+
 BINS += 0849/linear_search
 0849/linear_search: 0849/linear_search.cpp
 	g++ $(CFLAGS) -o $@ $^

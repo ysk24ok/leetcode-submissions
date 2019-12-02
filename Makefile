@@ -140,6 +140,10 @@ BINS += 0849/linear_search
 0849/linear_search: 0849/linear_search.cpp
 	g++ $(CFLAGS) -o $@ $^
 
+BINS += 0854/backtracking_cpp
+0854/backtracking_cpp: 0854/backtracking.cpp
+	g++ $(CFLAGS) -o $@ $^
+
 BINS += 0856/linear_search_with_recursion
 0856/linear_search_with_recursion: 0856/linear_search_with_recursion.cpp
 	g++ $(CFLAGS) -o $@ $?

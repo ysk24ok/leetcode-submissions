@@ -88,6 +88,10 @@ BINS += 0153/binary_search
 0153/binary_search: 0153/binary_search.cpp
 	g++ $(CFLAGS) -o $@ $^
 
+BINS += 0187/map_cpp
+0187/map_cpp: 0187/map.cpp
+	g++ $(CFLAGS) -o $@ $^
+
 BINS += 0191/solution
 0191/solution: 0191/solution.cpp
 	g++ $(CFLAGS) -o $@ $?

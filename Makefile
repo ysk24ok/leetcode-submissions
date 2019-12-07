@@ -48,6 +48,10 @@ BINS += 0073/solution_cpp
 0073/solution_cpp: 0073/solution.cpp
 	g++ $(CFLAGS) -o $@ $^
 
+BINS += 0075/counting_sort_cpp
+0075/counting_sort_cpp: 0075/counting_sort.cpp
+	g++ $(CFLAGS) -o $@ $^
+
 BINS += 0083/linked_list
 0083/linked_list: 0083/linked_list.cpp leetcode/linked_list.o
 	g++ $(CFLAGS) -o $@ $^

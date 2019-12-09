@@ -216,6 +216,26 @@ BINS += 1255/backtracking
 1255/backtracking: 1255/backtracking.cpp
 	g++ $(CFLAGS) -o $@ $^
 
+BINS += 1281/solution_cpp
+1281/solution_cpp: 1281/solution.cpp
+	g++ $(CFLAGS) -o $@ $^
+
+BINS += 1282/solution_cpp
+1282/solution_cpp: 1282/solution.cpp
+	g++ $(CFLAGS) -o $@ $^
+
+BINS += 1283/linear_search_cpp
+1283/linear_search_cpp: 1283/linear_search.cpp
+	g++ $(CFLAGS) -o $@ $^
+
+BINS += 1283/binary_search_cpp
+1283/binary_search_cpp: 1283/binary_search.cpp
+	g++ $(CFLAGS) -o $@ $^
+
+BINS += 1284/solution_cpp
+1284/solution_cpp: 1284/solution.cpp
+	g++ $(CFLAGS) -o $@ $^
+
 OBJS += leetcode/tree.o
 leetcode/tree.o: leetcode/tree.cpp
 	g++ $(CFLAGS) -o $@ -c $?

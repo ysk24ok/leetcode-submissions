@@ -104,6 +104,10 @@ BINS += 0191/n_AND_n-1
 0191/n_AND_n-1: 0191/n_AND_n-1.cpp
 	g++ $(CFLAGS) -o $@ $?
 
+BINS += 0198/dp_cpp
+0198/dp_cpp: 0198/dp.cpp
+	g++ $(CFLAGS) -o $@ $^
+
 BINS += 0221/dp_cpp
 0221/dp_cpp: 0221/dp.cpp
 	g++ $(CFLAGS) -o $@ $^

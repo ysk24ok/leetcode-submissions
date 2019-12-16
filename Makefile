@@ -56,6 +56,10 @@ BINS += 0075/counting_sort_cpp
 0075/counting_sort_cpp: 0075/counting_sort.cpp
 	g++ $(CFLAGS) -o $@ $^
 
+BINS += 0077/recursion_cpp
+0077/recursion_cpp: 0077/recursion.cpp
+	g++ $(CFLAGS) -o $@ $^
+
 BINS += 0083/linked_list
 0083/linked_list: 0083/linked_list.cpp leetcode/linked_list.o
 	g++ $(CFLAGS) -o $@ $^

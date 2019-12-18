@@ -108,6 +108,10 @@ BINS += 0153/binary_search
 0153/binary_search: 0153/binary_search.cpp
 	g++ $(CFLAGS) -o $@ $^
 
+BINS += 0155/two_stacks_cpp
+0155/two_stacks_cpp: 0155/two_stacks.cpp
+	g++ $(CFLAGS) -o $@ $^
+
 BINS += 0187/map_cpp
 0187/map_cpp: 0187/map.cpp
 	g++ $(CFLAGS) -o $@ $^

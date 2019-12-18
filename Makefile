@@ -28,6 +28,10 @@ BINS += 0046/solution_cpp
 0046/solution_cpp: 0046/solution.cpp
 	g++ $(CFLAGS) -o $@ $^
 
+BINS += 0047/solution_cpp
+0047/solution_cpp: 0047/solution.cpp
+	g++ $(CFLAGS) -o $@ $^
+
 BINS += 0049/solution
 0049/solution: 0049/solution.cpp
 	g++ $(CFLAGS) -o $@ $^

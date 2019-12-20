@@ -140,6 +140,10 @@ BINS += 0221/dp_cpp
 0221/dp_cpp: 0221/dp.cpp
 	g++ $(CFLAGS) -o $@ $^
 
+BINS += 0230/dfs_cpp
+0230/dfs_cpp: 0230/dfs.cpp leetcode/tree.o
+	g++ $(CFLAGS) -I. -o $@ $^
+
 BINS += 0268/sum
 0268/sum: 0268/sum.cpp
 	g++ $(CFLAGS) -o $@ $^

@@ -180,6 +180,10 @@ BINS += 0542/bfs
 0542/bfs: 0542/bfs.cpp
 	g++ $(CFLAGS) -o $@ $?
 
+BINS += 0668/binary_search_cpp
+0668/binary_search_cpp: 0668/binary_search.cpp
+	g++ $(CFLAGS) -o $@ $^
+
 BINS += 0799/dp
 0799/dp: 0799/dp.cpp
 	g++ $(CFLAGS) -o $@ $^

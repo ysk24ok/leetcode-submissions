@@ -200,6 +200,10 @@ BINS += 0668/binary_search_cpp
 0668/binary_search_cpp: 0668/binary_search.cpp
 	g++ $(CFLAGS) -o $@ $^
 
+BINS += 0704/solution_cpp
+0704/solution_cpp: 0704/solution.cpp
+	g++ $(CFLAGS) -o $@ $^
+
 BINS += 0799/dp
 0799/dp: 0799/dp.cpp
 	g++ $(CFLAGS) -o $@ $^

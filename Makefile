@@ -116,6 +116,10 @@ BINS += 0155/two_stacks_cpp
 0155/two_stacks_cpp: 0155/two_stacks.cpp
 	g++ $(CFLAGS) -o $@ $^
 
+BINS += 0169/hash_table_cpp
+0169/hash_table_cpp: 0169/hash_table.cpp
+	g++ $(CFLAGS) -o $@ $^
+
 BINS += 0187/map_cpp
 0187/map_cpp: 0187/map.cpp
 	g++ $(CFLAGS) -o $@ $^

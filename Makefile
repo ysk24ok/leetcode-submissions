@@ -144,6 +144,10 @@ BINS += 0213/dp_cpp
 0213/dp_cpp: 0213/dp.cpp
 	g++ $(CFLAGS) -o $@ $^
 
+BINS += 0215/min_heap_cpp
+0215/min_heap_cpp: 0215/min_heap.cpp
+	g++ $(CFLAGS) -o $@ $^
+
 BINS += 0221/dp_cpp
 0221/dp_cpp: 0221/dp.cpp
 	g++ $(CFLAGS) -o $@ $^

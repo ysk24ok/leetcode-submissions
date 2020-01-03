@@ -108,6 +108,10 @@ BINS += 0139/dfs
 0139/dfs: 0139/dfs.cpp
 	g++ $(CFLAGS) -o $@ $^
 
+BINS += 0141/hash_table_cpp
+0141/hash_table_cpp: 0141/hash_table.cpp leetcode/linked_list.o
+	g++ $(CFLAGS) -I. -o $@ $^
+
 BINS += 0151/solution
 0151/solution: 0151/solution.cpp
 	g++ $(CFLAGS) -o $@ $^

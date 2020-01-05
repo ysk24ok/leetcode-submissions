@@ -152,6 +152,10 @@ BINS += 0202/solution_cpp
 0202/solution_cpp: 0202/solution.cpp
 	g++ $(CFLAGS) -o $@ $^
 
+BINS += 0204/solution_cpp
+0204/solution_cpp: 0204/solution.cpp
+	g++ $(CFLAGS) -o $@ $^
+
 BINS += 0205/hash_table_cpp
 0205/hash_table_cpp: 0205/hash_table.cpp
 	g++ $(CFLAGS) -o $@ $^

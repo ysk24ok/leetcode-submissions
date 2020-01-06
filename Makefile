@@ -208,6 +208,10 @@ BINS += 0392/follow_up
 0392/follow_up: 0392/follow_up.cpp
 	g++ $(CFLAGS) -o $@ $^
 
+BINS += 0399/dfs_cpp
+0399/dfs_cpp: 0399/dfs.cpp
+	g++ $(CFLAGS) -o $@ $^
+
 BINS += 0406/solution_cpp
 0406/solution_cpp: 0406/solution.cpp
 	g++ $(CFLAGS) -o $@ $^

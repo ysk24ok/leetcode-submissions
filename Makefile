@@ -240,6 +240,10 @@ BINS += 0704/solution_cpp
 0704/solution_cpp: 0704/solution.cpp
 	g++ $(CFLAGS) -o $@ $^
 
+BINS += 0705/array_cpp
+0705/array_cpp: 0705/array.cpp
+	g++ $(CFLAGS) -o $@ $^
+
 BINS += 0799/dp
 0799/dp: 0799/dp.cpp
 	g++ $(CFLAGS) -o $@ $^

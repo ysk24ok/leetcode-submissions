@@ -100,6 +100,10 @@ BINS += 0125/two_pointers_cpp
 0125/two_pointers_cpp: 0125/two_pointers.cpp
 	g++ $(CFLAGS) -o $@ $^
 
+BINS += 0128/union_find_cpp
+0128/union_find_cpp: 0128/union_find.cpp
+	g++ $(CFLAGS) -o $@ $^
+
 BINS += 0129/dfs
 0129/dfs: 0129/dfs.cpp leetcode/tree.o
 	g++ $(CFLAGS) -o $@ $^

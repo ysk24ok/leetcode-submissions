@@ -256,6 +256,10 @@ BINS += 0705/linked_list_without_rehashing_cpp
 0705/linked_list_without_rehashing_cpp: 0705/linked_list_without_rehashing.cpp
 	g++ $(CFLAGS) -o $@ $^
 
+BINS += 0706/linked_list_without_rehashing_cpp
+0706/linked_list_without_rehashing_cpp: 0706/linked_list_without_rehashing.cpp
+	g++ $(CFLAGS) -o $@ $^
+
 BINS += 0799/dp
 0799/dp: 0799/dp.cpp
 	g++ $(CFLAGS) -o $@ $^

@@ -228,6 +228,10 @@ BINS += 0416/dp_cpp
 0416/dp_cpp: 0416/dp.cpp
 	g++ $(CFLAGS) -o $@ $^
 
+BINS += 0467/dp_cpp
+0467/dp_cpp: 0467/dp.cpp
+	g++ $(CFLAGS) -o $@ $^
+
 BINS += 0516/dp_cpp
 0516/dp_cpp: 0516/dp.cpp
 	g++ $(CFLAGS) -o $@ $^

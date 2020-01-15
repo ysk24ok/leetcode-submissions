@@ -120,6 +120,10 @@ BINS += 0142/hash_table_cpp
 0142/hash_table_cpp: 0142/hash_table.cpp leetcode/linked_list.o
 	g++ $(CFLAGS) -I. -o $@ $^
 
+BINS += 0144/dfs_cpp
+0144/dfs_cpp: 0144/dfs.cpp leetcode/tree.o
+	g++ $(CFLAGS) -I. -o $@ $^
+
 BINS += 0144/stack_cpp
 0144/stack_cpp: 0144/stack.cpp leetcode/tree.o
 	g++ $(CFLAGS) -I. -o $@ $^

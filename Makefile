@@ -80,6 +80,14 @@ BINS += 0089/recursion
 0089/recursion: 0089/recursion.cpp
 	g++ $(CFLAGS) -o $@ $^
 
+BINS += 0094/recursive_cpp
+0094/recursive_cpp: 0094/recursive.cpp leetcode/tree.o
+	g++ $(CFLAGS) -I. -o $@ $^
+
+BINS += 0094/iterative_cpp
+0094/iterative_cpp: 0094/iterative.cpp leetcode/tree.o
+	g++ $(CFLAGS) -I. -o $@ $^
+
 BINS += 0097/backtracking
 0097/backtracking: 0097/backtracking.cpp
 	g++ $(CFLAGS) -o $@ $^

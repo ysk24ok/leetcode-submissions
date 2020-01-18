@@ -136,6 +136,14 @@ BINS += 0144/stack_cpp
 0144/stack_cpp: 0144/stack.cpp leetcode/tree.o
 	g++ $(CFLAGS) -I. -o $@ $^
 
+BINS += 0145/recursive_cpp
+0145/recursive_cpp: 0145/recursive.cpp leetcode/tree.o
+	g++ $(CFLAGS) -I. -o $@ $^
+
+BINS += 0145/iterative_cpp
+0145/iterative_cpp: 0145/iterative.cpp leetcode/tree.o
+	g++ $(CFLAGS) -I. -o $@ $^
+
 BINS += 0151/solution
 0151/solution: 0151/solution.cpp
 	g++ $(CFLAGS) -o $@ $^

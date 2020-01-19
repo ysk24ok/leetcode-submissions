@@ -96,6 +96,14 @@ BINS += 0097/backtracking_with_memoization
 0097/backtracking_with_memoization: 0097/backtracking_with_memoization.cpp
 	g++ $(CFLAGS) -o $@ $^
 
+BINS += 0102/dfs_cpp
+0102/dfs_cpp: 0102/dfs.cpp leetcode/tree.o
+	g++ $(CFLAGS) -I. -o $@ $^
+
+BINS += 0102/bfs_cpp
+0102/bfs_cpp: 0102/bfs.cpp leetcode/tree.o
+	g++ $(CFLAGS) -I. -o $@ $^
+
 BINS += 0104/dfs
 0104/dfs: 0104/dfs.cpp leetcode/tree.o
 	g++ $(CFLAGS) -o $@ $^

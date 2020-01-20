@@ -196,6 +196,10 @@ BINS += 0205/hash_table_cpp
 0205/hash_table_cpp: 0205/hash_table.cpp
 	g++ $(CFLAGS) -o $@ $^
 
+BINS += 0208/dfs_cpp
+0208/dfs_cpp: 0208/dfs.cpp
+	g++ $(CFLAGS) -o $@ $^
+
 BINS += 0213/dp_cpp
 0213/dp_cpp: 0213/dp.cpp
 	g++ $(CFLAGS) -o $@ $^

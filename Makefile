@@ -108,6 +108,10 @@ BINS += 0104/dfs
 0104/dfs: 0104/dfs.cpp leetcode/tree.o
 	g++ $(CFLAGS) -o $@ $^
 
+BINS += 0121/one_pass_cpp
+0121/one_pass_cpp: 0121/one_pass.cpp
+	g++ $(CFLAGS) -o $@ $^
+
 BINS += 0139/dp
 0139/dp: 0139/dp.cpp
 	g++ $(CFLAGS) -o $@ $^

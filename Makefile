@@ -8,6 +8,10 @@ BINS += 0004/merge_and_sort
 0004/merge_and_sort: 0004/merge_and_sort.cpp
 	g++ $(CFLAGS) -o $@ $^
 
+BINS += 0011/two_pointers_cpp
+0011/two_pointers_cpp: 0011/two_pointers.cpp
+	g++ $(CFLAGS) -o $@ $^
+
 BINS += 0018/brute_force
 0018/brute_force: 0018/brute_force.cpp
 	g++ $(CFLAGS) -o $@ $^

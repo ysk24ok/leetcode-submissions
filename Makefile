@@ -200,6 +200,10 @@ BINS += 0198/dp_cpp
 0198/dp_cpp: 0198/dp.cpp
 	g++ $(CFLAGS) -o $@ $^
 
+BINS += 0200/dfs_cpp
+0200/dfs_cpp: 0200/dfs.cpp
+	g++ $(CFLAGS) -o $@ $^
+
 BINS += 0202/solution_cpp
 0202/solution_cpp: 0202/solution.cpp
 	g++ $(CFLAGS) -o $@ $^

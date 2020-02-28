@@ -486,3 +486,7 @@ check: $(TESTS)
 .PHONY: clean
 clean:
 	rm -f $(OBJS) $(BINS) $(TESTS)
+
+BINS += 0976/solution_cpp
+0976/solution_cpp: 0976/solution.cpp
+	g++ $(CFLAGS) -o $@ $^

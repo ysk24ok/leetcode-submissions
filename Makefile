@@ -132,10 +132,6 @@ BINS += 0123/dp_cpp
 0123/dp_cpp: 0123/dp.cpp
 	g++ $(CFLAGS) -o $@ $^
 
-BINS += 0139/dp
-0139/dp: 0139/dp.cpp
-	g++ $(CFLAGS) -o $@ $^
-
 BINS += 0125/two_pointers_cpp
 0125/two_pointers_cpp: 0125/two_pointers.cpp
 	g++ $(CFLAGS) -o $@ $^
@@ -150,6 +146,10 @@ BINS += 0129/dfs
 
 BINS += 0139/dfs
 0139/dfs: 0139/dfs.cpp
+	g++ $(CFLAGS) -o $@ $^
+
+BINS += 0139/dp
+0139/dp: 0139/dp.cpp
 	g++ $(CFLAGS) -o $@ $^
 
 BINS += 0141/hash_table_cpp
@@ -332,6 +332,10 @@ BINS += 0668/binary_search_cpp
 0668/binary_search_cpp: 0668/binary_search.cpp
 	g++ $(CFLAGS) -o $@ $^
 
+BINS += 0703/min_heap_cpp
+0703/min_heap_cpp: 0703/min_heap.cpp
+	g++ -std=c++11 -o $@ $^
+
 BINS += 0704/solution_cpp
 0704/solution_cpp: 0704/solution.cpp
 	g++ $(CFLAGS) -o $@ $^
@@ -383,6 +387,10 @@ BINS += 0950/solution
 BINS += 0950/queue_rs
 0950/queue_rs: 0950/queue.rs
 	rustc -o $@ $^
+
+BINS += 0976/solution_cpp
+0976/solution_cpp: 0976/solution.cpp
+	g++ $(CFLAGS) -o $@ $^
 
 BINS += 0988/bottom_up_dfs
 0988/bottom_up_dfs: 0988/bottom_up_dfs.cpp leetcode/tree.o
@@ -452,10 +460,6 @@ BINS += 1284/solution_cpp
 1284/solution_cpp: 1284/solution.cpp
 	g++ $(CFLAGS) -o $@ $^
 
-BINS += 0703/min_heap_cpp
-0703/min_heap_cpp: 0703/min_heap.cpp
-	g++ -std=c++11 -o $@ $^
-
 OBJS += leetcode/tree.o
 leetcode/tree.o: leetcode/tree.cpp
 	g++ $(CFLAGS) -o $@ -c $?
@@ -490,7 +494,3 @@ check: $(TESTS)
 .PHONY: clean
 clean:
 	rm -f $(OBJS) $(BINS) $(TESTS)
-
-BINS += 0976/solution_cpp
-0976/solution_cpp: 0976/solution.cpp
-	g++ $(CFLAGS) -o $@ $^

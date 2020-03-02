@@ -324,6 +324,10 @@ BINS += 0542/bfs
 0542/bfs: 0542/bfs.cpp
 	g++ $(CFLAGS) -o $@ $?
 
+BINS += 0630/greedy_cpp
+0630/greedy_cpp: 0630/greedy.cpp
+	g++ $(CFLAGS) -o $@ $^
+
 BINS += 0668/binary_search_cpp
 0668/binary_search_cpp: 0668/binary_search.cpp
 	g++ $(CFLAGS) -o $@ $^

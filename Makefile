@@ -272,6 +272,10 @@ BINS += 0309/dp_cpp
 0309/dp_cpp: 0309/dp.cpp
 	g++ $(CFLAGS) -o $@ $^
 
+BINS += 0322/dp_cpp
+0322/dp_cpp: 0322/dp.cpp
+	g++ $(CFLAGS) -o $@ $^
+
 BINS += 0337/dfs_cpp
 0337/dfs_cpp: 0337/dfs.cpp leetcode/tree.o
 	g++ $(CFLAGS) -o $@ $^

@@ -308,6 +308,14 @@ BINS += 0416/dp_rs
 0416/dp_rs: 0416/dp.rs
 	rustc -o $@ $^
 
+BINS += 0416/recursion_rs
+0416/recursion_rs: 0416/recursion.rs
+	rustc -o $@ $^
+
+BINS += 0416/recursion_without_memoization_rs
+0416/recursion_without_memoization_rs: 0416/recursion_without_memoization.rs
+	rustc -o $@ $^
+
 BINS += 0467/dp_cpp
 0467/dp_cpp: 0467/dp.cpp
 	g++ $(CFLAGS) -o $@ $^

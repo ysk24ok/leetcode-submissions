@@ -272,6 +272,10 @@ BINS += 0300/dp_rs
 0300/dp_rs: 0300/dp.rs
 	rustc -o $@ $^
 
+BINS += 0300/faster_dp_cpp
+0300/faster_dp_cpp: 0300/faster_dp.cpp
+	g++ $(CFLAGS) -o $@ $^
+
 BINS += 0309/dp_cpp
 0309/dp_cpp: 0309/dp.cpp
 	g++ $(CFLAGS) -o $@ $^

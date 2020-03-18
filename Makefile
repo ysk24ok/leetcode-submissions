@@ -404,6 +404,10 @@ BINS += 0856/linear_search_with_recursion
 0856/linear_search_with_recursion: 0856/linear_search_with_recursion.cpp
 	g++ $(CFLAGS) -o $@ $?
 
+BINS += 0871/priority_queue_cpp
+0871/priority_queue_cpp: 0871/priority_queue.cpp
+	g++ $(CFLAGS) -o $@ $^
+
 BINS += 0930/prefix_sum_cpp
 0930/prefix_sum_cpp: 0930/prefix_sum.cpp
 	g++ $(CFLAGS) -o $@ $^

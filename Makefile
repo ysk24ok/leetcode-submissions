@@ -516,6 +516,22 @@ BINS += 1377/solution_cpp
 1377/solution_cpp: 1377/solution.cpp
 	g++ $(CFLAGS) -o $@ $^
 
+BINS += 1389/solution_cpp
+1389/solution_cpp: 1389/solution.cpp
+	g++ $(CFLAGS) -o $@ $^
+
+BINS += 1390/solution_cpp
+1390/solution_cpp: 1390/solution.cpp
+	g++ $(CFLAGS) -o $@ $^
+
+BINS += 1391/solution_cpp
+1391/solution_cpp: 1391/solution.cpp
+	g++ $(CFLAGS) -o $@ $^
+
+BINS += 1392/rolling_hash_cpp
+1392/rolling_hash_cpp: 1392/rolling_hash.cpp
+	g++ $(CFLAGS) -o $@ $^
+
 OBJS += leetcode/tree.o
 leetcode/tree.o: leetcode/tree.cpp
 	g++ $(CFLAGS) -o $@ -c $?

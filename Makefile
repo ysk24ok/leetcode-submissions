@@ -392,6 +392,10 @@ BINS += 0785/bfs_cpp
 0785/bfs_cpp: 0785/bfs.cpp
 	g++ $(CFLAGS) -o $@ $^
 
+BINS += 0787/bellman_ford_cpp
+0787/bellman_ford_cpp: 0787/bellman_ford.cpp
+	g++ $(CFLAGS) -o $@ $^
+
 BINS += 0799/dp
 0799/dp: 0799/dp.cpp
 	g++ $(CFLAGS) -o $@ $^

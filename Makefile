@@ -512,6 +512,10 @@ BINS += 1284/solution_cpp
 1284/solution_cpp: 1284/solution.cpp
 	g++ $(CFLAGS) -o $@ $^
 
+BINS += 1334/warshall_floyd_cpp
+1334/warshall_floyd_cpp: 1334/warshall_floyd.cpp
+	g++ $(CFLAGS) -o $@ $^
+
 BINS += 1374/solution_cpp
 1374/solution_cpp: 1374/solution.cpp
 	g++ $(CFLAGS) -o $@ $^

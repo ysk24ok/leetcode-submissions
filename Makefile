@@ -424,6 +424,10 @@ BINS += 0871/priority_queue_cpp
 0871/priority_queue_cpp: 0871/priority_queue.cpp
 	g++ $(CFLAGS) -o $@ $^
 
+BINS += 0914/gcd_cpp
+0914/gcd_cpp: 0914/gcd.cpp
+	g++ $(CFLAGS) -o $@ $^
+
 BINS += 0930/prefix_sum_cpp
 0930/prefix_sum_cpp: 0930/prefix_sum.cpp
 	g++ $(CFLAGS) -o $@ $^

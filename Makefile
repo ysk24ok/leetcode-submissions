@@ -580,6 +580,10 @@ BINS += 1396/hash_table_and_pair_cpp
 1396/hash_table_and_pair_cpp: 1396/hash_table_and_pair.cpp
 	g++ $(CFLAGS) -o $@ $^
 
+BINS += 1397/solution_cpp
+1397/solution_cpp: 1397/solution.cpp
+	g++ $(CFLAGS) -o $@ $^
+
 OBJS += leetcode/tree.o
 leetcode/tree.o: leetcode/tree.cpp
 	g++ $(CFLAGS) -o $@ -c $?

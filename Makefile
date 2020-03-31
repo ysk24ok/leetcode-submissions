@@ -248,6 +248,14 @@ BINS += 0229/majority_voting_cpp
 0229/majority_voting_cpp: 0229/majority_voting.cpp
 	g++ $(CFLAGS) -o $@ $^
 
+BINS += 0231/recursive_cpp
+0231/recursive_cpp: 0231/recursive.cpp
+	g++ $(CFLAGS) -o $@ $^
+
+BINS += 0231/bitmanip_cpp
+0231/bitmanip_cpp: 0231/bitmanip.cpp
+	g++ $(CFLAGS) -o $@ $^
+
 BINS += 0230/dfs_cpp
 0230/dfs_cpp: 0230/dfs.cpp leetcode/tree.o
 	g++ $(CFLAGS) -I. -o $@ $^

@@ -144,6 +144,14 @@ BINS += 0129/dfs
 0129/dfs: 0129/dfs.cpp leetcode/tree.o
 	g++ $(CFLAGS) -o $@ $^
 
+BINS += 0136/hash_table_cpp
+0136/hash_table_cpp: 0136/hash_table.cpp
+	g++ $(CFLAGS) -o $@ $^
+
+BINS += 0136/bitmanip_cpp
+0136/bitmanip_cpp: 0136/bitmanip.cpp
+	g++ $(CFLAGS) -o $@ $^
+
 BINS += 0139/dfs
 0139/dfs: 0139/dfs.cpp
 	g++ $(CFLAGS) -o $@ $^

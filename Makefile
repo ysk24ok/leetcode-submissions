@@ -224,6 +224,10 @@ BINS += 0202/solution_cpp
 0202/solution_cpp: 0202/solution.cpp
 	g++ $(CFLAGS) -o $@ $^
 
+BINS += 0202/solution_rs
+0202/solution_rs: 0202/solution.rs
+	rustc -o $@ $^
+
 BINS += 0204/solution_cpp
 0204/solution_cpp: 0204/solution.cpp
 	g++ $(CFLAGS) -o $@ $^

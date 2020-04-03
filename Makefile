@@ -56,6 +56,10 @@ BINS += 0053/dp
 0053/dp: 0053/dp.cpp
 	g++ $(CFLAGS) -o $@ $^
 
+BINS += 0053/dp_rs
+0053/dp_rs: 0053/dp.rs
+	rustc -o $@ $^
+
 BINS += 0062/dp_matrix
 0062/dp_matrix: 0062/dp_matrix.cpp
 	g++ $(CFLAGS) -o $@ $^

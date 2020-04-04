@@ -280,6 +280,10 @@ BINS += 0268/sum
 0268/sum: 0268/sum.cpp
 	g++ $(CFLAGS) -o $@ $^
 
+BINS += 0283/solution_cpp
+0283/solution_cpp: 0283/solution.cpp
+	g++ $(CFLAGS) -o $@ $^
+
 BINS += 0297/bfs
 0297/bfs: 0297/bfs.cpp leetcode/tree.o
 	g++ $(CFLAGS) -o $@ $^

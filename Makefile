@@ -132,6 +132,10 @@ BINS += 0122/one_pass_cpp
 0122/one_pass_cpp: 0122/one_pass.cpp
 	g++ $(CFLAGS) -o $@ $^
 
+BINS += 0122/simple_one_pass_cpp
+0122/simple_one_pass_cpp: 0122/simple_one_pass.cpp
+	g++ $(CFLAGS) -o $@ $^
+
 BINS += 0123/dp_cpp
 0123/dp_cpp: 0123/dp.cpp
 	g++ $(CFLAGS) -o $@ $^

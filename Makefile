@@ -48,8 +48,12 @@ BINS += 0047/solution_cpp
 0047/solution_cpp: 0047/solution.cpp
 	g++ $(CFLAGS) -o $@ $^
 
-BINS += 0049/solution
-0049/solution: 0049/solution.cpp
+BINS += 0049/categorize_by_sorting_cpp
+0049/categorize_by_sorting_cpp: 0049/categorize_by_sorting.cpp
+	g++ $(CFLAGS) -o $@ $^
+
+BINS += 0049/categorize_by_count_cpp
+0049/categorize_by_count_cpp: 0049/categorize_by_count.cpp
 	g++ $(CFLAGS) -o $@ $^
 
 BINS += 0053/dp

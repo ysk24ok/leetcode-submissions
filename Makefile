@@ -460,6 +460,10 @@ BINS += 0871/priority_queue_cpp
 0871/priority_queue_cpp: 0871/priority_queue.cpp
 	g++ $(CFLAGS) -o $@ $^
 
+BINS += 0876/two_pointers_cpp
+0876/two_pointers_cpp: 0876/two_pointers.cpp leetcode/linked_list.o
+	g++ $(CFLAGS) -I. -o $@ $^
+
 BINS += 0914/gcd_cpp
 0914/gcd_cpp: 0914/gcd.cpp
 	g++ $(CFLAGS) -o $@ $^

@@ -12,4 +12,6 @@ ListNode* CreateListNode(const std::vector<int>& vec);
 
 void DeleteListNode(ListNode* node);
 
+void AssertListNodeEqual(ListNode* expected, ListNode* actual);
+
 } // namespace LeetCode

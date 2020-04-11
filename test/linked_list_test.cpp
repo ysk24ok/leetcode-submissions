@@ -31,4 +31,32 @@ TEST(CreateListNodeTest, empty_vector) {
   DeleteListNode(got);
 }
 
+TEST(AssertListNodeEqual, equal) {
+  ListNode* expected = CreateListNode({1, 2, 3, 4});
+  ListNode* actual = CreateListNode({1, 2, 3, 4});
+  EXPECT_NO_FATAL_FAILURE(AssertListNodeEqual(expected, actual));
+  DeleteListNode(expected);
+  DeleteListNode(actual);
+}
+
+TEST(AssertListNodeEqual, not_equal) {
+  EXPECT_DEATH({
+    ListNode* expected = CreateListNode({1, 2, 3, 4});
+    ListNode* actual = CreateListNode({1, 2, 3, 5});
+    AssertListNodeEqual(expected, actual);
+    DeleteListNode(expected);
+    DeleteListNode(actual);
+  }, "");
+}
+
+TEST(AssertListNodeEqual, not_equal_length) {
+  EXPECT_DEATH({
+    ListNode* expected = CreateListNode({1, 2, 3, 4});
+    ListNode* actual = CreateListNode({1, 2, 3, 4, 5});
+    AssertListNodeEqual(expected, actual);
+    DeleteListNode(expected);
+    DeleteListNode(actual);
+  }, "");
+}
+
 } // namespace LeetCode

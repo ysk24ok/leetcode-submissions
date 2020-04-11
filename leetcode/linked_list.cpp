@@ -1,3 +1,5 @@
+#include <cassert>
+
 #include "linked_list.hpp"
 
 namespace LeetCode {
@@ -23,6 +25,15 @@ void DeleteListNode(ListNode* node) {
     delete node;
     node = next;
   }
+}
+
+void AssertListNodeEqual(ListNode* expected, ListNode* actual) {
+  while (expected && actual) {
+    assert(expected->val == actual->val);
+    expected = expected->next;
+    actual = actual->next;
+  }
+  assert(!expected && !actual);
 }
 
 } // namespace LeetCode

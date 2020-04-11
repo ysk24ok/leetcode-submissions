@@ -328,6 +328,10 @@ BINS += 0337/dfs_cpp
 0337/dfs_cpp: 0337/dfs.cpp leetcode/tree.o
 	g++ $(CFLAGS) -o $@ $^
 
+BINS += 0344/recursion_cpp
+0344/recursion_cpp: 0344/recursion.cpp leetcode/utils.o
+	g++ $(CFLAGS) -I. -o $@ $^
+
 BINS += 0376/dp_cpp
 0376/dp_cpp: 0376/dp.cpp
 	g++ $(CFLAGS) -o $@ $^

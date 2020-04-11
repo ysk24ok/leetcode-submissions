@@ -33,11 +33,11 @@ BINS += 0035/linear_search_cpp
 	g++ $(CFLAGS) -o $@ $^
 
 BINS += 0039/backtracking_cpp
-0039/backtracking_cpp: 0039/backtracking.cpp leetcode/utils.o
+0039/backtracking_cpp: 0039/backtracking.cpp
 	g++ $(CFLAGS) -I. -o $@ $^
 
 BINS += 0040/backtracking_cpp
-0040/backtracking_cpp: 0040/backtracking.cpp leetcode/utils.o
+0040/backtracking_cpp: 0040/backtracking.cpp
 	g++ $(CFLAGS) -I. -o $@ $^
 
 BINS += 0046/solution_cpp
@@ -329,7 +329,7 @@ BINS += 0337/dfs_cpp
 	g++ $(CFLAGS) -o $@ $^
 
 BINS += 0344/recursion_cpp
-0344/recursion_cpp: 0344/recursion.cpp leetcode/utils.o
+0344/recursion_cpp: 0344/recursion.cpp
 	g++ $(CFLAGS) -I. -o $@ $^
 
 BINS += 0376/dp_cpp
@@ -646,10 +646,6 @@ leetcode/tree.o: leetcode/tree.cpp
 
 OBJS += leetcode/linked_list.o
 leetcode/linked_list.o: leetcode/linked_list.cpp
-	g++ $(CFLAGS) -o $@ -c $?
-
-OBJS += leetcode/utils.o
-leetcode/utils.o: leetcode/utils.cpp
 	g++ $(CFLAGS) -o $@ -c $?
 
 TESTS += test/linked_list_test

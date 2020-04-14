@@ -656,6 +656,10 @@ BINS += 5000/hash_table_cpp
 5000/hash_table_cpp: 5000/hash_table.cpp
 	g++ $(CFLAGS) -o $@ $^
 
+BINS += 5001/solution_cpp
+5001/solution_cpp: 5001/solution.cpp leetcode/assert.hpp
+	g++ $(CFLAGS) -I. -o $@ $<
+
 OBJS += leetcode/tree.o
 leetcode/tree.o: leetcode/tree.cpp
 	g++ $(CFLAGS) -o $@ -c $?

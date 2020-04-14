@@ -10,9 +10,11 @@ name=$3
 
 if [ $language = cpp ]; then
   ext=cpp
-  cmd='g++ $(CFLAGS) -o $@ $^'
+  rule="$number/${name}_$ext: $number/$name.$ext leetcode/assert.hpp"
+  cmd='g++ $(CFLAGS) -I. -o $@ $<'
 elif [ $language = rust ]; then
   ext=rs
+  rule="$number/${name}_$ext: $number/$name.$ext"
   cmd='rustc -o $@ $^'
 else
   echo "Error: $language is not supported."
@@ -24,7 +26,7 @@ mkdir -p $curdir/$number
 cp $curdir/templates/template.$ext $number/$name.$ext
 rule=$(cat << EOF
 \nBINS += $number/${name}_$ext
-$number/${name}_$ext: $number/$name.$ext
+$rule
 \t$cmd
 EOF
 )

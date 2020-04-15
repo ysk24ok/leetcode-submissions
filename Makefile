@@ -292,6 +292,14 @@ BINS += 0230/dfs_cpp
 0230/dfs_cpp: 0230/dfs.cpp leetcode/tree.o
 	g++ $(CFLAGS) -I. -o $@ $^
 
+BINS += 0238/solution_cpp
+0238/solution_cpp: 0238/solution.cpp leetcode/assert.hpp
+	g++ $(CFLAGS) -I. -o $@ $<
+
+BINS += 0238/solution_rs
+0238/solution_rs: 0238/solution.rs
+	rustc -o $@ $^
+
 BINS += 0268/sum
 0268/sum: 0268/sum.cpp
 	g++ $(CFLAGS) -o $@ $^

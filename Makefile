@@ -428,6 +428,10 @@ BINS += 0668/binary_search_cpp
 0668/binary_search_cpp: 0668/binary_search.cpp
 	g++ $(CFLAGS) -o $@ $^
 
+BINS += 0678/stack_cpp
+0678/stack_cpp: 0678/stack.cpp leetcode/assert.hpp
+	g++ $(CFLAGS) -I. -o $@ $<
+
 BINS += 0703/min_heap_cpp
 0703/min_heap_cpp: 0703/min_heap.cpp
 	g++ -std=c++11 -o $@ $^

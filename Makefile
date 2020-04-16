@@ -660,6 +660,26 @@ BINS += 1396/hash_table_and_pair_cpp
 1396/hash_table_and_pair_cpp: 1396/hash_table_and_pair.cpp
 	g++ $(CFLAGS) -o $@ $^
 
+BINS += 1408/solution_cpp
+1408/solution_cpp: 1408/solution.cpp leetcode/assert.hpp
+	g++ $(CFLAGS) -I. -o $@ $<
+
+BINS += 1408/solution_after_contest_cpp
+1408/solution_after_contest_cpp: 1408/solution_after_contest.cpp leetcode/assert.hpp
+	g++ $(CFLAGS) -I. -o $@ $<
+
+BINS += 1409/solution_cpp
+1409/solution_cpp: 1409/solution.cpp leetcode/assert.hpp
+	g++ $(CFLAGS) -I. -o $@ $<
+
+BINS += 1410/solution_cpp
+1410/solution_cpp: 1410/solution.cpp leetcode/assert.hpp
+	g++ $(CFLAGS) -I. -o $@ $<
+
+BINS += 1411/solution_cpp
+1411/solution_cpp: 1411/solution.cpp leetcode/assert.hpp
+	g++ $(CFLAGS) -I. -o $@ $<
+
 BINS += 5000/sorting_cpp
 5000/sorting_cpp: 5000/sorting.cpp
 	g++ $(CFLAGS) -o $@ $^

@@ -240,6 +240,10 @@ BINS += 0200/dfs_cpp
 0200/dfs_cpp: 0200/dfs.cpp
 	g++ $(CFLAGS) -o $@ $^
 
+BINS += 0200/dfs_rs
+0200/dfs_rs: 0200/dfs.rs
+	rustc -o $@ $^
+
 BINS += 0202/solution_cpp
 0202/solution_cpp: 0202/solution.cpp
 	g++ $(CFLAGS) -o $@ $^

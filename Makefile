@@ -84,6 +84,10 @@ BINS += 0063/dp_two_vec
 0063/dp_two_vec: 0063/dp_two_vec.rs
 	rustc -o $@ $^
 
+BINS += 0064/dp_cpp
+0064/dp_cpp: 0064/dp.cpp leetcode/assert.hpp
+	g++ $(CFLAGS) -I. -o $@ $<
+
 BINS += 0073/solution_cpp
 0073/solution_cpp: 0073/solution.cpp
 	g++ $(CFLAGS) -o $@ $^

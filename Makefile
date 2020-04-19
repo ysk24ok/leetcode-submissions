@@ -32,6 +32,10 @@ BINS += 0024/recursion_cpp
 0024/recursion_cpp: 0024/recursion.cpp leetcode/linked_list.o
 	g++ $(CFLAGS) -I. -o $@ $^
 
+BINS += 0033/binary_search_cpp
+0033/binary_search_cpp: 0033/binary_search.cpp leetcode/assert.hpp
+	g++ $(CFLAGS) -I. -o $@ $<
+
 BINS += 0035/linear_search_cpp
 0035/linear_search_cpp: 0035/linear_search.cpp
 	g++ $(CFLAGS) -o $@ $^

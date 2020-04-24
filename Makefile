@@ -208,6 +208,10 @@ BINS += 0145/iterative_cpp
 0145/iterative_cpp: 0145/iterative.cpp leetcode/tree.o
 	g++ $(CFLAGS) -I. -o $@ $^
 
+BINS += 0146/hashmap_cpp
+0146/hashmap_cpp: 0146/hashmap.cpp
+	g++ $(CFLAGS) -I. -o $@ $^
+
 BINS += 0151/solution
 0151/solution: 0151/solution.cpp
 	g++ $(CFLAGS) -o $@ $^

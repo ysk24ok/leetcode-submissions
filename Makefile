@@ -72,6 +72,14 @@ BINS += 0053/dp_rs
 0053/dp_rs: 0053/dp.rs
 	rustc -o $@ $^
 
+BINS += 0055/dp_cpp
+0055/dp_cpp: 0055/dp.cpp
+	g++ $(CFLAGS) -I. -o $@ $^
+
+BINS += 0055/dp_bottom_up_cpp
+0055/dp_bottom_up_cpp: 0055/dp_bottom_up.cpp
+	g++ $(CFLAGS) -I. -o $@ $^
+
 BINS += 0062/dp_matrix
 0062/dp_matrix: 0062/dp_matrix.cpp
 	g++ $(CFLAGS) -o $@ $^

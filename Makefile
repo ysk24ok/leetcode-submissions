@@ -592,6 +592,10 @@ BINS += 1143/dp_cpp
 1143/dp_cpp: 1143/dp.cpp
 	g++ $(CFLAGS) -o $@ $^
 
+BINS += 1143/dp_rs
+1143/dp_rs: 1143/dp.rs
+	rustc -o $@ $^
+
 BINS += 1221/solution
 1221/solution: 1221/solution.cpp
 	g++ $(CFLAGS) -o $@ $^

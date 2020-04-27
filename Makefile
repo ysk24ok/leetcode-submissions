@@ -302,7 +302,7 @@ BINS += 0215/min_heap_cpp
 
 BINS += 0221/dp_cpp
 0221/dp_cpp: 0221/dp.cpp
-	g++ $(CFLAGS) -o $@ $^
+	g++ $(CFLAGS) -I. -o $@ $^
 
 BINS += 0221/dfs_cpp
 0221/dfs_cpp: 0221/dfs.cpp

@@ -304,6 +304,10 @@ BINS += 0221/dp_cpp
 0221/dp_cpp: 0221/dp.cpp
 	g++ $(CFLAGS) -o $@ $^
 
+BINS += 0221/dfs_cpp
+0221/dfs_cpp: 0221/dfs.cpp
+	g++ $(CFLAGS) -I. -o $@ $^
+
 BINS += 0229/majority_voting_cpp
 0229/majority_voting_cpp: 0229/majority_voting.cpp
 	g++ $(CFLAGS) -o $@ $^

@@ -10,8 +10,8 @@ name=$3
 
 if [ $language = cpp ]; then
   ext=cpp
-  rule="$number/${name}_$ext: $number/$name.$ext leetcode/assert.hpp"
-  cmd='g++ $(CFLAGS) -I. -o $@ $<'
+  rule="$number/${name}_$ext: $number/$name.$ext"
+  cmd='g++ $(CFLAGS) -I. -o $@ $^'
 elif [ $language = rust ]; then
   ext=rs
   rule="$number/${name}_$ext: $number/$name.$ext"

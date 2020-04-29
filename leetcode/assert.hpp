@@ -25,7 +25,7 @@ std::string Matrix2String(const std::vector<std::vector<T>>& mat) {
   if (m == 0) { return "[]"; }
   size_t n = mat[0].size();
   oss << "[";
-  for (size_t i = 0; i < m - 1; ++i) {
+  for (size_t i = 0; i < m; ++i) {
     oss << "[";
     for (size_t j = 0; j < n - 1; ++j) {
       oss << mat[i][j] << ",";

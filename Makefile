@@ -104,6 +104,10 @@ BINS += 0073/solution_cpp
 0073/solution_cpp: 0073/solution.cpp
 	g++ $(CFLAGS) -o $@ $^
 
+BINS += 0073/constant_space_complexity_cpp
+0073/constant_space_complexity_cpp: 0073/constant_space_complexity.cpp
+	g++ $(CFLAGS) -I. -o $@ $^
+
 BINS += 0075/counting_sort_cpp
 0075/counting_sort_cpp: 0075/counting_sort.cpp
 	g++ $(CFLAGS) -o $@ $^

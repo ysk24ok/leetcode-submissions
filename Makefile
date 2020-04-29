@@ -164,6 +164,10 @@ BINS += 0123/dp_cpp
 0123/dp_cpp: 0123/dp.cpp
 	g++ $(CFLAGS) -o $@ $^
 
+BINS += 0124/dfs_cpp
+0124/dfs_cpp: 0124/dfs.cpp leetcode/tree.o
+	g++ $(CFLAGS) -I. -o $@ $^
+
 BINS += 0125/two_pointers_cpp
 0125/two_pointers_cpp: 0125/two_pointers.cpp
 	g++ $(CFLAGS) -o $@ $^

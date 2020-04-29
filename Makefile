@@ -764,6 +764,14 @@ BINS += 5002/binary_search_cpp
 5002/binary_search_cpp: 5002/binary_search.cpp leetcode/assert.hpp
 	g++ $(CFLAGS) -I. -o $@ $<
 
+BINS += 5003/queue_cpp
+5003/queue_cpp: 5003/queue.cpp
+	g++ $(CFLAGS) -I. -o $@ $^
+
+BINS += 5003/linked_list_cpp
+5003/linked_list_cpp: 5003/linked_list.cpp leetcode/linked_list.o
+	g++ $(CFLAGS) -I. -o $@ $^
+
 OBJS += leetcode/tree.o
 leetcode/tree.o: leetcode/tree.cpp
 	g++ $(CFLAGS) -o $@ -c $?

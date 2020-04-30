@@ -780,6 +780,10 @@ BINS += 5003/linked_list_cpp
 5003/linked_list_cpp: 5003/linked_list.cpp leetcode/linked_list.o
 	g++ $(CFLAGS) -I. -o $@ $^
 
+BINS += 5004/dfs_cpp
+5004/dfs_cpp: 5004/dfs.cpp leetcode/tree.o
+	g++ $(CFLAGS) -I. -o $@ $^
+
 OBJS += leetcode/tree.o
 leetcode/tree.o: leetcode/tree.cpp
 	g++ $(CFLAGS) -o $@ -c $?

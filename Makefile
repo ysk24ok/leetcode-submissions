@@ -344,6 +344,10 @@ BINS += 0268/sum
 0268/sum: 0268/sum.cpp
 	g++ $(CFLAGS) -o $@ $^
 
+BINS += 0278/binary_search_cpp
+0278/binary_search_cpp: 0278/binary_search.cpp
+	g++ $(CFLAGS) -I. -o $@ $^
+
 BINS += 0283/solution_cpp
 0283/solution_cpp: 0283/solution.cpp
 	g++ $(CFLAGS) -o $@ $^

@@ -512,6 +512,14 @@ BINS += 0743/dijkstra_cpp
 0743/dijkstra_cpp: 0743/dijkstra.cpp
 	g++ $(CFLAGS) -o $@ $^
 
+BINS += 0771/hashmap_cpp
+0771/hashmap_cpp: 0771/hashmap.cpp
+	g++ $(CFLAGS) -I. -o $@ $^
+
+BINS += 0771/hashset_cpp
+0771/hashset_cpp: 0771/hashset.cpp
+	g++ $(CFLAGS) -I. -o $@ $^
+
 BINS += 0785/bfs_cpp
 0785/bfs_cpp: 0785/bfs.cpp
 	g++ $(CFLAGS) -o $@ $^

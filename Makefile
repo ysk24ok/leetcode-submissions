@@ -396,6 +396,10 @@ BINS += 0383/hashmap_cpp
 0383/hashmap_cpp: 0383/hashmap.cpp
 	g++ $(CFLAGS) -I. -o $@ $^
 
+BINS += 0387/hashmap_cpp
+0387/hashmap_cpp: 0387/hashmap.cpp
+	g++ $(CFLAGS) -I. -o $@ $^
+
 BINS += 0392/linear_search
 0392/linear_search: 0392/linear_search.cpp
 	g++ $(CFLAGS) -o $@ $^

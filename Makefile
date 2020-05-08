@@ -656,6 +656,10 @@ BINS += 1224/solution
 1224/solution: 1224/solution.cpp
 	g++ $(CFLAGS) -o $@ $^
 
+BINS += 1232/solution_cpp
+1232/solution_cpp: 1232/solution.cpp
+	g++ $(CFLAGS) -I. -o $@ $^
+
 BINS += 1252/solution
 1252/solution: 1252/solution.cpp
 	g++ $(CFLAGS) -o $@ $^

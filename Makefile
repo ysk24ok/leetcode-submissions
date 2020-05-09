@@ -392,6 +392,10 @@ BINS += 0344/recursion_cpp
 0344/recursion_cpp: 0344/recursion.cpp
 	g++ $(CFLAGS) -I. -o $@ $^
 
+BINS += 0367/binary_search_cpp
+0367/binary_search_cpp: 0367/binary_search.cpp
+	g++ $(CFLAGS) -I. -o $@ $^
+
 BINS += 0376/dp_cpp
 0376/dp_cpp: 0376/dp.cpp
 	g++ $(CFLAGS) -o $@ $^

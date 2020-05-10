@@ -612,6 +612,10 @@ BINS += 0993/dfs_cpp
 0993/dfs_cpp: 0993/dfs.cpp leetcode/tree.o
 	g++ $(CFLAGS) -I. -o $@ $^
 
+BINS += 0997/solution_cpp
+0997/solution_cpp: 0997/solution.cpp
+	g++ $(CFLAGS) -I. -o $@ $^
+
 BINS += 1008/top_down_cpp
 1008/top_down_cpp: 1008/top_down.cpp leetcode/tree.o
 	g++ $(CFLAGS) -I. -o $@ $^

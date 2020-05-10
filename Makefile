@@ -804,6 +804,22 @@ BINS += 1420/solution_cpp
 1420/solution_cpp: 1420/solution.cpp leetcode/assert.hpp
 	g++ $(CFLAGS) -I. -o $@ $<
 
+BINS += 1441/solution_cpp
+1441/solution_cpp: 1441/solution.cpp
+	g++ $(CFLAGS) -I. -o $@ $^
+
+BINS += 1442/solution_cpp
+1442/solution_cpp: 1442/solution.cpp
+	g++ $(CFLAGS) -I. -o $@ $^
+
+BINS += 1443/solution_cpp
+1443/solution_cpp: 1443/solution.cpp
+	g++ $(CFLAGS) -I. -o $@ $^
+
+BINS += 1444/solution_cpp
+1444/solution_cpp: 1444/solution.cpp
+	g++ $(CFLAGS) -I. -o $@ $^
+
 BINS += 5000/sorting_cpp
 5000/sorting_cpp: 5000/sorting.cpp
 	g++ $(CFLAGS) -o $@ $^

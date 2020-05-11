@@ -528,6 +528,10 @@ BINS += 0714/dp_cpp
 0714/dp_cpp: 0714/dp.cpp
 	g++ $(CFLAGS) -o $@ $^
 
+BINS += 0733/bfs_cpp
+0733/bfs_cpp: 0733/bfs.cpp
+	g++ $(CFLAGS) -I. -o $@ $^
+
 BINS += 0743/dijkstra_cpp
 0743/dijkstra_cpp: 0743/dijkstra.cpp
 	g++ $(CFLAGS) -o $@ $^

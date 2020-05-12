@@ -468,6 +468,10 @@ BINS += 0525/dp_rs
 0525/dp_rs: 0525/dp.rs
 	rustc -o $@ $^
 
+BINS += 0540/binary_search_cpp
+0540/binary_search_cpp: 0540/binary_search.cpp
+	g++ $(CFLAGS) -I. -o $@ $^
+
 BINS += 0542/dfs
 0542/dfs: 0542/dfs.cpp
 	g++ $(CFLAGS) -o $@ $?

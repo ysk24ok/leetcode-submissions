@@ -804,6 +804,34 @@ BINS += 1420/solution_cpp
 1420/solution_cpp: 1420/solution.cpp leetcode/assert.hpp
 	g++ $(CFLAGS) -I. -o $@ $<
 
+BINS += 1426/sorting_cpp
+1426/sorting_cpp: 1426/sorting.cpp
+	g++ $(CFLAGS) -o $@ $^
+
+BINS += 1426/hash_table_cpp
+1426/hash_table_cpp: 1426/hash_table.cpp
+	g++ $(CFLAGS) -o $@ $^
+
+BINS += 1427/solution_cpp
+1427/solution_cpp: 1427/solution.cpp leetcode/assert.hpp
+	g++ $(CFLAGS) -I. -o $@ $<
+
+BINS += 1428/binary_search_cpp
+1428/binary_search_cpp: 1428/binary_search.cpp leetcode/assert.hpp
+	g++ $(CFLAGS) -I. -o $@ $<
+
+BINS += 1429/queue_cpp
+1429/queue_cpp: 1429/queue.cpp
+	g++ $(CFLAGS) -I. -o $@ $^
+
+BINS += 1429/linked_list_cpp
+1429/linked_list_cpp: 1429/linked_list.cpp leetcode/linked_list.o
+	g++ $(CFLAGS) -I. -o $@ $^
+
+BINS += 1430/dfs_cpp
+1430/dfs_cpp: 1430/dfs.cpp leetcode/tree.o
+	g++ $(CFLAGS) -I. -o $@ $^
+
 BINS += 1441/solution_cpp
 1441/solution_cpp: 1441/solution.cpp
 	g++ $(CFLAGS) -I. -o $@ $^
@@ -818,34 +846,6 @@ BINS += 1443/solution_cpp
 
 BINS += 1444/solution_cpp
 1444/solution_cpp: 1444/solution.cpp
-	g++ $(CFLAGS) -I. -o $@ $^
-
-BINS += 5000/sorting_cpp
-5000/sorting_cpp: 5000/sorting.cpp
-	g++ $(CFLAGS) -o $@ $^
-
-BINS += 5000/hash_table_cpp
-5000/hash_table_cpp: 5000/hash_table.cpp
-	g++ $(CFLAGS) -o $@ $^
-
-BINS += 5001/solution_cpp
-5001/solution_cpp: 5001/solution.cpp leetcode/assert.hpp
-	g++ $(CFLAGS) -I. -o $@ $<
-
-BINS += 5002/binary_search_cpp
-5002/binary_search_cpp: 5002/binary_search.cpp leetcode/assert.hpp
-	g++ $(CFLAGS) -I. -o $@ $<
-
-BINS += 5003/queue_cpp
-5003/queue_cpp: 5003/queue.cpp
-	g++ $(CFLAGS) -I. -o $@ $^
-
-BINS += 5003/linked_list_cpp
-5003/linked_list_cpp: 5003/linked_list.cpp leetcode/linked_list.o
-	g++ $(CFLAGS) -I. -o $@ $^
-
-BINS += 5004/dfs_cpp
-5004/dfs_cpp: 5004/dfs.cpp leetcode/tree.o
 	g++ $(CFLAGS) -I. -o $@ $^
 
 OBJS += leetcode/tree.o

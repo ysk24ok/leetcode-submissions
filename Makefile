@@ -72,6 +72,10 @@ BINS += 0053/dp_rs
 0053/dp_rs: 0053/dp.rs
 	rustc -o $@ $^
 
+BINS += 0053/dp_constant_space_cpp
+0053/dp_constant_space_cpp: 0053/dp_constant_space.cpp
+	g++ $(CFLAGS) -o $@ $^ -Igtest/include -Lgtest/lib -lgtest -lgtest_main
+
 BINS += 0055/dp_cpp
 0055/dp_cpp: 0055/dp.cpp
 	g++ $(CFLAGS) -I. -o $@ $^

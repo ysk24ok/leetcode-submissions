@@ -1,4 +1,4 @@
-CFLAGS = -std=c++11 -g -fsanitize=address,leak
+CFLAGS = -std=c++11 -lpthread -g -fsanitize=address,leak
 
 OBJS =
 BINS =
@@ -615,6 +615,10 @@ BINS += 0950/solution
 BINS += 0950/queue_rs
 0950/queue_rs: 0950/queue.rs
 	rustc -o $@ $^
+
+BINS += 0974/prefix_sum_cpp
+0974/prefix_sum_cpp: 0974/prefix_sum.cpp
+	g++ $(CFLAGS) -I. -o $@ $^ -Igtest/include -Lgtest/lib -lgtest -lgtest_main
 
 BINS += 0976/solution_cpp
 0976/solution_cpp: 0976/solution.cpp

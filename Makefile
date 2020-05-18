@@ -456,6 +456,14 @@ BINS += 0416/recursion_without_memoization_rs
 0416/recursion_without_memoization_rs: 0416/recursion_without_memoization.rs
 	rustc -o $@ $^
 
+BINS += 0438/tle_cpp
+0438/tle_cpp: 0438/tle.cpp
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+
+BINS += 0438/sliding_window_cpp
+0438/sliding_window_cpp: 0438/sliding_window.cpp
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+
 BINS += 0467/dp_cpp
 0467/dp_cpp: 0467/dp.cpp
 	g++ $(CXXFLAGS) -o $@ $^

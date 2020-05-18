@@ -12,10 +12,9 @@
 #include <utility>
 #include <vector>
 
-#include "leetcode/assert.hpp"
+#include "gtest/gtest.h"
 
 using namespace std;
-using namespace LeetCode;
 
 class Solution {
  public:

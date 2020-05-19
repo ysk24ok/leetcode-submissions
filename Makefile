@@ -616,6 +616,14 @@ BINS += 0876/two_pointers_cpp
 0876/two_pointers_cpp: 0876/two_pointers.cpp leetcode/linked_list.o
 	g++ $(CXXFLAGS) -I. -o $@ $^
 
+BINS += 0901/linear_search_cpp
+0901/linear_search_cpp: 0901/linear_search.cpp
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+
+BINS += 0901/stack_cpp
+0901/stack_cpp: 0901/stack.cpp
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+
 BINS += 0914/gcd_cpp
 0914/gcd_cpp: 0914/gcd.cpp
 	g++ $(CXXFLAGS) -o $@ $^

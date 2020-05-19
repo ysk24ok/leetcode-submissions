@@ -520,6 +520,10 @@ BINS += 0560/hashmap_cpp
 0560/hashmap_cpp: 0560/hashmap.cpp leetcode/assert.hpp
 	g++ $(CXXFLAGS) -I. -o $@ $<
 
+BINS += 0567/sliding_window_cpp
+0567/sliding_window_cpp: 0567/sliding_window.cpp
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+
 BINS += 0630/greedy_cpp
 0630/greedy_cpp: 0630/greedy.cpp
 	g++ $(CXXFLAGS) -o $@ $^

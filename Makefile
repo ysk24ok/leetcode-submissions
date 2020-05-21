@@ -740,6 +740,10 @@ BINS += 1255/backtracking
 1255/backtracking: 1255/backtracking.cpp
 	g++ $(CXXFLAGS) -o $@ $^
 
+BINS += 1277/recursion_with_memoization_cpp
+1277/recursion_with_memoization_cpp: 1277/recursion_with_memoization.cpp
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+
 BINS += 1281/solution_cpp
 1281/solution_cpp: 1281/solution.cpp
 	g++ $(CXXFLAGS) -o $@ $^

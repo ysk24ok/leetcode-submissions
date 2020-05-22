@@ -468,6 +468,10 @@ BINS += 0438/sliding_window_cpp
 0438/sliding_window_cpp: 0438/sliding_window.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
+BINS += 0451/heap_cpp
+0451/heap_cpp: 0451/heap.cpp
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+
 BINS += 0467/dp_cpp
 0467/dp_cpp: 0467/dp.cpp
 	g++ $(CXXFLAGS) -o $@ $^

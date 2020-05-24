@@ -721,6 +721,14 @@ BINS += 1143/dp_rs
 1143/dp_rs: 1143/dp.rs
 	rustc -o $@ $^
 
+BINS += 0962/tle_cpp
+0962/tle_cpp: 0962/tle.cpp
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+
+BINS += 0962/sort_cpp
+0962/sort_cpp: 0962/sort.cpp
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+
 BINS += 1221/solution
 1221/solution: 1221/solution.cpp
 	g++ $(CXXFLAGS) -o $@ $^

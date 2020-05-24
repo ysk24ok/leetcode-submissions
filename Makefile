@@ -356,6 +356,10 @@ BINS += 0238/solution_rs
 0238/solution_rs: 0238/solution.rs
 	rustc -o $@ $^
 
+BINS += 0239/deque_cpp
+0239/deque_cpp: 0239/deque.cpp
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+
 BINS += 0268/sum
 0268/sum: 0268/sum.cpp
 	g++ $(CXXFLAGS) -o $@ $^

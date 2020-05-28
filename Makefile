@@ -408,6 +408,10 @@ BINS += 0337/dfs_cpp
 0337/dfs_cpp: 0337/dfs.cpp leetcode/tree.o
 	g++ $(CXXFLAGS) -o $@ $^
 
+BINS += 0338/solution_cpp
+0338/solution_cpp: 0338/solution.cpp
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+
 BINS += 0344/recursion_cpp
 0344/recursion_cpp: 0344/recursion.cpp
 	g++ $(CXXFLAGS) -I. -o $@ $^

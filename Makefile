@@ -308,6 +308,10 @@ BINS += 0206/solution_cpp
 0206/solution_cpp: 0206/solution.cpp leetcode/linked_list.o
 	g++ $(CXXFLAGS) -I. -o $@ $^
 
+BINS += 0207/dfs_cpp
+0207/dfs_cpp: 0207/dfs.cpp
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+
 BINS += 0208/dfs_cpp
 0208/dfs_cpp: 0208/dfs.cpp
 	g++ $(CXXFLAGS) -o $@ $^

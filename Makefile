@@ -672,6 +672,10 @@ BINS += 0950/queue_rs
 0950/queue_rs: 0950/queue.rs
 	rustc -o $@ $^
 
+BINS += 0973/heap_cpp
+0973/heap_cpp: 0973/heap.cpp
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+
 BINS += 0974/prefix_sum_cpp
 0974/prefix_sum_cpp: 0974/prefix_sum.cpp
 	g++ $(CXXFLAGS) -I. -o $@ $^ -Igtest/include -Lgtest/lib -lgtest -lgtest_main

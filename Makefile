@@ -108,6 +108,10 @@ BINS += 0064/dp_cpp
 0064/dp_cpp: 0064/dp.cpp leetcode/assert.hpp
 	g++ $(CXXFLAGS) -I. -o $@ $<
 
+BINS += 0072/dp_cpp
+0072/dp_cpp: 0072/dp.cpp
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+
 BINS += 0073/solution_cpp
 0073/solution_cpp: 0073/solution.cpp
 	g++ $(CXXFLAGS) -o $@ $^

@@ -336,6 +336,14 @@ BINS += 0221/dfs_cpp
 0221/dfs_cpp: 0221/dfs.cpp
 	g++ $(CXXFLAGS) -I. -o $@ $^
 
+BINS += 0226/recursive_cpp
+0226/recursive_cpp: 0226/recursive.cpp leetcode/tree.o
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+
+BINS += 0226/iterative_cpp
+0226/iterative_cpp: 0226/iterative.cpp leetcode/tree.o
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+
 BINS += 0229/majority_voting_cpp
 0229/majority_voting_cpp: 0229/majority_voting.cpp
 	g++ $(CXXFLAGS) -o $@ $^

@@ -364,6 +364,10 @@ BINS += 0231/bitmanip_cpp
 0231/bitmanip_cpp: 0231/bitmanip.cpp
 	g++ $(CXXFLAGS) -o $@ $^
 
+BINS += 0237/solution_cpp
+0237/solution_cpp: 0237/solution.cpp leetcode/linked_list.o
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+
 BINS += 0238/solution_cpp
 0238/solution_cpp: 0238/solution.cpp leetcode/assert.hpp
 	g++ $(CXXFLAGS) -I. -o $@ $<

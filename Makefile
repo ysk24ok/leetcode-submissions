@@ -733,6 +733,14 @@ BINS += 1008/dfs_cpp
 1008/dfs_cpp: 1008/dfs.cpp leetcode/tree.o
 	g++ $(CXXFLAGS) -I. -o $@ $^
 
+BINS += 1029/heap_cpp
+1029/heap_cpp: 1029/heap.cpp
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+
+BINS += 1029/sort_cpp
+1029/sort_cpp: 1029/sort.cpp
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+
 BINS += 1035/dp_cpp
 1035/dp_cpp: 1035/dp.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)

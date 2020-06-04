@@ -436,6 +436,10 @@ BINS += 0344/recursion_cpp
 0344/recursion_cpp: 0344/recursion.cpp
 	g++ $(CXXFLAGS) -I. -o $@ $^
 
+BINS += 0344/two_pointers_cpp
+0344/two_pointers_cpp: 0344/two_pointers.cpp
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+
 BINS += 0367/binary_search_cpp
 0367/binary_search_cpp: 0367/binary_search.cpp
 	g++ $(CXXFLAGS) -I. -o $@ $^

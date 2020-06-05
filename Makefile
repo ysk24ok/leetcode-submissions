@@ -532,6 +532,10 @@ BINS += 0525/dp_rs
 0525/dp_rs: 0525/dp.rs
 	rustc -o $@ $^
 
+BINS += 0528/binary_search_cpp
+0528/binary_search_cpp: 0528/binary_search.cpp
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+
 BINS += 0540/binary_search_cpp
 0540/binary_search_cpp: 0540/binary_search.cpp
 	g++ $(CXXFLAGS) -I. -o $@ $^

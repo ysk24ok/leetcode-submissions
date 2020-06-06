@@ -472,9 +472,13 @@ BINS += 0402/stack_cpp
 0402/stack_cpp: 0402/stack.cpp
 	g++ $(CXXFLAGS) -I. -o $@ $^
 
-BINS += 0406/solution_cpp
-0406/solution_cpp: 0406/solution.cpp
+BINS += 0406/sort_cpp
+0406/sort_cpp: 0406/sort.cpp
 	g++ $(CXXFLAGS) -o $@ $^
+
+BINS += 0406/heap_cpp
+0406/heap_cpp: 0406/heap.cpp
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
 BINS += 0416/dp_cpp
 0416/dp_cpp: 0416/dp.cpp

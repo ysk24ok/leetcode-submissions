@@ -524,6 +524,10 @@ BINS += 0518/dp_cpp
 0518/dp_cpp: 0518/dp.cpp
 	g++ $(CXXFLAGS) -o $@ $^
 
+BINS += 0518/recursion_with_memoization_cpp
+0518/recursion_with_memoization_cpp: 0518/recursion_with_memoization.cpp
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+
 BINS += 0520/solution_cpp
 0520/solution_cpp: 0520/solution.cpp
 	g++ $(CXXFLAGS) -o $@ $^

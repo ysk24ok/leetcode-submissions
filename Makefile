@@ -44,6 +44,10 @@ BINS += 0035/linear_search_cpp
 0035/linear_search_cpp: 0035/linear_search.cpp
 	g++ $(CXXFLAGS) -o $@ $^
 
+BINS += 0035/binary_search_cpp
+0035/binary_search_cpp: 0035/binary_search.cpp
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+
 BINS += 0039/backtracking_cpp
 0039/backtracking_cpp: 0039/backtracking.cpp
 	g++ $(CXXFLAGS) -I. -o $@ $^

@@ -1,19 +1,8 @@
-#include <algorithm>
 #include <cassert>
 #include <iostream>
-#include <numeric>
-#include <string>
-#include <unordered_map>
 #include <vector>
 
 using namespace std;
-
-void print_vec(const vector<int>& nums) {
-  for (auto& i : nums) {
-    cout << i << ", ";
-  }
-  cout << endl;
-}
 
 class Solution {
  public:
@@ -43,6 +32,5 @@ int main() {
   nums = {2,0,2,1,1,0};
   expected = {0,0,1,1,2,2};
   sol.sortColors(nums);
-  print_vec(nums);
   assert(nums == expected);
 }

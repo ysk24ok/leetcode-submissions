@@ -124,9 +124,14 @@ BINS += 0073/constant_space_complexity_cpp
 0073/constant_space_complexity_cpp: 0073/constant_space_complexity.cpp
 	g++ $(CXXFLAGS) -I. -o $@ $^
 
+# Dutch national flag problem
 BINS += 0075/counting_sort_cpp
 0075/counting_sort_cpp: 0075/counting_sort.cpp
 	g++ $(CXXFLAGS) -o $@ $^
+
+BINS += 0075/one_pass_cpp
+0075/one_pass_cpp: 0075/one_pass.cpp
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
 BINS += 0077/recursion_cpp
 0077/recursion_cpp: 0077/recursion.cpp

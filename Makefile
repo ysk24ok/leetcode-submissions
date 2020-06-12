@@ -457,6 +457,10 @@ BINS += 0376/dp_cpp
 0376/dp_cpp: 0376/dp.cpp
 	g++ $(CXXFLAGS) -o $@ $^
 
+BINS += 0380/hashmap_cpp
+0380/hashmap_cpp: 0380/hashmap.cpp
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+
 BINS += 0383/hashmap_cpp
 0383/hashmap_cpp: 0383/hashmap.cpp
 	g++ $(CXXFLAGS) -I. -o $@ $^

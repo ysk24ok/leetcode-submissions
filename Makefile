@@ -653,6 +653,10 @@ BINS += 0787/bellman_ford_cpp
 0787/bellman_ford_cpp: 0787/bellman_ford.cpp
 	g++ $(CXXFLAGS) -o $@ $^
 
+BINS += 0787/dijkstra_cpp
+0787/dijkstra_cpp: 0787/dijkstra.cpp
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+
 BINS += 0799/dp
 0799/dp: 0799/dp.cpp
 	g++ $(CXXFLAGS) -o $@ $^

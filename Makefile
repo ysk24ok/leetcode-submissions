@@ -205,6 +205,10 @@ BINS += 0129/dfs
 0129/dfs: 0129/dfs.cpp leetcode/tree.o
 	g++ $(CXXFLAGS) -o $@ $^
 
+BINS += 0130/dfs_cpp
+0130/dfs_cpp: 0130/dfs.cpp
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+
 BINS += 0136/hash_table_cpp
 0136/hash_table_cpp: 0136/hash_table.cpp
 	g++ $(CXXFLAGS) -o $@ $^

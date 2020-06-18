@@ -397,6 +397,10 @@ BINS += 0268/sum
 0268/sum: 0268/sum.cpp
 	g++ $(CXXFLAGS) -o $@ $^
 
+BINS += 0275/binary_search_cpp
+0275/binary_search_cpp: 0275/binary_search.cpp
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+
 BINS += 0278/binary_search_cpp
 0278/binary_search_cpp: 0278/binary_search.cpp
 	g++ $(CXXFLAGS) -I. -o $@ $^

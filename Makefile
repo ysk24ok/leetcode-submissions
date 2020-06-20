@@ -92,6 +92,10 @@ BINS += 0055/dp_bottom_up_cpp
 0055/dp_bottom_up_cpp: 0055/dp_bottom_up.cpp
 	g++ $(CXXFLAGS) -I. -o $@ $^
 
+BINS += 0060/solution_cpp
+0060/solution_cpp: 0060/solution.cpp
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+
 BINS += 0062/dp_matrix
 0062/dp_matrix: 0062/dp_matrix.cpp
 	g++ $(CXXFLAGS) -o $@ $^

@@ -798,6 +798,10 @@ BINS += 1035/dp_cpp
 1035/dp_cpp: 1035/dp.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
+BINS += 1044/binary_search_cpp
+1044/binary_search_cpp: 1044/binary_search.cpp
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+
 BINS += 1046/heap_cpp
 1046/heap_cpp: 1046/heap.cpp
 	g++ $(CXXFLAGS) -o $@ $^

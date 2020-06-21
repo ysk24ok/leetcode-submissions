@@ -281,6 +281,10 @@ BINS += 0169/boyer_moore_voting_cpp
 0169/boyer_moore_voting_cpp: 0169/boyer_moore_voting.cpp
 	g++ $(CXXFLAGS) -I. -o $@ $^
 
+BINS += 0174/recursion_with_memoization_cpp
+0174/recursion_with_memoization_cpp: 0174/recursion_with_memoization.cpp
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+
 BINS += 0187/map_cpp
 0187/map_cpp: 0187/map.cpp
 	g++ $(CXXFLAGS) -o $@ $^

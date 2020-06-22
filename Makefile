@@ -221,6 +221,10 @@ BINS += 0136/bitmanip_cpp
 0136/bitmanip_cpp: 0136/bitmanip.cpp
 	g++ $(CXXFLAGS) -o $@ $^
 
+BINS += 0137/hash_table_cpp
+0137/hash_table_cpp: 0137/hash_table.cpp
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+
 BINS += 0139/dfs
 0139/dfs: 0139/dfs.cpp
 	g++ $(CXXFLAGS) -o $@ $^

@@ -157,6 +157,10 @@ BINS += 0094/iterative_cpp
 0094/iterative_cpp: 0094/iterative.cpp leetcode/tree.o
 	g++ $(CXXFLAGS) -I. -o $@ $^
 
+BINS += 0096/recursion_with_memoization_cpp
+0096/recursion_with_memoization_cpp: 0096/recursion_with_memoization.cpp
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+
 BINS += 0097/backtracking
 0097/backtracking: 0097/backtracking.cpp
 	g++ $(CXXFLAGS) -o $@ $^

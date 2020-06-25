@@ -429,6 +429,11 @@ BINS += 0283/solution_cpp
 0283/solution_cpp: 0283/solution.cpp
 	g++ $(CXXFLAGS) -o $@ $^
 
+# Floyd's Tortoise and Hare
+BINS += 0287/constant_space_complexity_cpp
+0287/constant_space_complexity_cpp: 0287/constant_space_complexity.cpp
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+
 BINS += 0297/bfs
 0297/bfs: 0297/bfs.cpp leetcode/tree.o
 	g++ $(CXXFLAGS) -o $@ $^

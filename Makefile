@@ -209,9 +209,13 @@ BINS += 0128/union_find_cpp
 0128/union_find_cpp: 0128/union_find.cpp
 	g++ $(CXXFLAGS) -o $@ $^
 
-BINS += 0129/dfs
-0129/dfs: 0129/dfs.cpp leetcode/tree.o
+BINS += 0129/bottom_up_dfs
+0129/bottom_up_dfs_cpp: 0129/bottom_up_dfs.cpp leetcode/tree.o
 	g++ $(CXXFLAGS) -o $@ $^
+
+BINS += 0129/top_down_dfs_cpp
+0129/top_down_dfs_cpp: 0129/top_down_dfs.cpp leetcode/tree.o
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
 BINS += 0130/dfs_cpp
 0130/dfs_cpp: 0130/dfs.cpp

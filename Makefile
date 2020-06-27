@@ -429,6 +429,10 @@ BINS += 0278/binary_search_cpp
 0278/binary_search_cpp: 0278/binary_search.cpp
 	g++ $(CXXFLAGS) -I. -o $@ $^
 
+BINS += 0279/recursive_cpp
+0279/recursive_cpp: 0279/recursive.cpp
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+
 BINS += 0283/solution_cpp
 0283/solution_cpp: 0283/solution.cpp
 	g++ $(CXXFLAGS) -o $@ $^

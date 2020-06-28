@@ -474,6 +474,10 @@ BINS += 0328/constant_space_cpp
 0328/constant_space_cpp: 0328/constant_space.cpp leetcode/linked_list.o
 	g++ $(CXXFLAGS) -I. -o $@ $^ -Igtest/include -Lgtest/lib -lgtest -lgtest_main
 
+BINS += 0332/recursive_cpp
+0332/recursive_cpp: 0332/recursive.cpp
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+
 BINS += 0337/dfs_cpp
 0337/dfs_cpp: 0337/dfs.cpp leetcode/tree.o
 	g++ $(CXXFLAGS) -o $@ $^

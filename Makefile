@@ -100,6 +100,10 @@ BINS += 0062/dp_matrix
 0062/dp_matrix: 0062/dp_matrix.cpp
 	g++ $(CXXFLAGS) -o $@ $^
 
+BINS += 0062/dp_vector_cpp
+0062/dp_vector_cpp: 0062/dp_vector.cpp
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+
 BINS += 0062/dp_two_vec
 0062/dp_two_vec: 0062/dp_two_vec.rs
 	rustc -o $@ $^

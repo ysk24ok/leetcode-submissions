@@ -357,6 +357,10 @@ BINS += 0208/dfs_cpp
 0208/dfs_cpp: 0208/dfs.cpp
 	g++ $(CXXFLAGS) -o $@ $^
 
+BINS += 0212/recursive_cpp
+0212/recursive_cpp: 0212/recursive.cpp
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+
 BINS += 0213/dp_cpp
 0213/dp_cpp: 0213/dp.cpp
 	g++ $(CXXFLAGS) -o $@ $^

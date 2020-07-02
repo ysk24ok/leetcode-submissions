@@ -16,6 +16,8 @@ elif [ $language = rust ]; then
   ext=rs
   rule="$number/${name}_$ext: $number/$name.$ext"
   cmd='rustc -o $@ $^'
+elif [ $language = py ]; then
+  ext=py
 else
   echo "Error: $language is not supported."
   exit 1
@@ -24,6 +26,9 @@ fi
 curdir=$(pwd)
 mkdir -p $curdir/$number
 cp $curdir/templates/template.$ext $number/$name.$ext
+if [ $language = py ]; then
+  exit 0
+fi
 rule=$(cat << EOF
 \nBINS += $number/${name}_$ext
 $rule

@@ -36,6 +36,10 @@ BINS += 0024/recursion_cpp
 0024/recursion_cpp: 0024/recursion.cpp leetcode/linked_list.o
 	g++ $(CXXFLAGS) -I. -o $@ $^
 
+BINS += 0031/solution
+0031/solution: 0031/solution.cpp
+	g++ -std=c++11 -o $@ $^
+
 BINS += 0033/binary_search_cpp
 0033/binary_search_cpp: 0033/binary_search.cpp leetcode/assert.hpp
 	g++ $(CXXFLAGS) -I. -o $@ $<

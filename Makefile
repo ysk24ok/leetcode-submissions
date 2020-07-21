@@ -149,6 +149,10 @@ BINS += 0077/recursion_cpp
 0077/recursion_cpp: 0077/recursion.cpp
 	g++ $(CXXFLAGS) -o $@ $^
 
+BINS += 0079/recursive_cpp
+0079/recursive_cpp: 0079/recursive.cpp
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+
 BINS += 0083/linked_list
 0083/linked_list: 0083/linked_list.cpp leetcode/linked_list.o
 	g++ $(CXXFLAGS) -o $@ $^

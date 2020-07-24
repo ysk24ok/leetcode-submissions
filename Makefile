@@ -28,6 +28,10 @@ BINS += 0019/two_pass_cpp
 0019/two_pass_cpp: 0019/two_pass.cpp leetcode/linked_list.o
 	g++ $(CXXFLAGS) -o $@ $^
 
+BINS += 0019/one_pass_cpp
+0019/one_pass_cpp: 0019/one_pass.cpp leetcode/linked_list.o
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+
 BINS += 0021/solution_cpp
 0021/solution_cpp: 0021/solution.cpp leetcode/linked_list.o
 	g++ $(CXXFLAGS) -I. -o $@ $^

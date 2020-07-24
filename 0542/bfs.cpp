@@ -1,10 +1,9 @@
 #include <algorithm>
-#include <cassert>
-#include <iostream>
 #include <limits>
 #include <queue>
-#include <string>
 #include <vector>
+
+#include "gtest/gtest.h"
 
 using namespace std;
 
@@ -45,33 +44,16 @@ class Solution {
   }
 };
 
-void print_matrix(const vector<vector<int>>& matrix) {
-  for (auto& row : matrix) {
-    for (auto& e : row) {
-      cout << e << " ";
-    }
-    cout << endl;
-  }
-  cout << endl;
-}
-
 int main() {
   Solution sol;
-  vector<vector<int>> matrix;
-  vector<vector<int>> got;
-  vector<vector<int>> expected;
+  vector<vector<int>> matrix, expected;
 
   matrix = {
     {0,0,0},
     {0,1,0},
     {0,0,0}
   };
-  got = sol.updateMatrix(matrix);
-  assert(matrix.size() == got.size());
-  print_matrix(got);
-  for (int i = 0; i < matrix.size(); i++) {
-    assert(matrix[i] == got[i]);
-  }
+  EXPECT_EQ(matrix, sol.updateMatrix(matrix));
 
   matrix = {
     {0,0,0},
@@ -83,12 +65,7 @@ int main() {
     {0,1,0},
     {1,2,1}
   };
-  got = sol.updateMatrix(matrix);
-  assert(matrix.size() == got.size());
-  print_matrix(got);
-  for (int i = 0; i < got.size(); i++) {
-    assert(got[i] == expected[i]);
-  }
+  EXPECT_EQ(expected, sol.updateMatrix(matrix));
 
   matrix = {
     {1,1,1},
@@ -100,12 +77,7 @@ int main() {
     {2,1,0},
     {1,0,1}
   };
-  got = sol.updateMatrix(matrix);
-  assert(matrix.size() == got.size());
-  print_matrix(got);
-  for (int i = 0; i < got.size(); i++) {
-    assert(got[i] == expected[i]);
-  }
+  EXPECT_EQ(expected, sol.updateMatrix(matrix));
 
   matrix = {
     {1,0,1,1,0,0,1,0,0,1},
@@ -131,10 +103,5 @@ int main() {
     {2,1,1,1,1,2,1,0,1,0},
     {3,2,2,1,0,1,0,0,1,1}
   };
-  got = sol.updateMatrix(matrix);
-  assert(matrix.size() == got.size());
-  print_matrix(got);
-  for (int i = 0; i < got.size(); i++) {
-    assert(got[i] == expected[i]);
-  }
+  EXPECT_EQ(expected, sol.updateMatrix(matrix));
 }

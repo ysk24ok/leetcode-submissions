@@ -1,7 +1,5 @@
 #include "../leetcode/tree.hpp"
 
-#include <vector>
-
 #include "gtest/gtest.h"
 
 namespace LeetCode {
@@ -12,7 +10,7 @@ TEST(CreateTreeNodeTest, normal_string) {
   //    2   3
   //   /
   //  4
-  std::string s("1 2 3 4 ;");
+  std::string s("1 2 3 4");
   TreeNode* got = CreateTreeNode(s);
   EXPECT_EQ(1, got->val);
   EXPECT_EQ(2, got->left->val);
@@ -26,14 +24,13 @@ TEST(CreateTreeNodeTest, normal_string) {
   DeleteTreeNode(got);
 }
 
-
 TEST(CreateTreeNodeTest, string_with_empty_node) {
   //      1
   //       \
   //        2
   //       /
   //      3
-  std::string s("1 # 2 # # 3 ;");
+  std::string s("1 # 2 3");
   TreeNode* got = CreateTreeNode(s);
   EXPECT_EQ(1, got->val);
   EXPECT_EQ(nullptr, got->left);
@@ -45,11 +42,17 @@ TEST(CreateTreeNodeTest, string_with_empty_node) {
   DeleteTreeNode(got);
 }
 
-TEST(CreateTreeNodeTest, from_empty_string) {
+TEST(CreateTreeNodeTest, empty_string) {
   std::string s;
   TreeNode* got = CreateTreeNode(s);
   EXPECT_EQ(nullptr, got);
   DeleteTreeNode(got);
 }
 
-} // namespace LeetCode
+TEST(CreateTreeNodeTest, blank_string) {
+  std::string s("  ");
+  TreeNode* got = CreateTreeNode(s);
+  EXPECT_EQ(nullptr, got);
+}
+
+}  // namespace LeetCode

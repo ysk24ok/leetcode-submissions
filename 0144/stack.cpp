@@ -1,13 +1,6 @@
-#include <algorithm>
 #include <cassert>
-#include <iostream>
-#include <limits>
-#include <numeric>
-#include <queue>
-#include <set>
 #include <stack>
 #include <string>
-#include <unordered_map>
 #include <vector>
 
 #include "leetcode/tree.hpp"
@@ -40,13 +33,13 @@ int main() {
   TreeNode* root;
   vector<int> got, expected;
 
-  root = CreateTreeNode("1 # 2 # # 3 ;");
+  root = CreateTreeNode("1 # 2 3");
   got = sol.preorderTraversal(root);
   expected = {1,2,3};
   assert(got == expected);
   DeleteTreeNode(root);
 
-  root = CreateTreeNode("1 2 3 4 5 6 7 ;");
+  root = CreateTreeNode("1 2 3 4 5 6 7");
   got = sol.preorderTraversal(root);
   expected = {1,2,4,5,3,6,7};
   assert(got == expected);

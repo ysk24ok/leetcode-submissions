@@ -167,11 +167,11 @@ BINS += 0089/recursion
 
 BINS += 0094/recursive_cpp
 0094/recursive_cpp: 0094/recursive.cpp leetcode/tree.o
-	g++ $(CXXFLAGS) -I. -o $@ $^
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
 BINS += 0094/iterative_cpp
 0094/iterative_cpp: 0094/iterative.cpp leetcode/tree.o
-	g++ $(CXXFLAGS) -I. -o $@ $^
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
 BINS += 0096/recursion_with_memoization_cpp
 0096/recursion_with_memoization_cpp: 0096/recursion_with_memoization.cpp
@@ -187,11 +187,11 @@ BINS += 0097/backtracking_with_memoization
 
 BINS += 0102/dfs_cpp
 0102/dfs_cpp: 0102/dfs.cpp leetcode/tree.o
-	g++ $(CXXFLAGS) -I. -o $@ $^
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
 BINS += 0102/bfs_cpp
 0102/bfs_cpp: 0102/bfs.cpp leetcode/tree.o
-	g++ $(CXXFLAGS) -I. -o $@ $^
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
 BINS += 0104/dfs
 0104/dfs: 0104/dfs.cpp leetcode/tree.o
@@ -215,7 +215,7 @@ BINS += 0123/dp_cpp
 
 BINS += 0124/dfs_cpp
 0124/dfs_cpp: 0124/dfs.cpp leetcode/tree.o
-	g++ $(CXXFLAGS) -I. -o $@ $^
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
 BINS += 0125/two_pointers_cpp
 0125/two_pointers_cpp: 0125/two_pointers.cpp
@@ -225,9 +225,9 @@ BINS += 0128/union_find_cpp
 0128/union_find_cpp: 0128/union_find.cpp
 	g++ $(CXXFLAGS) -o $@ $^
 
-BINS += 0129/bottom_up_dfs
+BINS += 0129/bottom_up_dfs_cpp
 0129/bottom_up_dfs_cpp: 0129/bottom_up_dfs.cpp leetcode/tree.o
-	g++ $(CXXFLAGS) -o $@ $^
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
 BINS += 0129/top_down_dfs_cpp
 0129/top_down_dfs_cpp: 0129/top_down_dfs.cpp leetcode/tree.o
@@ -267,19 +267,19 @@ BINS += 0142/hash_table_cpp
 
 BINS += 0144/dfs_cpp
 0144/dfs_cpp: 0144/dfs.cpp leetcode/tree.o
-	g++ $(CXXFLAGS) -I. -o $@ $^
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
 BINS += 0144/stack_cpp
 0144/stack_cpp: 0144/stack.cpp leetcode/tree.o
-	g++ $(CXXFLAGS) -I. -o $@ $^
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
 BINS += 0145/recursive_cpp
 0145/recursive_cpp: 0145/recursive.cpp leetcode/tree.o
-	g++ $(CXXFLAGS) -I. -o $@ $^
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
 BINS += 0145/iterative_cpp
 0145/iterative_cpp: 0145/iterative.cpp leetcode/tree.o
-	g++ $(CXXFLAGS) -I. -o $@ $^
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
 BINS += 0146/hashmap_cpp
 0146/hashmap_cpp: 0146/hashmap.cpp
@@ -407,7 +407,7 @@ BINS += 0229/majority_voting_cpp
 
 BINS += 0230/dfs_cpp
 0230/dfs_cpp: 0230/dfs.cpp leetcode/tree.o
-	g++ $(CXXFLAGS) -I. -o $@ $^
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
 BINS += 0230/dfs_iterative_cpp
 0230/dfs_iterative_cpp: 0230/dfs_iterative.cpp leetcode/tree.o
@@ -462,13 +462,13 @@ BINS += 0287/constant_space_complexity_cpp
 0287/constant_space_complexity_cpp: 0287/constant_space_complexity.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
-BINS += 0297/bfs
-0297/bfs: 0297/bfs.cpp leetcode/tree.o
-	g++ $(CXXFLAGS) -o $@ $^
+BINS += 0297/bfs_cpp
+0297/bfs_cpp: 0297/bfs.cpp leetcode/tree.o
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
-BINS += 0297/dfs
-0297/dfs: 0297/dfs.cpp leetcode/tree.o
-	g++ $(CXXFLAGS) -o $@ $^
+BINS += 0297/dfs_cpp
+0297/dfs_cpp: 0297/dfs.cpp leetcode/tree.o
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
 BINS += 0300/dp
 0300/dp: 0300/dp.cpp
@@ -500,7 +500,7 @@ BINS += 0332/recursive_cpp
 
 BINS += 0337/dfs_cpp
 0337/dfs_cpp: 0337/dfs.cpp leetcode/tree.o
-	g++ $(CXXFLAGS) -o $@ $^
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
 BINS += 0338/solution_cpp
 0338/solution_cpp: 0338/solution.cpp
@@ -644,7 +644,7 @@ BINS += 0542/bfs_cpp
 
 BINS += 0543/dfs_cpp
 0543/dfs_cpp: 0543/dfs.cpp leetcode/tree.o
-	g++ $(CXXFLAGS) -I. -o $@ $^
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
 BINS += 0547/union_find_without_rank_cpp
 0547/union_find_without_rank_cpp: 0547/union_find_without_rank.cpp
@@ -819,17 +819,17 @@ BINS += 0986/two_pointers_cpp
 0986/two_pointers_cpp: 0986/two_pointers.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
-BINS += 0988/bottom_up_dfs
-0988/bottom_up_dfs: 0988/bottom_up_dfs.cpp leetcode/tree.o
-	g++ $(CXXFLAGS) -o $@ $^
+BINS += 0988/bottom_up_dfs_cpp
+0988/bottom_up_dfs_cpp: 0988/bottom_up_dfs.cpp leetcode/tree.o
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
-BINS += 0988/top_down_dfs
-0988/top_down_dfs: 0988/top_down_dfs.cpp leetcode/tree.o
-	g++ $(CXXFLAGS) -o $@ $^
+BINS += 0988/top_down_dfs_cpp
+0988/top_down_dfs_cpp: 0988/top_down_dfs.cpp leetcode/tree.o
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
 BINS += 0993/dfs_cpp
 0993/dfs_cpp: 0993/dfs.cpp leetcode/tree.o
-	g++ $(CXXFLAGS) -I. -o $@ $^
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
 BINS += 0997/solution_cpp
 0997/solution_cpp: 0997/solution.cpp
@@ -1073,7 +1073,7 @@ BINS += 1429/linked_list_cpp
 
 BINS += 1430/dfs_cpp
 1430/dfs_cpp: 1430/dfs.cpp leetcode/tree.o
-	g++ $(CXXFLAGS) -I. -o $@ $^
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
 BINS += 1441/solution_cpp
 1441/solution_cpp: 1441/solution.cpp

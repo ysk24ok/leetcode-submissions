@@ -2,7 +2,7 @@
 #include <sstream>
 #include <string>
 
-#include "../leetcode/tree.hpp"
+#include "leetcode/tree.hpp"
 
 using namespace std;
 using namespace LeetCode;
@@ -48,7 +48,12 @@ class Codec {
 int main() {
   Codec codec;
 
-  string s = "1 2 3 # # 4 5 ;";
+  //      1
+  //     / \
+  //    2   3
+  //       / \
+  //      4   5
+  string s = "1 2 3 # # 4 5";
   TreeNode* root = CreateTreeNode(s);
 
   TreeNode* got = codec.deserialize(codec.serialize(root));

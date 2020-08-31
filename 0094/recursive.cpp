@@ -29,13 +29,19 @@ int main() {
   TreeNode* root;
   vector<int> got, expected;
 
-  root = CreateTreeNode("1 # 2 # # 3 ;");
+  //  1
+  //   2
+  //  3
+  root = CreateTreeNode("1 # 2 3");
   expected = {1,3,2};
   got = sol.inorderTraversal(root);
   assert(got == expected);
   DeleteTreeNode(root);
 
-  root = CreateTreeNode("1 2 3 4 5 6 7 ;");
+  //     1
+  //   2   3
+  //  4 5 6 7
+  root = CreateTreeNode("1 2 3 4 5 6 7");
   expected = {4,2,5,1,6,3,7};
   got = sol.inorderTraversal(root);
   assert(got == expected);

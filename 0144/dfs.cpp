@@ -29,7 +29,7 @@ int main() {
   TreeNode* root;
   vector<int> got, expected;
 
-  str = "1 # 2 # # 3 ;";
+  str = "1 # 2 3";
   root = CreateTreeNode(str);
   expected = {1,2,3};
   got = sol.preorderTraversal(root);

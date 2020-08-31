@@ -29,7 +29,14 @@ int main() {
   TreeNode* root = nullptr;
   vector<int> arr;
 
-  root = CreateTreeNode("0 1 0 0 1 0 # # 1 0 0 ;");
+  //          0
+  //        /   \
+  //      1       0
+  //    /   \    /
+  //   0     1  0
+  //    \   / \
+  //     1 0   0
+  root = CreateTreeNode("0 1 0 0 1 0 # # 1 0 0");
   arr = {0,1,0,1};
   ExpectEqual(true, sol.isValidSequence(root, arr));
   arr = {0,0,0};
@@ -53,7 +60,7 @@ int main() {
   //   2   1
   //  / \
   // 5   4
-  root = CreateTreeNode("8 3 # 2 1 # # 5 4 ;");
+  root = CreateTreeNode("8 3 # 2 1 5 4");
   arr = {8,3,1};
   ExpectEqual(true, sol.isValidSequence(root, arr));
   arr = {8,3};

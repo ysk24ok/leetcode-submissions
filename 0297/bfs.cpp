@@ -4,7 +4,7 @@
 #include <sstream>
 #include <string>
 
-#include "../leetcode/tree.hpp"
+#include "leetcode/tree.hpp"
 
 using namespace std;
 using namespace LeetCode;
@@ -70,7 +70,12 @@ int main() {
   TreeNode* root;
   TreeNode* got;
 
-  s = "1 2 3 # # 4 5 ;";
+  //      1
+  //     / \
+  //    2   3
+  //       / \
+  //      4   5
+  s = "1 2 3 # # 4 5";
   root = CreateTreeNode(s);
   got = codec.deserialize(codec.serialize(root));
   assert(got->val == 1);
@@ -90,7 +95,7 @@ int main() {
   //      2   4
   //     / \
   //    3   1
-  s = "5 2 3 # # 2 4 # # # # 3 1 ;";
+  s = "5 2 3 # # 2 4 3 1";
   root = CreateTreeNode(s);
   got = codec.deserialize(codec.serialize(root));
   assert(got->val == 5);

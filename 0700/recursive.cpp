@@ -22,7 +22,7 @@ class Solution {
 int main() {
   Solution sol;
   int val;
-  TreeNode* root = CreateTreeNode("4 2 7 1 3 ;");
+  TreeNode* root = CreateTreeNode("4 2 7 1 3");
   TreeNode* got;
 
   val = 2;

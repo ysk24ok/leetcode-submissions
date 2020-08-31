@@ -2,7 +2,7 @@
 #include <iostream>
 #include <string>
 
-#include "../leetcode/tree.hpp"
+#include "leetcode/tree.hpp"
 
 using namespace std;
 using namespace LeetCode;
@@ -41,19 +41,19 @@ int main() {
   TreeNode* node;
   int got;
 
-  s = "1 2 3 ;";
+  s = "1 2 3";
   node = CreateTreeNode(s);
   got = sol.sumNumbers(node);
   DeleteTreeNode(node);
   assert(got == 25);
 
-  s = "4 9 0 5 1 ;";
+  s = "4 9 0 5 1";
   node = CreateTreeNode(s);
   got = sol.sumNumbers(node);
   DeleteTreeNode(node);
   assert(got == 1026);
 
-  s = "4 0 9 # # 5 1 ;";
+  s = "4 0 9 # # 5 1";
   node = CreateTreeNode(s);
   got = sol.sumNumbers(node);
   DeleteTreeNode(node);

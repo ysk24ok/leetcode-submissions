@@ -3,7 +3,7 @@
 #include <iostream>
 #include <vector>
 
-#include "../leetcode/tree.hpp"
+#include "leetcode/tree.hpp"
 
 using namespace std;
 using namespace LeetCode;
@@ -47,7 +47,7 @@ int main() {
   // 2   3
   //  \   \
   //   3   1
-  s = "3 2 3 # 3 # 1 ;";
+  s = "3 2 3 # 3 # 1";
   node = CreateTreeNode(s);
   assert(sol.rob(node) == 7);
 
@@ -56,7 +56,7 @@ int main() {
   //   4   5
   //  / \   \
   // 1   3   1
-  s = "3 4 5 1 3 # 1 ;";
+  s = "3 4 5 1 3 # 1";
   node = CreateTreeNode(s);
   assert(sol.rob(node) == 9);
 
@@ -65,7 +65,7 @@ int main() {
   //      1   3
   //       \ (4,0)
   //        4
-  s = "2 1 3 # 4 ;";
+  s = "2 1 3 # 4";
   node = CreateTreeNode(s);
   assert(sol.rob(node) == 7);
 

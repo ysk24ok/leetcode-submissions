@@ -3,12 +3,12 @@
 #include <string>
 #include <vector>
 
-#include "../leetcode/tree.hpp"
+#include "leetcode/tree.hpp"
 
 using namespace std;
 using namespace LeetCode;
 
-// This bottom-up approch does not work with some cases
+// This bottom-up approach does not work with some cases
 // such as [25,1,null,0,0,1,null,null,null,0]
 // See https://leetcode.com/problems/smallest-string-starting-from-leaf/discuss/244205/Divide-and-conquer-technique-doesn't-work-for-this-problem
 class Solution {
@@ -40,7 +40,6 @@ class Solution {
   }
 
   bool compareLexicographically(const string& s1, const string& s2) {
-    cout << s1 << ", " << s2 << endl;
     size_t size = (s1.size() > s2.size()) ? s2.size() : s1.size();
     for (int i = 0; i < size; i++) {
       if (s1[i] == s2[i]) continue;
@@ -56,37 +55,43 @@ int main() {
   string s;
   TreeNode* node;
 
-  s = "0 1 2 3 4 3 4 ;";
+  s = "0 1 2 3 4 3 4";
   node = CreateTreeNode(s);
   assert(sol.smallestFromLeaf(node) == "dba");
+  DeleteTreeNode(node);
 
-  s = "25 1 3 1 3 0 2 ;";
+  s = "25 1 3 1 3 0 2";
   node = CreateTreeNode(s);
   assert(sol.smallestFromLeaf(node) == "adz");
+  DeleteTreeNode(node);
 
-  s = "2 2 1 # 1 0 # 0 ;";
+  s = "2 2 1 # 1 0 # 0";
   node = CreateTreeNode(s);
   assert(sol.smallestFromLeaf(node) == "abc");
+  DeleteTreeNode(node);
 
-  s = "1 ;";
+  s = "1";
   node = CreateTreeNode(s);
   assert(sol.smallestFromLeaf(node) == "b");
+  DeleteTreeNode(node);
 
   assert(sol.compareLexicographically("be", "bae") == false);
 
   //   4
   //  0 1
   // 1
-  s = "4 0 1 1 ;";
+  s = "4 0 1 1";
   node = CreateTreeNode(s);
   assert(sol.smallestFromLeaf(node) == "bae");
+  DeleteTreeNode(node);
 
   //     25
   //    1
   //   0 0
   //  1
   // 0
-  s = "25 1 # 0 0 # # 1 # # # # # # # 0 ;";
+  s = "25 1 # 0 0 1 # # # 0";
   node = CreateTreeNode(s);
   assert(sol.smallestFromLeaf(node) == "ababz");
+  DeleteTreeNode(node);
 }

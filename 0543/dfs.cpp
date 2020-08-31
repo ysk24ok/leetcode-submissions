@@ -28,11 +28,11 @@ int main() {
   Solution sol;
   TreeNode* root;
 
-  root = CreateTreeNode("1 2 3 4 5 ;");
+  root = CreateTreeNode("1 2 3 4 5");
   assert(sol.diameterOfBinaryTree(root) == 3);
   DeleteTreeNode(root);
 
-  root = CreateTreeNode("0 ;");
+  root = CreateTreeNode("0");
   assert(sol.diameterOfBinaryTree(root) == 0);
   DeleteTreeNode(root);
 }

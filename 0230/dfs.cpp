@@ -35,7 +35,7 @@ int main() {
   // 1   4
   //  \
   //   2
-  node = CreateTreeNode("3 1 4 # 2 ;");
+  node = CreateTreeNode("3 1 4 # 2");
   assert(sol.kthSmallest(node, 1) == 1);
   DeleteTreeNode(node);
 
@@ -46,7 +46,7 @@ int main() {
   //   2   4
   //  /
   // 1
-  node = CreateTreeNode("5 3 6 2 4 # # 1 ;");
+  node = CreateTreeNode("5 3 6 2 4 # # 1");
   assert(sol.kthSmallest(node, 3) == 3);
   DeleteTreeNode(node);
 
@@ -57,7 +57,7 @@ int main() {
   //   2   6  11  13
   //  / \ / \
   // 1  3 5  7
-  node = CreateTreeNode("10 4 12 2 6 11 13 1 3 5 7 ;");
+  node = CreateTreeNode("10 4 12 2 6 11 13 1 3 5 7");
   assert(sol.kthSmallest(node, 9) == 11);
   DeleteTreeNode(node);
 }

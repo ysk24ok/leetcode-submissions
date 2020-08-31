@@ -31,7 +31,7 @@ int main() {
   TreeNode* root = nullptr;
   TreeNode* got = nullptr;
 
-  root = CreateTreeNode("4 2 7 1 3 6 9 ;");
+  root = CreateTreeNode("4 2 7 1 3 6 9");
   got = sol.invertTree(root);
   EXPECT_EQ(4, got->val);
   EXPECT_EQ(7, got->left->val);

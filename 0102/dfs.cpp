@@ -31,7 +31,7 @@ int main() {
   vector<vector<int>> got;
   vector<int> expected;
 
-  node = CreateTreeNode("3 9 20 # # 15 7 ;");
+  node = CreateTreeNode("3 9 20 # # 15 7");
   got = sol.levelOrder(node);
   expected = {3};
   assert (got[0] == expected);
@@ -41,7 +41,7 @@ int main() {
   assert (got[2] == expected);
   DeleteTreeNode(node);
 
-  node = CreateTreeNode("1 2 3 4 5 6 7 ;");
+  node = CreateTreeNode("1 2 3 4 5 6 7");
   got = sol.levelOrder(node);
   expected = {1};
   assert (got[0] == expected);

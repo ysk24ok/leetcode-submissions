@@ -40,51 +40,51 @@ int main() {
   Solution sol;
   TreeNode* node = nullptr;
 
-  node = CreateTreeNode("1 2 3 ;");
+  node = CreateTreeNode("1 2 3");
   ExpectEqual(6, sol.maxPathSum(node));
   DeleteTreeNode(node);
 
-  node = CreateTreeNode("1 -2 -3 ;");
+  node = CreateTreeNode("1 -2 -3");
   ExpectEqual(1, sol.maxPathSum(node));
   DeleteTreeNode(node);
 
-  node = CreateTreeNode("1 -2 3 ;");
+  node = CreateTreeNode("1 -2 3");
   ExpectEqual(4, sol.maxPathSum(node));
   DeleteTreeNode(node);
 
-  node = CreateTreeNode("-10 9 20 # # 15 7 ;");
+  node = CreateTreeNode("-10 9 20 # # 15 7");
   ExpectEqual(42, sol.maxPathSum(node));
   DeleteTreeNode(node);
 
-  node = CreateTreeNode("10 9 20 # # 15 7 ;");
+  node = CreateTreeNode("10 9 20 # # 15 7");
   ExpectEqual(54, sol.maxPathSum(node));
   DeleteTreeNode(node);
 
-  node = CreateTreeNode("-10 9 20 # # 15 -7 ;");
+  node = CreateTreeNode("-10 9 20 # # 15 -7");
   ExpectEqual(35, sol.maxPathSum(node));
   DeleteTreeNode(node);
 
-  node = CreateTreeNode("-10 -9 20 # # -15 -7 ;");
+  node = CreateTreeNode("-10 -9 20 # # -15 -7");
   ExpectEqual(20, sol.maxPathSum(node));
   DeleteTreeNode(node);
 
-  node = CreateTreeNode("-3 ;");
+  node = CreateTreeNode("-3");
   ExpectEqual(-3, sol.maxPathSum(node));
   DeleteTreeNode(node);
 
-  node = CreateTreeNode("-3 1 ;");
+  node = CreateTreeNode("-3 1");
   ExpectEqual(1, sol.maxPathSum(node));
   DeleteTreeNode(node);
 
-  node = CreateTreeNode("-3 # 1 ;");
+  node = CreateTreeNode("-3 # 1");
   ExpectEqual(1, sol.maxPathSum(node));
   DeleteTreeNode(node);
 
-  node = CreateTreeNode("2 -1 ;");
+  node = CreateTreeNode("2 -1");
   ExpectEqual(2, sol.maxPathSum(node));
   DeleteTreeNode(node);
 
-  node = CreateTreeNode("2 # -1 ;");
+  node = CreateTreeNode("2 # -1");
   ExpectEqual(2, sol.maxPathSum(node));
   DeleteTreeNode(node);
 }

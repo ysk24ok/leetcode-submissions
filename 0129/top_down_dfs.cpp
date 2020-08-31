@@ -1,16 +1,7 @@
-#include <algorithm>
 #include <cassert>
-#include <cstdlib>
 #include <iostream>
-#include <iterator>
-#include <limits>
 #include <numeric>
-#include <queue>
-#include <stack>
 #include <string>
-#include <unordered_map>
-#include <unordered_set>
-#include <utility>
 #include <vector>
 
 #include "gtest/gtest.h"
@@ -43,12 +34,12 @@ int main() {
   TreeNode* root;
   int expected;
 
-  root = CreateTreeNode("1 2 3 ;");
+  root = CreateTreeNode("1 2 3");
   expected = 25;
   EXPECT_EQ(expected, sol.sumNumbers(root));
   DeleteTreeNode(root);
 
-  root = CreateTreeNode("4 9 0 5 1 ;");
+  root = CreateTreeNode("4 9 0 5 1");
   expected = 1026;
   EXPECT_EQ(expected, sol.sumNumbers(root));
   DeleteTreeNode(root);

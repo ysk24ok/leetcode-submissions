@@ -1,16 +1,4 @@
-#include <algorithm>
-#include <cassert>
-#include <iostream>
-#include <iterator>
-#include <limits>
-#include <numeric>
-#include <queue>
-#include <set>
-#include <stack>
 #include <string>
-#include <unordered_map>
-#include <utility>
-#include <vector>
 
 #include "leetcode/assert.hpp"
 #include "leetcode/tree.hpp"
@@ -47,19 +35,19 @@ int main() {
   TreeNode* root = nullptr;
   int x, y;
 
-  root = CreateTreeNode("1 2 3 4 ;");
+  root = CreateTreeNode("1 2 3 4");
   x = 4, y = 3;
   ExpectEqual(false, sol.isCousins(root, x, y));
 
-  root = CreateTreeNode("1 2 3 # 4 # 5 ;");
+  root = CreateTreeNode("1 2 3 # 4 # 5");
   x = 5, y = 4;
   ExpectEqual(true, sol.isCousins(root, x, y));
 
-  root = CreateTreeNode("1 2 3 # 4 ;");
+  root = CreateTreeNode("1 2 3 # 4");
   x = 2, y = 3;
   ExpectEqual(false, sol.isCousins(root, x, y));
 
-  root = CreateTreeNode("1 2 3 # 4 ;");
+  root = CreateTreeNode("1 2 3 # 4");
   x = 1, y = 3;
   ExpectEqual(false, sol.isCousins(root, x, y));
 }

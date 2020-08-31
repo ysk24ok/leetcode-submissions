@@ -35,7 +35,10 @@ int main() {
   TreeNode* root;
   vector<int> got, expected;
 
-  root = CreateTreeNode("1 # 2 # # 3 ;");
+  //  1
+  //   2
+  //  3
+  root = CreateTreeNode("1 # 2 3");
   expected = {3,2,1};
   got = sol.postorderTraversal(root);
   assert(got == expected);
@@ -44,7 +47,7 @@ int main() {
   //    1
   //  2   3
   // 4 5 6 7
-  root = CreateTreeNode("1 2 3 4 5 6 7 ;");
+  root = CreateTreeNode("1 2 3 4 5 6 7");
   expected = {4,5,2,6,7,3,1};
   got = sol.postorderTraversal(root);
   assert(got == expected);

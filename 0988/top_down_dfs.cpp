@@ -3,7 +3,7 @@
 #include <iostream>
 #include <string>
 
-#include "../leetcode/tree.hpp"
+#include "leetcode/tree.hpp"
 
 using namespace std;
 using namespace LeetCode;
@@ -51,22 +51,22 @@ int main() {
   string s;
   TreeNode* node;
 
-  s = "0 1 2 3 4 3 4 ;";
+  s = "0 1 2 3 4 3 4";
   node = CreateTreeNode(s);
   assert(sol.smallestFromLeaf(node) == "dba");
   DeleteTreeNode(node);
 
-  s = "25 1 3 1 3 0 2 ;";
+  s = "25 1 3 1 3 0 2";
   node = CreateTreeNode(s);
   assert(sol.smallestFromLeaf(node) == "adz");
   DeleteTreeNode(node);
 
-  s = "2 2 1 # 1 0 # 0 ;";
+  s = "2 2 1 # 1 0 # 0";
   node = CreateTreeNode(s);
   assert(sol.smallestFromLeaf(node) == "abc");
   DeleteTreeNode(node);
 
-  s = "1 ;";
+  s = "1";
   node = CreateTreeNode(s);
   assert(sol.smallestFromLeaf(node) == "b");
   DeleteTreeNode(node);
@@ -74,7 +74,7 @@ int main() {
   //   4
   //  0 1
   // 1
-  s = "4 0 1 1 ;";
+  s = "4 0 1 1";
   node = CreateTreeNode(s);
   assert(sol.smallestFromLeaf(node) == "bae");
   DeleteTreeNode(node);
@@ -84,7 +84,7 @@ int main() {
   //   0 0
   //  1
   // 0
-  s = "25 1 # 0 0 # # 1 # # # # # # # 0 ;";
+  s = "25 1 # 0 0 1 # # # 0";
   node = CreateTreeNode(s);
   assert(sol.smallestFromLeaf(node) == "ababz");
   DeleteTreeNode(node);

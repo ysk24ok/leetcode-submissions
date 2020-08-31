@@ -43,7 +43,7 @@ int main() {
   // 1   4
   //  \
   //   2
-  node = CreateTreeNode("3 1 4 # 2 ;");
+  node = CreateTreeNode("3 1 4 # 2");
   k = 1, expected = 1;
   EXPECT_EQ(expected, sol.kthSmallest(node, k));
   DeleteTreeNode(node);
@@ -55,7 +55,7 @@ int main() {
   //   2   4
   //  /
   // 1
-  node = CreateTreeNode("5 3 6 2 4 # # 1 ;");
+  node = CreateTreeNode("5 3 6 2 4 # # 1");
   k = 3, expected = 3;
   EXPECT_EQ(expected, sol.kthSmallest(node, k));
   DeleteTreeNode(node);
@@ -67,7 +67,7 @@ int main() {
   //   2   6  11  13
   //  / \ / \
   // 1  3 5  7
-  node = CreateTreeNode("10 4 12 2 6 11 13 1 3 5 7 ;");
+  node = CreateTreeNode("10 4 12 2 6 11 13 1 3 5 7");
   k = 9, expected = 11;
   EXPECT_EQ(expected, sol.kthSmallest(node, k));
   DeleteTreeNode(node);

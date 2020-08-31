@@ -48,7 +48,7 @@ int main() {
   //      1
   //    2   3
   //   4 5 6
-  root = CreateTreeNode("1 2 3 4 5 6 ;");
+  root = CreateTreeNode("1 2 3 4 5 6");
   expected = 6;
   EXPECT_EQ(expected, sol.countNodes(root));
   DeleteTreeNode(root);
@@ -56,7 +56,7 @@ int main() {
   //      1
   //    2   3
   //   4 5
-  root = CreateTreeNode("1 2 3 4 5 ;");
+  root = CreateTreeNode("1 2 3 4 5");
   expected = 5;
   EXPECT_EQ(expected, sol.countNodes(root));
   DeleteTreeNode(root);
@@ -64,7 +64,7 @@ int main() {
   //      1
   //    2   3
   //   4 5 6 7
-  root = CreateTreeNode("1 2 3 4 5 6 7 ;");
+  root = CreateTreeNode("1 2 3 4 5 6 7");
   expected = 7;
   EXPECT_EQ(expected, sol.countNodes(root));
   DeleteTreeNode(root);
@@ -72,7 +72,7 @@ int main() {
   //      1
   //    2   3
   //   4
-  root = CreateTreeNode("1 2 3 4 ;");
+  root = CreateTreeNode("1 2 3 4");
   expected = 4;
   EXPECT_EQ(expected, sol.countNodes(root));
   DeleteTreeNode(root);

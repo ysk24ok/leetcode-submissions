@@ -586,6 +586,10 @@ BINS += 0438/sliding_window_cpp
 0438/sliding_window_cpp: 0438/sliding_window.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
+BINS += 0450/recursive_cpp
+0450/recursive_cpp: 0450/recursive.cpp leetcode/tree.o
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+
 BINS += 0451/heap_cpp
 0451/heap_cpp: 0451/heap.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)

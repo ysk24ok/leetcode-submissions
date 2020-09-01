@@ -1,8 +1,8 @@
+#include <gtest/gtest.h>
+
 #include <algorithm>
 #include <iostream>
 #include <vector>
-
-#include "leetcode/utils.hpp"
 
 using namespace std;
 
@@ -45,7 +45,7 @@ int main() {
     {7}
   };
   got = sol.combinationSum(candidates, target);
-  assert_2dvector_equal(expected, got);
+  EXPECT_EQ(expected, got);
 
   candidates = {2,3,5};
   target = 8;
@@ -55,5 +55,5 @@ int main() {
     {3,5}
   };
   got = sol.combinationSum(candidates, target);
-  assert_2dvector_equal(expected, got);
+  EXPECT_EQ(expected, got);
 }

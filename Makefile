@@ -58,11 +58,11 @@ BINS += 0035/binary_search_cpp
 
 BINS += 0039/backtracking_cpp
 0039/backtracking_cpp: 0039/backtracking.cpp
-	g++ $(CXXFLAGS) -I. -o $@ $^
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
 BINS += 0040/backtracking_cpp
 0040/backtracking_cpp: 0040/backtracking.cpp
-	g++ $(CXXFLAGS) -I. -o $@ $^
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
 BINS += 0046/solution_cpp
 0046/solution_cpp: 0046/solution.cpp
@@ -508,7 +508,7 @@ BINS += 0338/solution_cpp
 
 BINS += 0344/recursion_cpp
 0344/recursion_cpp: 0344/recursion.cpp
-	g++ $(CXXFLAGS) -I. -o $@ $^
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
 BINS += 0344/two_pointers_cpp
 0344/two_pointers_cpp: 0344/two_pointers.cpp

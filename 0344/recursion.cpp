@@ -1,9 +1,9 @@
+#include <gtest/gtest.h>
+
 #include <cassert>
 #include <iostream>
 #include <string>
 #include <vector>
-
-#include "leetcode/utils.hpp"
 
 using namespace std;
 
@@ -30,18 +30,18 @@ int main() {
   s = {'h', 'e', 'l', 'l', 'o'};
   expected = {'o', 'l', 'l', 'e', 'h'};
   sol.reverseString(s);
-  assert_vector_equal(expected, s);
+  EXPECT_EQ(expected, s);
 
   s = {'H', 'a', 'n', 'n', 'a', 'h'};
   expected = {'h', 'a', 'n', 'n', 'a', 'H'};
   sol.reverseString(s);
-  assert_vector_equal(expected, s);
+  EXPECT_EQ(expected, s);
 
   s = {'a'};
   sol.reverseString(s);
-  assert(s.size() == 1);
+  EXPECT_EQ(1, s.size());
 
   s = {};
   sol.reverseString(s);
-  assert(s.size() == 0);
+  EXPECT_EQ(0, s.size());
 }

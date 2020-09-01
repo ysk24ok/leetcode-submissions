@@ -23,13 +23,13 @@ std::string Matrix2String(const std::vector<std::vector<T>>& mat) {
   size_t m = mat.size();
   if (m == 0) { return "[]"; }
   size_t n = mat[0].size();
-  oss << "[";
+  oss << "[\n";
   for (size_t i = 0; i < m; ++i) {
-    oss << "[";
+    oss << "  [";
     for (size_t j = 0; j < n - 1; ++j) {
       oss << mat[i][j] << ",";
     }
-    oss << mat[i][n - 1] << "]";
+    oss << mat[i][n - 1] << "],\n";
   }
   oss << "]";
   return oss.str();

@@ -1,11 +1,10 @@
+#include <gtest/gtest.h>
+
 #include <set>
 #include <unordered_map>
 #include <vector>
 
-#include "leetcode/assert.hpp"
-
 using namespace std;
-using namespace LeetCode;
 
 class Solution {
  public:
@@ -41,11 +40,11 @@ int main() {
   n = 7;
   edges = {{0,1},{0,2},{1,4},{1,5},{2,3},{2,6}};
   hasApple = {false,false,true,false,true,true,false};
-  ExpectEqual(8, sol.minTime(n, edges, hasApple));
+  EXPECT_EQ(8, sol.minTime(n, edges, hasApple));
   hasApple = {false,false,true,false,false,true,false};
-  ExpectEqual(6, sol.minTime(n, edges, hasApple));
+  EXPECT_EQ(6, sol.minTime(n, edges, hasApple));
   hasApple = {false,false,false,false,false,false,false};
-  ExpectEqual(0, sol.minTime(n, edges, hasApple));
+  EXPECT_EQ(0, sol.minTime(n, edges, hasApple));
 
   //    0
   //   / \
@@ -55,5 +54,5 @@ int main() {
   n = 4;
   edges = {{0,1},{1,2},{0,3}};
   hasApple = {true,true,true,true};
-  ExpectEqual(6, sol.minTime(n, edges, hasApple));
+  EXPECT_EQ(6, sol.minTime(n, edges, hasApple));
 }

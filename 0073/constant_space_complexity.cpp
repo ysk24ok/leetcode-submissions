@@ -1,9 +1,8 @@
+#include <gtest/gtest.h>
+
 #include <vector>
 
-#include "leetcode/assert.hpp"
-
 using namespace std;
-using namespace LeetCode;
 
 // time complexity: O(mn * 2)
 // space complexity: O(1)
@@ -54,7 +53,7 @@ int main() {
     {1,0,1}
   };
   sol.setZeroes(matrix);
-  ExpectMatrixEqual(expected, matrix);
+  EXPECT_EQ(expected, matrix);
 
   matrix = {
     {0,1,2,0},
@@ -67,7 +66,7 @@ int main() {
     {0,3,1,0}
   };
   sol.setZeroes(matrix);
-  ExpectMatrixEqual(expected, matrix);
+  EXPECT_EQ(expected, matrix);
 
   matrix = {
     {1, 0, 3, 4},
@@ -86,7 +85,7 @@ int main() {
     {9,0,11,12}
   };
   sol.setZeroes(matrix);
-  ExpectMatrixEqual(expected, matrix);
+  EXPECT_EQ(expected, matrix);
 
   matrix = {
     {1,1,1},
@@ -97,5 +96,5 @@ int main() {
     {0,0,0}
   };
   sol.setZeroes(matrix);
-  ExpectMatrixEqual(expected, matrix);
+  EXPECT_EQ(expected, matrix);
 }

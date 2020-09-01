@@ -1,12 +1,11 @@
+#include <gtest/gtest.h>
+
 #include <set>
 #include <string>
 #include <unordered_map>
 #include <vector>
 
-#include "leetcode/assert.hpp"
-
 using namespace std;
-using namespace LeetCode;
 
 class Solution {
  public:
@@ -72,7 +71,7 @@ int main() {
     {"5","0","1","0","1"},
     {"10","1","0","0","0"}
   };
-  ExpectMatrixEqual(expected, sol.displayTable(orders));
+  EXPECT_EQ(expected, sol.displayTable(orders));
 
   orders = {
     {"James","12","Fried Chicken"},
@@ -86,5 +85,5 @@ int main() {
     {"1","2","0"},
     {"12","0","3"}
   };
-  ExpectMatrixEqual(expected, sol.displayTable(orders));
+  EXPECT_EQ(expected, sol.displayTable(orders));
 }

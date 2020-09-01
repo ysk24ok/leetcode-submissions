@@ -1,10 +1,9 @@
+#include <gtest/gtest.h>
+
 #include <algorithm>
 #include <vector>
 
-#include "leetcode/assert.hpp"
-
 using namespace std;
-using namespace LeetCode;
 
 class Solution {
  public:
@@ -31,20 +30,20 @@ int main() {
   vector<int> A;
 
   A = {1,-2,3,-2};
-  ExpectEqual(3, sol.maxSubarraySumCircular(A));
+  EXPECT_EQ(3, sol.maxSubarraySumCircular(A));
 
   A = {5,-3,5};
-  ExpectEqual(10, sol.maxSubarraySumCircular(A));
+  EXPECT_EQ(10, sol.maxSubarraySumCircular(A));
 
   A = {3,-1,2,-1};
-  ExpectEqual(4, sol.maxSubarraySumCircular(A));
+  EXPECT_EQ(4, sol.maxSubarraySumCircular(A));
 
   A = {3,-2,2,-3};
-  ExpectEqual(3, sol.maxSubarraySumCircular(A));
+  EXPECT_EQ(3, sol.maxSubarraySumCircular(A));
 
   A = {-2,-3,-1};
-  ExpectEqual(-1, sol.maxSubarraySumCircular(A));
+  EXPECT_EQ(-1, sol.maxSubarraySumCircular(A));
 
   A = {-2,-3,1};
-  ExpectEqual(1, sol.maxSubarraySumCircular(A));
+  EXPECT_EQ(1, sol.maxSubarraySumCircular(A));
 }

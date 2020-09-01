@@ -1,10 +1,9 @@
+#include <gtest/gtest.h>
+
 #include <unordered_map>
 #include <vector>
 
-#include "leetcode/assert.hpp"
-
 using namespace std;
-using namespace LeetCode;
 
 class Solution {
  public:
@@ -32,21 +31,21 @@ int main() {
 
   N = 2;
   trust = {{1,2}};
-  ExpectEqual(2, sol.findJudge(N, trust));
+  EXPECT_EQ(2, sol.findJudge(N, trust));
 
   N = 3;
   trust = {{1,3},{2,3}};
-  ExpectEqual(3, sol.findJudge(N, trust));
+  EXPECT_EQ(3, sol.findJudge(N, trust));
 
   N = 3;
   trust = {{1,3},{2,3},{3,1}};
-  ExpectEqual(-1, sol.findJudge(N, trust));
+  EXPECT_EQ(-1, sol.findJudge(N, trust));
 
   N = 3;
   trust = {{1,2},{2,3}};
-  ExpectEqual(-1, sol.findJudge(N, trust));
+  EXPECT_EQ(-1, sol.findJudge(N, trust));
 
   N = 4;
   trust = {{1,3},{1,4},{2,3},{2,4},{4,3}};
-  ExpectEqual(3, sol.findJudge(N, trust));
+  EXPECT_EQ(3, sol.findJudge(N, trust));
 }

@@ -1,9 +1,8 @@
+#include <gtest/gtest.h>
+
 #include <vector>
 
-#include "leetcode/assert.hpp"
-
 using namespace std;
-using namespace LeetCode;
 
 constexpr static int mod = 1e9 + 7;
 
@@ -56,17 +55,17 @@ int main() {
 
   pizza = {"A..", "AAA", "..."};
   k = 3;
-  ExpectEqual(3, sol.ways(pizza, k));
+  EXPECT_EQ(3, sol.ways(pizza, k));
 
   pizza = {"A..", "AA.", "..."};
   k = 3;
-  ExpectEqual(1, sol.ways(pizza, k));
+  EXPECT_EQ(1, sol.ways(pizza, k));
 
   pizza = {"A..", "A..", "..."};
   k = 1;
-  ExpectEqual(1, sol.ways(pizza, k));
+  EXPECT_EQ(1, sol.ways(pizza, k));
 
   pizza = {"AAAA.", "A..A.", "AA.AA"};
   k = 5;
-  ExpectEqual(39, sol.ways(pizza, k));
+  EXPECT_EQ(39, sol.ways(pizza, k));
 }

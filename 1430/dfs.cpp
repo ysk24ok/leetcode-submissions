@@ -1,6 +1,7 @@
+#include <gtest/gtest.h>
+
 #include <vector>
 
-#include "leetcode/assert.hpp"
 #include "leetcode/tree.hpp"
 
 using namespace std;
@@ -38,19 +39,19 @@ int main() {
   //     1 0   0
   root = CreateTreeNode("0 1 0 0 1 0 # # 1 0 0");
   arr = {0,1,0,1};
-  ExpectEqual(true, sol.isValidSequence(root, arr));
+  EXPECT_EQ(true, sol.isValidSequence(root, arr));
   arr = {0,0,0};
-  ExpectEqual(true, sol.isValidSequence(root, arr));
+  EXPECT_EQ(true, sol.isValidSequence(root, arr));
   arr = {0,1,1,0};
-  ExpectEqual(true, sol.isValidSequence(root, arr));
+  EXPECT_EQ(true, sol.isValidSequence(root, arr));
   arr = {0,1,1,1};
-  ExpectEqual(false, sol.isValidSequence(root, arr));
+  EXPECT_EQ(false, sol.isValidSequence(root, arr));
   arr = {0,0,1};
-  ExpectEqual(false, sol.isValidSequence(root, arr));
+  EXPECT_EQ(false, sol.isValidSequence(root, arr));
   arr = {0,1,1};
-  ExpectEqual(false, sol.isValidSequence(root, arr));
+  EXPECT_EQ(false, sol.isValidSequence(root, arr));
   arr = {0,0};
-  ExpectEqual(false, sol.isValidSequence(root, arr));
+  EXPECT_EQ(false, sol.isValidSequence(root, arr));
   DeleteTreeNode(root);
 
   //       8
@@ -62,16 +63,16 @@ int main() {
   // 5   4
   root = CreateTreeNode("8 3 # 2 1 5 4");
   arr = {8,3,1};
-  ExpectEqual(true, sol.isValidSequence(root, arr));
+  EXPECT_EQ(true, sol.isValidSequence(root, arr));
   arr = {8,3};
-  ExpectEqual(false, sol.isValidSequence(root, arr));
+  EXPECT_EQ(false, sol.isValidSequence(root, arr));
   arr = {8,3,2};
-  ExpectEqual(false, sol.isValidSequence(root, arr));
+  EXPECT_EQ(false, sol.isValidSequence(root, arr));
   arr = {8,3,2,5};
-  ExpectEqual(true, sol.isValidSequence(root, arr));
+  EXPECT_EQ(true, sol.isValidSequence(root, arr));
   arr = {8,3,2,4};
-  ExpectEqual(true, sol.isValidSequence(root, arr));
+  EXPECT_EQ(true, sol.isValidSequence(root, arr));
   arr = {8};
-  ExpectEqual(false, sol.isValidSequence(root, arr));
+  EXPECT_EQ(false, sol.isValidSequence(root, arr));
   DeleteTreeNode(root);
 }

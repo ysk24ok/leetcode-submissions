@@ -1,10 +1,9 @@
+#include <gtest/gtest.h>
+
 #include <algorithm>
 #include <vector>
 
-#include "leetcode/assert.hpp"
-
 using namespace std;
-using namespace LeetCode;
 
 // time complexity: O(2mn)
 //  Each entry in the matrix may be visited twice.
@@ -49,5 +48,5 @@ int main() {
     {'1','1','1','1','1'},
     {'1','0','0','1','0'},
   };
-  ExpectEqual(4, sol.maximalSquare(matrix));
+  EXPECT_EQ(4, sol.maximalSquare(matrix));
 }

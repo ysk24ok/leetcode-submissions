@@ -1,11 +1,10 @@
+#include <gtest/gtest.h>
+
 #include <algorithm>
 #include <string>
 #include <unordered_map>
 
-#include "leetcode/assert.hpp"
-
 using namespace std;
-using namespace LeetCode;
 
 class Solution {
  public:
@@ -28,9 +27,9 @@ class Solution {
 
 int main() {
   Solution sol;
-  ExpectEqual(0, sol.firstUniqChar("leetcode"));
-  ExpectEqual(2, sol.firstUniqChar("loveleetcode"));
-  ExpectEqual(0, sol.firstUniqChar("c"));
-  ExpectEqual(-1, sol.firstUniqChar(""));
-  ExpectEqual(-1, sol.firstUniqChar("aabb"));
+  EXPECT_EQ(0, sol.firstUniqChar("leetcode"));
+  EXPECT_EQ(2, sol.firstUniqChar("loveleetcode"));
+  EXPECT_EQ(0, sol.firstUniqChar("c"));
+  EXPECT_EQ(-1, sol.firstUniqChar(""));
+  EXPECT_EQ(-1, sol.firstUniqChar("aabb"));
 }

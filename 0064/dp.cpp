@@ -1,10 +1,9 @@
+#include <gtest/gtest.h>
+
 #include <algorithm>
 #include <vector>
 
-#include "leetcode/assert.hpp"
-
 using namespace std;
-using namespace LeetCode;
 
 class Solution {
  public:
@@ -34,8 +33,8 @@ int main() {
     {1,5,1},
     {4,2,1}
   };
-  ExpectEqual(7, sol.minPathSum(grid));
+  EXPECT_EQ(7, sol.minPathSum(grid));
 
   grid = {};
-  ExpectEqual(0, sol.minPathSum(grid));
+  EXPECT_EQ(0, sol.minPathSum(grid));
 }

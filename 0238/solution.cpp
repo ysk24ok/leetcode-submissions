@@ -1,10 +1,9 @@
+#include <gtest/gtest.h>
+
 #include <iostream>
 #include <vector>
 
-#include "leetcode/assert.hpp"
-
 using namespace std;
-using namespace LeetCode;
 
 class Solution {
  public:
@@ -36,5 +35,5 @@ int main() {
   nums = {1,2,3,4};
   got = sol.productExceptSelf(nums);
   expected = {24,12,8,6};
-  ExpectVectorEqual(expected, got);
+  EXPECT_EQ(expected, got);
 }

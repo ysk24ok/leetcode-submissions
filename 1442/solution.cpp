@@ -1,9 +1,8 @@
+#include <gtest/gtest.h>
+
 #include <vector>
 
-#include "leetcode/assert.hpp"
-
 using namespace std;
-using namespace LeetCode;
 
 class Solution {
  public:
@@ -31,17 +30,17 @@ int main() {
   vector<int> arr;
 
   arr = {2,3,1,6,7};
-  ExpectEqual(4, sol.countTriplets(arr));
+  EXPECT_EQ(4, sol.countTriplets(arr));
 
   arr = {1,1,1,1,1};
-  ExpectEqual(10, sol.countTriplets(arr));
+  EXPECT_EQ(10, sol.countTriplets(arr));
 
   arr = {2,3};
-  ExpectEqual(0, sol.countTriplets(arr));
+  EXPECT_EQ(0, sol.countTriplets(arr));
 
   arr = {1,3,5,7,9};
-  ExpectEqual(3, sol.countTriplets(arr));
+  EXPECT_EQ(3, sol.countTriplets(arr));
 
   arr = {7,11,12,9,5,2,7,17,22};
-  ExpectEqual(8, sol.countTriplets(arr));
+  EXPECT_EQ(8, sol.countTriplets(arr));
 }

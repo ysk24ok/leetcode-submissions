@@ -1,11 +1,10 @@
+#include <gtest/gtest.h>
+
 #include <set>
 #include <string>
 #include <vector>
 
-#include "leetcode/assert.hpp"
-
 using namespace std;
-using namespace LeetCode;
 
 class Solution {
  public:
@@ -47,19 +46,19 @@ int main() {
   words = {"mass","as","hero","superhero"};
   got = sol.stringMatching(words);
   expected = {"as", "hero"};
-  ExpectVectorUnorderedEqual(expected, got);
+  EXPECT_EQ(expected, got);
 
   words = {"leetcode","et","code"};
   got = sol.stringMatching(words);
-  expected = {"et", "code"};
-  ExpectVectorUnorderedEqual(expected, got);
+  expected = {"code", "et"};
+  EXPECT_EQ(expected, got);
 
   words = {"blue","green","bu"};
   got = sol.stringMatching(words);
-  ExpectEqual(0ul, got.size());
+  EXPECT_EQ(0ul, got.size());
 
   words = {"leetcoder","leetcode","od","hamlet","am"};
   got = sol.stringMatching(words);
-  expected = {"leetcode", "od", "am"};
-  ExpectVectorUnorderedEqual(expected, got);
+  expected = {"am", "leetcode", "od"};
+  EXPECT_EQ(expected, got);
 }

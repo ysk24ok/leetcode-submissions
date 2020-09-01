@@ -1,7 +1,8 @@
+#include <gtest/gtest.h>
+
 #include <numeric>
 #include <vector>
 
-#include "leetcode/assert.hpp"
 #include "leetcode/tree.hpp"
 
 using namespace std;
@@ -31,14 +32,14 @@ int main() {
 
   preorder = {8,5,1,7,10,12};
   got = sol.bstFromPreorder(preorder);
-  ExpectEqual(8, got->val);
-  ExpectEqual(5, got->left->val);
-  ExpectEqual(1, got->left->left->val);
-  ExpectEqual(7, got->left->right->val);
-  ExpectEqual(10, got->right->val);
-  ExpectEqual(12, got->right->right->val);
+  EXPECT_EQ(8, got->val);
+  EXPECT_EQ(5, got->left->val);
+  EXPECT_EQ(1, got->left->left->val);
+  EXPECT_EQ(7, got->left->right->val);
+  EXPECT_EQ(10, got->right->val);
+  EXPECT_EQ(12, got->right->right->val);
   DeleteTreeNode(got);
 
   preorder = {};
-  ExpectEqual(true, !sol.bstFromPreorder(preorder));
+  EXPECT_EQ(true, !sol.bstFromPreorder(preorder));
 }

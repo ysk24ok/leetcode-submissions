@@ -1,7 +1,6 @@
-#include "leetcode/assert.hpp"
+#include <gtest/gtest.h>
 
 using namespace std;
-using namespace LeetCode;
 
 bool isBadVersion(int version) {
   return version >= 4;
@@ -27,5 +26,5 @@ class Solution {
 int main() {
   Solution sol;
 
-  ExpectEqual(4, sol.firstBadVersion(5));
+  EXPECT_EQ(4, sol.firstBadVersion(5));
 }

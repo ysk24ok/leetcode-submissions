@@ -1,9 +1,8 @@
+#include <gtest/gtest.h>
+
 #include <vector>
 
-#include "leetcode/assert.hpp"
-
 using namespace std;
-using namespace LeetCode;
 
 // XXX: TLE
 class Solution {
@@ -35,14 +34,14 @@ int main() {
   vector<int> nums;
 
   nums = {2,3,1,1,4};
-  ExpectEqual(true, sol.canJump(nums));
+  EXPECT_EQ(true, sol.canJump(nums));
 
   nums = {3,2,1,0,4};
-  ExpectEqual(false, sol.canJump(nums));
+  EXPECT_EQ(false, sol.canJump(nums));
 
   nums = {};
-  ExpectEqual(false, sol.canJump(nums));
+  EXPECT_EQ(false, sol.canJump(nums));
 
   nums = {0};
-  ExpectEqual(true, sol.canJump(nums));
+  EXPECT_EQ(true, sol.canJump(nums));
 }

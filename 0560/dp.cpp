@@ -1,10 +1,9 @@
+#include <gtest/gtest.h>
+
 #include <iostream>
 #include <vector>
 
-#include "leetcode/assert.hpp"
-
 using namespace std;
-using namespace LeetCode;
 
 // XXX: TLE
 class Solution {
@@ -38,7 +37,7 @@ int main() {
   // 1| 2 1
   nums = {1,1,1};
   k = 2;
-  ExpectEqual(2, sol.subarraySum(nums, k));
+  EXPECT_EQ(2, sol.subarraySum(nums, k));
 
   //  | 0 1 2 3
   // ----------
@@ -48,7 +47,7 @@ int main() {
   // 3| - - - 2
   nums = {1,1,2,2};
   k = 4;
-  ExpectEqual(2, sol.subarraySum(nums, k));
+  EXPECT_EQ(2, sol.subarraySum(nums, k));
 
   //  | 0 1 2 3 4
   // ------------
@@ -59,5 +58,5 @@ int main() {
   // 4| - - - - 1
   nums = {1,2,1,2,1};
   k = 3;
-  ExpectEqual(4, sol.subarraySum(nums, k));
+  EXPECT_EQ(4, sol.subarraySum(nums, k));
 }

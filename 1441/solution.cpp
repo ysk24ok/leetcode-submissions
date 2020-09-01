@@ -1,9 +1,8 @@
+#include <gtest/gtest.h>
+
 #include <vector>
 
-#include "leetcode/assert.hpp"
-
 using namespace std;
-using namespace LeetCode;
 
 class Solution {
  public:
@@ -34,23 +33,23 @@ int main() {
   expected = {"Push", "Push", "Pop", "Push"};
   n = 3;
   got = sol.buildArray(target, n);
-  ExpectVectorEqual(expected, got);
+  EXPECT_EQ(expected, got);
 
   target = {1,2,3};
   expected = {"Push", "Push", "Push"};
   n = 3;
   got = sol.buildArray(target, n);
-  ExpectVectorEqual(expected, got);
+  EXPECT_EQ(expected, got);
 
   target = {1,2};
   expected = {"Push", "Push"};
   n = 4;
   got = sol.buildArray(target, n);
-  ExpectVectorEqual(expected, got);
+  EXPECT_EQ(expected, got);
 
   target = {2,3,4};
   expected = {"Push", "Pop", "Push", "Push", "Push"};
   n = 4;
   got = sol.buildArray(target, n);
-  ExpectVectorEqual(expected, got);
+  EXPECT_EQ(expected, got);
 }

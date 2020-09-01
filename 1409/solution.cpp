@@ -1,11 +1,10 @@
+#include <gtest/gtest.h>
+
 #include <cassert>
 #include <iostream>
 #include <vector>
 
-#include "leetcode/assert.hpp"
-
 using namespace std;
-using namespace LeetCode;
 
 class Solution {
  public:
@@ -30,15 +29,15 @@ int main() {
   queries = {3,1,2,1};
   got = sol.processQueries(queries, 5);
   expected = {2,1,2,1};
-  ExpectVectorEqual(expected, got);
+  EXPECT_EQ(expected, got);
 
   queries = {4,1,2,2};
   got = sol.processQueries(queries, 4);
   expected = {3,1,2,0};
-  ExpectVectorEqual(expected, got);
+  EXPECT_EQ(expected, got);
 
   queries = {7,5,5,8,3};
   got = sol.processQueries(queries, 8);
   expected = {6,5,0,7,5};
-  ExpectVectorEqual(expected, got);
+  EXPECT_EQ(expected, got);
 }

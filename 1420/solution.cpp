@@ -1,7 +1,6 @@
-#include "leetcode/assert.hpp"
+#include <gtest/gtest.h>
 
 using namespace std;
-using namespace LeetCode;
 
 int dp[51][101][51] = {};
 constexpr int mod = 1e9 + 7;
@@ -38,17 +37,17 @@ int main() {
   int n, m, k;
 
   n = 2, m = 3, k = 1;
-  ExpectEqual(6, sol.numOfArrays(n, m, k));
+  EXPECT_EQ(6, sol.numOfArrays(n, m, k));
 
   n = 5, m = 2, k = 3;
-  ExpectEqual(0, sol.numOfArrays(n, m, k));
+  EXPECT_EQ(0, sol.numOfArrays(n, m, k));
 
   n = 9, m = 1, k = 1;
-  ExpectEqual(1, sol.numOfArrays(n, m, k));
+  EXPECT_EQ(1, sol.numOfArrays(n, m, k));
 
   n = 50, m = 100, k = 25;
-  ExpectEqual(34549172, sol.numOfArrays(n, m, k));
+  EXPECT_EQ(34549172, sol.numOfArrays(n, m, k));
 
   n = 37, m = 17, k = 7;
-  ExpectEqual(418930126, sol.numOfArrays(n, m, k));
+  EXPECT_EQ(418930126, sol.numOfArrays(n, m, k));
 }

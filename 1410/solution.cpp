@@ -1,4 +1,5 @@
-#include <cassert>
+#include <gtest/gtest.h>
+
 #include <string>
 #include <sstream>
 #include <unordered_map>
@@ -52,29 +53,29 @@ int main() {
   text = "&amp; is an HTML entity but &ambassador; is not.";
   got = sol.entityParser(text);
   expected = "& is an HTML entity but &ambassador; is not.";
-  assert(got == expected);
+  EXPECT_EQ(expected, got);
 
   text = "A & B";
   got = sol.entityParser(text);
   expected = "A & B";
-  assert(got == expected);
+  EXPECT_EQ(expected, got);
 
   text = "and I quote: &quot;...&quot;";
   got = sol.entityParser(text);
   expected = "and I quote: \"...\"";
-  assert(got == expected);
+  EXPECT_EQ(expected, got);
 
   text = "Stay home! Practice on Leetcode :)";
   got = sol.entityParser(text);
-  assert(got == text);
+  EXPECT_EQ(text, got);
 
   text = "x &gt; y &amp;&amp; x &lt; y is always false";
   got = sol.entityParser(text);
   expected = "x > y && x < y is always false";
-  assert(got == expected);
+  EXPECT_EQ(expected, got);
 
   text = "leetcode.com&frasl;problemset&frasl;all";
   got = sol.entityParser(text);
   expected = "leetcode.com/problemset/all";
-  assert(got == expected);
+  EXPECT_EQ(expected, got);
 }

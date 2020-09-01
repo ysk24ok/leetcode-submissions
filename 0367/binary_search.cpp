@@ -1,7 +1,6 @@
-#include "leetcode/assert.hpp"
+#include <cassert>
 
 using namespace std;
-using namespace LeetCode;
 
 class Solution {
  public:

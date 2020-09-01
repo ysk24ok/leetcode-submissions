@@ -1,11 +1,10 @@
+#include <gtest/gtest.h>
+
 #include <algorithm>
 #include <string>
 #include <unordered_map>
 
-#include "leetcode/assert.hpp"
-
 using namespace std;
-using namespace LeetCode;
 
 class Solution {
  public:
@@ -48,20 +47,20 @@ int main() {
   string croakOfFrogs;
 
   croakOfFrogs = "croakcroak";
-  ExpectEqual(1, sol.minNumberOfFrogs(croakOfFrogs));
+  EXPECT_EQ(1, sol.minNumberOfFrogs(croakOfFrogs));
 
   croakOfFrogs = "crcoakroak";
-  ExpectEqual(2, sol.minNumberOfFrogs(croakOfFrogs));
+  EXPECT_EQ(2, sol.minNumberOfFrogs(croakOfFrogs));
 
   croakOfFrogs = "croakcrook";
-  ExpectEqual(-1, sol.minNumberOfFrogs(croakOfFrogs));
+  EXPECT_EQ(-1, sol.minNumberOfFrogs(croakOfFrogs));
 
   croakOfFrogs = "croakcroa";
-  ExpectEqual(-1, sol.minNumberOfFrogs(croakOfFrogs));
+  EXPECT_EQ(-1, sol.minNumberOfFrogs(croakOfFrogs));
 
   croakOfFrogs = "roakcroak";
-  ExpectEqual(-1, sol.minNumberOfFrogs(croakOfFrogs));
+  EXPECT_EQ(-1, sol.minNumberOfFrogs(croakOfFrogs));
 
   croakOfFrogs = "crcocraorkakoak";
-  ExpectEqual(3, sol.minNumberOfFrogs(croakOfFrogs));
+  EXPECT_EQ(3, sol.minNumberOfFrogs(croakOfFrogs));
 }

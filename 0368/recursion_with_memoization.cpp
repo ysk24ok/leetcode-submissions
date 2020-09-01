@@ -1,10 +1,9 @@
+#include <gtest/gtest.h>
+
 #include <cstdlib>
 #include <iostream>
 #include <unordered_map>
 #include <vector>
-
-#include "gtest/gtest.h"
-#include "leetcode/assert.hpp"
 
 using namespace std;
 

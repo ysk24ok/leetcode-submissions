@@ -1,12 +1,11 @@
+#include <gtest/gtest.h>
+
 #include <algorithm>
 #include <stack>
 #include <string>
 #include <vector>
 
-#include "leetcode/assert.hpp"
-
 using namespace std;
-using namespace LeetCode;
 
 class Solution {
  public:
@@ -44,45 +43,45 @@ int main() {
   num = "1432219";
   k = 3;
   expected = "1219";
-  ExpectEqual(expected, sol.removeKdigits(num, k));
+  EXPECT_EQ(expected, sol.removeKdigits(num, k));
 
   num = "10200";
   k = 1;
   expected = "200";
-  ExpectEqual(expected, sol.removeKdigits(num, k));
+  EXPECT_EQ(expected, sol.removeKdigits(num, k));
 
   num = "10";
   k = 2;
   expected = "0";
-  ExpectEqual(expected, sol.removeKdigits(num, k));
+  EXPECT_EQ(expected, sol.removeKdigits(num, k));
 
   num = "9876";
   k = 2;
   expected = "76";
-  ExpectEqual(expected, sol.removeKdigits(num, k));
+  EXPECT_EQ(expected, sol.removeKdigits(num, k));
 
   num = "1234";
   k = 2;
   expected = "12";
-  ExpectEqual(expected, sol.removeKdigits(num, k));
+  EXPECT_EQ(expected, sol.removeKdigits(num, k));
 
   num = "1234321";
   k = 2;
   expected = "12321";
-  ExpectEqual(expected, sol.removeKdigits(num, k));
+  EXPECT_EQ(expected, sol.removeKdigits(num, k));
 
   num = "9";
   k = 1;
   expected = "0";
-  ExpectEqual(expected, sol.removeKdigits(num, k));
+  EXPECT_EQ(expected, sol.removeKdigits(num, k));
 
   num = "1173";
   k = 2;
   expected = "11";
-  ExpectEqual(expected, sol.removeKdigits(num, k));
+  EXPECT_EQ(expected, sol.removeKdigits(num, k));
 
   num = "1234567890";
   k = 9;
   expected = "0";
-  ExpectEqual(expected, sol.removeKdigits(num, k));
+  EXPECT_EQ(expected, sol.removeKdigits(num, k));
 }

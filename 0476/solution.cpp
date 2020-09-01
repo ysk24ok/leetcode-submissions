@@ -1,9 +1,8 @@
+#include <gtest/gtest.h>
+
 #include <cmath>
 
-#include "leetcode/assert.hpp"
-
 using namespace std;
-using namespace LeetCode;
 
 class Solution {
  public:
@@ -32,11 +31,11 @@ int main() {
   Solution sol;
   // 5: 101
   // 2: 010
-  ExpectEqual(2, sol.findComplement(5));
+  EXPECT_EQ(2, sol.findComplement(5));
   // 1: 1
   // 0: 0
-  ExpectEqual(0, sol.findComplement(1));
+  EXPECT_EQ(0, sol.findComplement(1));
   // 2: 10
   // 1: 01
-  ExpectEqual(1, sol.findComplement(2));
+  EXPECT_EQ(1, sol.findComplement(2));
 }

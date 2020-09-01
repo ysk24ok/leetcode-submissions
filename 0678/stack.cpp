@@ -1,11 +1,10 @@
+#include <gtest/gtest.h>
+
 #include <stack>
 #include <string>
 #include <vector>
 
-#include "leetcode/assert.hpp"
-
 using namespace std;
-using namespace LeetCode;
 
 class Solution {
  public:
@@ -39,15 +38,15 @@ class Solution {
 int main() {
   Solution sol;
 
-  ExpectEqual(true, sol.checkValidString("()"));
-  ExpectEqual(true, sol.checkValidString("(*)"));
-  ExpectEqual(true, sol.checkValidString("(*))"));
-  ExpectEqual(false, sol.checkValidString("((())"));
-  ExpectEqual(true, sol.checkValidString("((*())"));
-  ExpectEqual(false, sol.checkValidString("*("));
-  ExpectEqual(true, sol.checkValidString("*((*)))"));
+  EXPECT_EQ(true, sol.checkValidString("()"));
+  EXPECT_EQ(true, sol.checkValidString("(*)"));
+  EXPECT_EQ(true, sol.checkValidString("(*))"));
+  EXPECT_EQ(false, sol.checkValidString("((())"));
+  EXPECT_EQ(true, sol.checkValidString("((*())"));
+  EXPECT_EQ(false, sol.checkValidString("*("));
+  EXPECT_EQ(true, sol.checkValidString("*((*)))"));
   // WA
-  ExpectEqual(true, sol.checkValidString("(((******))"));
+  EXPECT_EQ(true, sol.checkValidString("(((******))"));
   // WA
-  ExpectEqual(false, sol.checkValidString("(())((())()()(*)(*()(())())())()()((()())((()))(*"));
+  EXPECT_EQ(false, sol.checkValidString("(())((())()()(*)(*()(())())())()()((()())((()))(*"));
 }

@@ -1,6 +1,7 @@
+#include <gtest/gtest.h>
+
 #include <string>
 
-#include "leetcode/assert.hpp"
 #include "leetcode/tree.hpp"
 
 using namespace std;
@@ -37,17 +38,17 @@ int main() {
 
   root = CreateTreeNode("1 2 3 4");
   x = 4, y = 3;
-  ExpectEqual(false, sol.isCousins(root, x, y));
+  EXPECT_EQ(false, sol.isCousins(root, x, y));
 
   root = CreateTreeNode("1 2 3 # 4 # 5");
   x = 5, y = 4;
-  ExpectEqual(true, sol.isCousins(root, x, y));
+  EXPECT_EQ(true, sol.isCousins(root, x, y));
 
   root = CreateTreeNode("1 2 3 # 4");
   x = 2, y = 3;
-  ExpectEqual(false, sol.isCousins(root, x, y));
+  EXPECT_EQ(false, sol.isCousins(root, x, y));
 
   root = CreateTreeNode("1 2 3 # 4");
   x = 1, y = 3;
-  ExpectEqual(false, sol.isCousins(root, x, y));
+  EXPECT_EQ(false, sol.isCousins(root, x, y));
 }

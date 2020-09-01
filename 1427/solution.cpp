@@ -1,10 +1,9 @@
+#include <gtest/gtest.h>
+
 #include <string>
 #include <vector>
 
-#include "leetcode/assert.hpp"
-
 using namespace std;
-using namespace LeetCode;
 
 class Solution {
  public:
@@ -28,20 +27,20 @@ int main() {
   s = "abc";
   shift = {{0,1},{1,2}};
   expected = "cab";
-  ExpectEqual(expected, sol.stringShift(s, shift));
+  EXPECT_EQ(expected, sol.stringShift(s, shift));
 
   s = "abcdefg";
   shift = {{1,1},{1,1},{0,2},{1,3}};
   expected = "efgabcd";
-  ExpectEqual(expected, sol.stringShift(s, shift));
+  EXPECT_EQ(expected, sol.stringShift(s, shift));
 
   s = "yisxjwry";
   shift = {{1,8},{1,4},{1,3},{1,6},{0,6},{1,4},{0,2},{0,1}};
   expected = "yisxjwry";
-  ExpectEqual(expected, sol.stringShift(s, shift));
+  EXPECT_EQ(expected, sol.stringShift(s, shift));
 
   s = "xqgwkiqpif";
   shift = {{1,4},{0,7},{0,8},{0,7},{0,6},{1,3},{0,1},{1,7},{0,5},{0,6}};
   expected = "qpifxqgwki";
-  ExpectEqual(expected, sol.stringShift(s, shift));
+  EXPECT_EQ(expected, sol.stringShift(s, shift));
 }

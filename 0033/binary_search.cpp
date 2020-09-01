@@ -1,9 +1,8 @@
+#include <gtest/gtest.h>
+
 #include <vector>
 
-#include "leetcode/assert.hpp"
-
 using namespace std;
-using namespace LeetCode;
 
 class Solution {
  public:
@@ -35,24 +34,24 @@ int main() {
   vector<int> nums;
 
   nums = {4,5,6,7,0,1,2};
-  ExpectEqual(0, sol.search(nums, 4));
-  ExpectEqual(1, sol.search(nums, 5));
-  ExpectEqual(2, sol.search(nums, 6));
-  ExpectEqual(3, sol.search(nums, 7));
-  ExpectEqual(4, sol.search(nums, 0));
-  ExpectEqual(5, sol.search(nums, 1));
-  ExpectEqual(6, sol.search(nums, 2));
-  ExpectEqual(-1, sol.search(nums, 3));
+  EXPECT_EQ(0, sol.search(nums, 4));
+  EXPECT_EQ(1, sol.search(nums, 5));
+  EXPECT_EQ(2, sol.search(nums, 6));
+  EXPECT_EQ(3, sol.search(nums, 7));
+  EXPECT_EQ(4, sol.search(nums, 0));
+  EXPECT_EQ(5, sol.search(nums, 1));
+  EXPECT_EQ(6, sol.search(nums, 2));
+  EXPECT_EQ(-1, sol.search(nums, 3));
 
   nums = {5,6,0,1,2,3};
-  ExpectEqual(-1, sol.search(nums, 4));
-  ExpectEqual(0, sol.search(nums, 5));
-  ExpectEqual(1, sol.search(nums, 6));
-  ExpectEqual(2, sol.search(nums, 0));
-  ExpectEqual(3, sol.search(nums, 1));
-  ExpectEqual(4, sol.search(nums, 2));
-  ExpectEqual(5, sol.search(nums, 3));
+  EXPECT_EQ(-1, sol.search(nums, 4));
+  EXPECT_EQ(0, sol.search(nums, 5));
+  EXPECT_EQ(1, sol.search(nums, 6));
+  EXPECT_EQ(2, sol.search(nums, 0));
+  EXPECT_EQ(3, sol.search(nums, 1));
+  EXPECT_EQ(4, sol.search(nums, 2));
+  EXPECT_EQ(5, sol.search(nums, 3));
 
   nums = {3,1};
-  ExpectEqual(1, sol.search(nums, 1));
+  EXPECT_EQ(1, sol.search(nums, 1));
 }

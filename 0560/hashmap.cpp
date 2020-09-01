@@ -1,10 +1,9 @@
+#include <gtest/gtest.h>
+
 #include <unordered_map>
 #include <vector>
 
-#include "leetcode/assert.hpp"
-
 using namespace std;
-using namespace LeetCode;
 
 class Solution {
  public:
@@ -33,13 +32,13 @@ int main() {
 
   nums = {1,1,1};
   k = 2;
-  ExpectEqual(2, sol.subarraySum(nums, k));
+  EXPECT_EQ(2, sol.subarraySum(nums, k));
 
   nums = {1,1,2,2};
   k = 4;
-  ExpectEqual(2, sol.subarraySum(nums, k));
+  EXPECT_EQ(2, sol.subarraySum(nums, k));
 
   nums = {1,2,1,2,1};
   k = 3;
-  ExpectEqual(4, sol.subarraySum(nums, k));
+  EXPECT_EQ(4, sol.subarraySum(nums, k));
 }

@@ -1,11 +1,10 @@
+#include <gtest/gtest.h>
+
 #include <cctype>
 #include <queue>
 #include <string>
 
-#include "leetcode/assert.hpp"
-
 using namespace std;
-using namespace LeetCode;
 
 class Solution {
  public:
@@ -48,21 +47,21 @@ int main() {
 
   s = "a0b1c2";
   expected = "0a1b2c";
-  ExpectEqual(expected, sol.reformat(s));
+  EXPECT_EQ(expected, sol.reformat(s));
 
   s = "leetcode";
   expected = "";
-  ExpectEqual(expected, sol.reformat(s));
+  EXPECT_EQ(expected, sol.reformat(s));
 
   s = "1229857369";
   expected = "";
-  ExpectEqual(expected, sol.reformat(s));
+  EXPECT_EQ(expected, sol.reformat(s));
 
   s = "covid2019";
   expected = "c2o0v1i9d";
-  ExpectEqual(expected, sol.reformat(s));
+  EXPECT_EQ(expected, sol.reformat(s));
 
   s = "ab123";
   expected = "1a2b3";
-  ExpectEqual(expected, sol.reformat(s));
+  EXPECT_EQ(expected, sol.reformat(s));
 }

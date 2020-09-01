@@ -1,9 +1,8 @@
+#include "gtest/gtest.h"
+
 #include <vector>
 
-#include "leetcode/assert.hpp"
-
 using namespace std;
-using namespace LeetCode;
 
 class Solution {
  public:
@@ -25,11 +24,11 @@ int main() {
   vector<int> nums;
 
   nums = {3,2,3};
-  ExpectEqual(3, sol.majorityElement(nums));
+  EXPECT_EQ(3, sol.majorityElement(nums));
 
   nums = {2,2,1,1,1,2,2};
-  ExpectEqual(2, sol.majorityElement(nums));
+  EXPECT_EQ(2, sol.majorityElement(nums));
 
   nums = {1};
-  ExpectEqual(1, sol.majorityElement(nums));
+  EXPECT_EQ(1, sol.majorityElement(nums));
 }

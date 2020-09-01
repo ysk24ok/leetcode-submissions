@@ -1,11 +1,10 @@
+#include <gtest/gtest.h>
+
 #include <string>
 #include <unordered_set>
 #include <vector>
 
-#include "leetcode/assert.hpp"
-
 using namespace std;
-using namespace LeetCode;
 
 class Solution {
  public:
@@ -27,8 +26,8 @@ int main() {
   string J, S;
 
   J = "aA", S = "aAAbbbb";
-  ExpectEqual(3, sol.numJewelsInStones(J, S));
+  EXPECT_EQ(3, sol.numJewelsInStones(J, S));
 
   J = "z", S = "ZZ";
-  ExpectEqual(0, sol.numJewelsInStones(J, S));
+  EXPECT_EQ(0, sol.numJewelsInStones(J, S));
 }

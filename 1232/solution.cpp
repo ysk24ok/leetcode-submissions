@@ -1,9 +1,8 @@
+#include <gtest/gtest.h>
+
 #include <vector>
 
-#include "leetcode/assert.hpp"
-
 using namespace std;
-using namespace LeetCode;
 
 class Solution {
  public:
@@ -34,11 +33,11 @@ int main() {
   vector<vector<int>> coordinates;
 
   coordinates = {{1,2},{2,3},{3,4},{4,5},{5,6},{6,7}};
-  ExpectEqual(true, sol.checkStraightLine(coordinates));
+  EXPECT_TRUE(sol.checkStraightLine(coordinates));
 
   coordinates = {{1,1},{2,2},{3,4},{4,5},{5,6},{7,7}};
-  ExpectEqual(false, sol.checkStraightLine(coordinates));
+  EXPECT_FALSE(sol.checkStraightLine(coordinates));
 
   coordinates = {{-3,-2},{-1,-2},{2,-2},{-2,-2},{0,-2}};
-  ExpectEqual(true, sol.checkStraightLine(coordinates));
+  EXPECT_TRUE(sol.checkStraightLine(coordinates));
 }

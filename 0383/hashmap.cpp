@@ -1,10 +1,9 @@
+#include <gtest/gtest.h>
+
 #include <string>
 #include <unordered_map>
 
-#include "leetcode/assert.hpp"
-
 using namespace std;
-using namespace LeetCode;
 
 class Solution {
  public:
@@ -24,7 +23,7 @@ class Solution {
 
 int main() {
   Solution sol;
-  ExpectEqual(false, sol.canConstruct("a", "b"));
-  ExpectEqual(false, sol.canConstruct("aa", "ab"));
-  ExpectEqual(true, sol.canConstruct("aa", "aab"));
+  EXPECT_EQ(false, sol.canConstruct("a", "b"));
+  EXPECT_EQ(false, sol.canConstruct("aa", "ab"));
+  EXPECT_EQ(true, sol.canConstruct("aa", "aab"));
 }

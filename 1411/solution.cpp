@@ -1,9 +1,8 @@
+#include <gtest/gtest.h>
+
 #include <array>
 
-#include "leetcode/assert.hpp"
-
 using namespace std;
-using namespace LeetCode;
 
 int dp[5001][4][4][4] = {};
 constexpr array<int, 3> colors = {1, 2, 3};
@@ -37,9 +36,9 @@ class Solution {
 
 int main() {
   Solution sol;
-  ExpectEqual(12, sol.numOfWays(1));
-  ExpectEqual(54, sol.numOfWays(2));
-  ExpectEqual(246, sol.numOfWays(3));
-  ExpectEqual(106494, sol.numOfWays(7));
-  ExpectEqual(30228214, sol.numOfWays(5000));
+  EXPECT_EQ(12, sol.numOfWays(1));
+  EXPECT_EQ(54, sol.numOfWays(2));
+  EXPECT_EQ(246, sol.numOfWays(3));
+  EXPECT_EQ(106494, sol.numOfWays(7));
+  EXPECT_EQ(30228214, sol.numOfWays(5000));
 }

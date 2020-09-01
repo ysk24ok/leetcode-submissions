@@ -1,9 +1,10 @@
+#include <gtest/gtest.h>
+
 #include <algorithm>
 #include <limits>
 #include <numeric>
 #include <vector>
 
-#include "leetcode/assert.hpp"
 #include "leetcode/tree.hpp"
 
 using namespace std;
@@ -41,50 +42,50 @@ int main() {
   TreeNode* node = nullptr;
 
   node = CreateTreeNode("1 2 3");
-  ExpectEqual(6, sol.maxPathSum(node));
+  EXPECT_EQ(6, sol.maxPathSum(node));
   DeleteTreeNode(node);
 
   node = CreateTreeNode("1 -2 -3");
-  ExpectEqual(1, sol.maxPathSum(node));
+  EXPECT_EQ(1, sol.maxPathSum(node));
   DeleteTreeNode(node);
 
   node = CreateTreeNode("1 -2 3");
-  ExpectEqual(4, sol.maxPathSum(node));
+  EXPECT_EQ(4, sol.maxPathSum(node));
   DeleteTreeNode(node);
 
   node = CreateTreeNode("-10 9 20 # # 15 7");
-  ExpectEqual(42, sol.maxPathSum(node));
+  EXPECT_EQ(42, sol.maxPathSum(node));
   DeleteTreeNode(node);
 
   node = CreateTreeNode("10 9 20 # # 15 7");
-  ExpectEqual(54, sol.maxPathSum(node));
+  EXPECT_EQ(54, sol.maxPathSum(node));
   DeleteTreeNode(node);
 
   node = CreateTreeNode("-10 9 20 # # 15 -7");
-  ExpectEqual(35, sol.maxPathSum(node));
+  EXPECT_EQ(35, sol.maxPathSum(node));
   DeleteTreeNode(node);
 
   node = CreateTreeNode("-10 -9 20 # # -15 -7");
-  ExpectEqual(20, sol.maxPathSum(node));
+  EXPECT_EQ(20, sol.maxPathSum(node));
   DeleteTreeNode(node);
 
   node = CreateTreeNode("-3");
-  ExpectEqual(-3, sol.maxPathSum(node));
+  EXPECT_EQ(-3, sol.maxPathSum(node));
   DeleteTreeNode(node);
 
   node = CreateTreeNode("-3 1");
-  ExpectEqual(1, sol.maxPathSum(node));
+  EXPECT_EQ(1, sol.maxPathSum(node));
   DeleteTreeNode(node);
 
   node = CreateTreeNode("-3 # 1");
-  ExpectEqual(1, sol.maxPathSum(node));
+  EXPECT_EQ(1, sol.maxPathSum(node));
   DeleteTreeNode(node);
 
   node = CreateTreeNode("2 -1");
-  ExpectEqual(2, sol.maxPathSum(node));
+  EXPECT_EQ(2, sol.maxPathSum(node));
   DeleteTreeNode(node);
 
   node = CreateTreeNode("2 # -1");
-  ExpectEqual(2, sol.maxPathSum(node));
+  EXPECT_EQ(2, sol.maxPathSum(node));
   DeleteTreeNode(node);
 }

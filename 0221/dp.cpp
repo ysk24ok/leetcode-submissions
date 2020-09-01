@@ -1,10 +1,9 @@
+#include <gtest/gtest.h>
+
 #include <algorithm>
 #include <vector>
 
-#include "leetcode/assert.hpp"
-
 using namespace std;
-using namespace LeetCode;
 
 // time complexity: O(mn)
 // time complexity: O(n)
@@ -39,7 +38,7 @@ int main() {
     {'1','1','1','1','1'},
     {'1','0','0','1','0'},
   };
-  ExpectEqual(4, sol.maximalSquare(matrix));
+  EXPECT_EQ(4, sol.maximalSquare(matrix));
 
   matrix = {
     {'0','1','1','1','0'},
@@ -47,7 +46,7 @@ int main() {
     {'1','1','1','1','0'},
     {'1','1','1','1','0'},
   };
-  ExpectEqual(9, sol.maximalSquare(matrix));
+  EXPECT_EQ(9, sol.maximalSquare(matrix));
 
   matrix = {
     {'0','1','1','1','0'},
@@ -55,8 +54,8 @@ int main() {
     {'0','1','1','0','0'},
     {'1','0','1','1','0'},
   };
-  ExpectEqual(1, sol.maximalSquare(matrix));
+  EXPECT_EQ(1, sol.maximalSquare(matrix));
 
   matrix = {};
-  ExpectEqual(0, sol.maximalSquare(matrix));
+  EXPECT_EQ(0, sol.maximalSquare(matrix));
 }

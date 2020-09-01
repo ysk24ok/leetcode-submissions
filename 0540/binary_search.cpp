@@ -1,9 +1,8 @@
+#include <gtest/gtest.h>
+
 #include <vector>
 
-#include "leetcode/assert.hpp"
-
 using namespace std;
-using namespace LeetCode;
 
 class Solution {
  public:
@@ -27,23 +26,23 @@ int main() {
   vector<int> nums;
 
   nums = {1,1,2,3,3,4,4,8,8};
-  ExpectEqual(2, sol.singleNonDuplicate(nums));
+  EXPECT_EQ(2, sol.singleNonDuplicate(nums));
   nums = {3,3,7,7,10,11,11};
-  ExpectEqual(10, sol.singleNonDuplicate(nums));
+  EXPECT_EQ(10, sol.singleNonDuplicate(nums));
   nums = {1,1,3};
-  ExpectEqual(3, sol.singleNonDuplicate(nums));
+  EXPECT_EQ(3, sol.singleNonDuplicate(nums));
   nums = {1,3,3};
-  ExpectEqual(1, sol.singleNonDuplicate(nums));
+  EXPECT_EQ(1, sol.singleNonDuplicate(nums));
   nums = {1,2,2,3,3};
-  ExpectEqual(1, sol.singleNonDuplicate(nums));
+  EXPECT_EQ(1, sol.singleNonDuplicate(nums));
   nums = {1,1,2,3,3};
-  ExpectEqual(2, sol.singleNonDuplicate(nums));
+  EXPECT_EQ(2, sol.singleNonDuplicate(nums));
   nums = {1,1,2,2,3};
-  ExpectEqual(3, sol.singleNonDuplicate(nums));
+  EXPECT_EQ(3, sol.singleNonDuplicate(nums));
   nums = {1,3,3,5,5,7,7};
-  ExpectEqual(1, sol.singleNonDuplicate(nums));
+  EXPECT_EQ(1, sol.singleNonDuplicate(nums));
   nums = {1,1,2,2,4,4,5,5,9};
-  ExpectEqual(9, sol.singleNonDuplicate(nums));
+  EXPECT_EQ(9, sol.singleNonDuplicate(nums));
   nums = {1,1,3,3,5,5,7,9,9,11,11};
-  ExpectEqual(7, sol.singleNonDuplicate(nums));
+  EXPECT_EQ(7, sol.singleNonDuplicate(nums));
 }

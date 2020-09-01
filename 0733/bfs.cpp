@@ -1,10 +1,9 @@
+#include <gtest/gtest.h>
+
 #include <queue>
 #include <vector>
 
-#include "leetcode/assert.hpp"
-
 using namespace std;
-using namespace LeetCode;
 
 class Solution {
  public:
@@ -44,7 +43,7 @@ int main() {
     {2,0,1}
   };
   sr = 1, sc = 1, newColor = 2;
-  ExpectMatrixEqual(expected, sol.floodFill(image, sr, sc, newColor));
+  EXPECT_EQ(expected, sol.floodFill(image, sr, sc, newColor));
 
   image = {
     {0,0,0},
@@ -55,5 +54,5 @@ int main() {
     {0,1,1}
   };
   sr = 1, sc = 1, newColor = 1;
-  ExpectMatrixEqual(expected, sol.floodFill(image, sr, sc, newColor));
+  EXPECT_EQ(expected, sol.floodFill(image, sr, sc, newColor));
 }

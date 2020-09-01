@@ -1,10 +1,9 @@
+#include <gtest/gtest.h>
+
 #include <algorithm>
 #include <vector>
 
-#include "leetcode/assert.hpp"
-
 using namespace std;
-using namespace LeetCode;
 
 class BinaryMatrix {
  public:
@@ -64,14 +63,14 @@ int main() {
   BinaryMatrix bmatrix;
 
   bmatrix = {{0,0},{1,1}};
-  ExpectEqual(0, sol.leftMostColumnWithOne(bmatrix));
+  EXPECT_EQ(0, sol.leftMostColumnWithOne(bmatrix));
 
   bmatrix = {{0,0},{0,0}};
-  ExpectEqual(-1, sol.leftMostColumnWithOne(bmatrix));
+  EXPECT_EQ(-1, sol.leftMostColumnWithOne(bmatrix));
 
   bmatrix = {{0,0,0,1},{0,0,1,1},{0,1,1,1}};
-  ExpectEqual(1, sol.leftMostColumnWithOne(bmatrix));
+  EXPECT_EQ(1, sol.leftMostColumnWithOne(bmatrix));
 
   bmatrix = {{0,0,1},{0,1,1},{0,0,0}};
-  ExpectEqual(1, sol.leftMostColumnWithOne(bmatrix));
+  EXPECT_EQ(1, sol.leftMostColumnWithOne(bmatrix));
 }

@@ -1,3 +1,5 @@
+#include <gtest/gtest.h>
+
 #include <algorithm>
 #include <cassert>
 #include <cstdlib>
@@ -12,8 +14,6 @@
 #include <unordered_set>
 #include <utility>
 #include <vector>
-
-#include "gtest/gtest.h"
 
 using namespace std;
 

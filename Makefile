@@ -714,6 +714,10 @@ BINS += 0743/dijkstra_cpp
 0743/dijkstra_cpp: 0743/dijkstra.cpp
 	g++ $(CXXFLAGS) -o $@ $^
 
+BINS += 0763/greedy_cpp
+0763/greedy_cpp: 0763/greedy.cpp
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+
 BINS += 0771/hashmap_cpp
 0771/hashmap_cpp: 0771/hashmap.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)

@@ -959,6 +959,10 @@ BINS += 1284/solution_cpp
 1284/solution_cpp: 1284/solution.cpp
 	g++ $(CXXFLAGS) -o $@ $^
 
+BINS += 1305/dfs_cpp
+1305/dfs_cpp: 1305/dfs.cpp leetcode/tree.o
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+
 BINS += 1334/warshall_floyd_cpp
 1334/warshall_floyd_cpp: 1334/warshall_floyd.cpp
 	g++ $(CXXFLAGS) -o $@ $^

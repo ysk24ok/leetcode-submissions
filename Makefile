@@ -855,6 +855,10 @@ BINS += 1008/dfs_cpp
 1008/dfs_cpp: 1008/dfs.cpp leetcode/tree.o
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
+BINS += 1022/bfs_cpp
+1022/bfs_cpp: 1022/bfs.cpp leetcode/tree.o
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+
 BINS += 1029/heap_cpp
 1029/heap_cpp: 1029/heap.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)

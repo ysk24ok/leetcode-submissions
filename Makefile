@@ -301,6 +301,10 @@ BINS += 0155/two_vector_rs
 0155/two_vector_rs: 0155/two_vector.rs
 	rustc -o $@ $^
 
+BINS += 0165/solution_cpp
+0165/solution_cpp: 0165/solution.cpp
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+
 BINS += 0169/hash_table_cpp
 0169/hash_table_cpp: 0169/hash_table.cpp
 	g++ $(CXXFLAGS) -o $@ $^

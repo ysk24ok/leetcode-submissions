@@ -474,6 +474,10 @@ BINS += 0297/dfs_cpp
 0297/dfs_cpp: 0297/dfs.cpp leetcode/tree.o
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
+BINS += 0299/one_pass_cpp
+0299/one_pass_cpp: 0299/one_pass.cpp
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+
 BINS += 0300/dp
 0300/dp: 0300/dp.cpp
 	g++ $(CXXFLAGS) -o $@ $^

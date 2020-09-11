@@ -289,6 +289,10 @@ BINS += 0151/solution
 0151/solution: 0151/solution.cpp
 	g++ $(CXXFLAGS) -o $@ $^
 
+BINS += 0152/dp_constant_space_cpp
+0152/dp_constant_space_cpp: 0152/dp_constant_space.cpp
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+
 BINS += 0153/binary_search
 0153/binary_search: 0153/binary_search.cpp
 	g++ $(CXXFLAGS) -o $@ $^

@@ -389,6 +389,10 @@ BINS += 0215/min_heap_cpp
 0215/min_heap_cpp: 0215/min_heap.cpp
 	g++ $(CXXFLAGS) -o $@ $^
 
+BINS += 0216/recursive_cpp
+0216/recursive_cpp: 0216/recursive.cpp
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+
 BINS += 0221/dp_cpp
 0221/dp_cpp: 0221/dp.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)

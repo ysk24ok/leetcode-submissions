@@ -12,22 +12,14 @@ using namespace std;
 class Solution {
  public:
   int rob(vector<int>& nums) {
-    int m = nums.size();
-    if (m == 0) return 0;
-    if (m == 1) return nums[0];
-    if (m == 2) return max(nums[0], nums[1]);
-    vector<int> dp(m);
-    dp[0] = nums[0];
-    dp[1] = nums[1];
-    int ret = max(dp[0], dp[1]);
-    int max_sofar = 0;
-    // dp[i] = nums[i] + max(dp[i-2], dp[i-3], dp[i-4], ...);
-    for (int i = 2; i < m; i++) {
-      max_sofar = max(dp[i-2], max_sofar);
-      dp[i] = nums[i] + max_sofar;
-      ret = max(ret, dp[i]);
+    const size_t n = nums.size();
+    if (n == 0) { return 0; }
+    vector<int> dp(n+1, 0);
+    dp[1] = nums[0];
+    for (size_t i = 2; i <= n; ++i) {
+      dp[i] = max(dp[i-1], dp[i-2] + nums[i-1]);
     }
-    return ret;
+    return dp[n];
   }
 };
 

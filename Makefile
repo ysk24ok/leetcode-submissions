@@ -335,7 +335,11 @@ BINS += 0191/n_AND_n-1
 
 BINS += 0198/dp_cpp
 0198/dp_cpp: 0198/dp.cpp
-	g++ $(CXXFLAGS) -o $@ $^
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+
+BINS += 0198/dp_constant_space_cpp
+0198/dp_constant_space_cpp: 0198/dp_constant_space.cpp
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
 BINS += 0200/dfs_cpp
 0200/dfs_cpp: 0200/dfs.cpp

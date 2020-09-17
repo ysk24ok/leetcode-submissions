@@ -602,6 +602,14 @@ BINS += 0416/recursion_without_memoization_rs
 0416/recursion_without_memoization_rs: 0416/recursion_without_memoization.rs
 	rustc -o $@ $^
 
+BINS += 0421/brute_force_cpp
+0421/brute_force_cpp: 0421/brute_force.cpp
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+
+BINS += 0421/trie_cpp
+0421/trie_cpp: 0421/trie.cpp
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+
 BINS += 0438/tle_cpp
 0438/tle_cpp: 0438/tle.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)

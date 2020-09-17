@@ -903,6 +903,10 @@ BINS += 1035/dp_cpp
 1035/dp_cpp: 1035/dp.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
+BINS += 1041/one_pass_cpp
+1041/one_pass_cpp: 1041/one_pass.cpp
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+
 BINS += 1044/binary_search_cpp
 1044/binary_search_cpp: 1044/binary_search.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)

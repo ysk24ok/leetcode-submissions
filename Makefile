@@ -1003,6 +1003,10 @@ BINS += 1284/solution_cpp
 1284/solution_cpp: 1284/solution.cpp
 	g++ $(CXXFLAGS) -o $@ $^
 
+BINS += 1291/brute_force_cpp
+1291/brute_force_cpp: 1291/brute_force.cpp
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+
 BINS += 1305/dfs_cpp
 1305/dfs_cpp: 1305/dfs.cpp leetcode/tree.o
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)

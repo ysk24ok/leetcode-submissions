@@ -854,6 +854,10 @@ BINS += 0976/solution_cpp
 0976/solution_cpp: 0976/solution.cpp
 	g++ $(CXXFLAGS) -o $@ $^
 
+BINS += 0980/recursion_cpp
+0980/recursion_cpp: 0980/recursion.cpp
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+
 # TLE
 BINS += 0986/linear_search_cpp
 0986/linear_search_cpp: 0986/linear_search.cpp

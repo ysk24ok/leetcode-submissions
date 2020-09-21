@@ -26,16 +26,6 @@ class Solution {
       if (capacity < 0) return false;
     }
     return ret;
-    /*
-    for (auto& trip : trips) {
-      for (int i = trip[1]; i < trip[2]; i++) {
-        dp[i] += trip[0];
-      }
-    }
-    for (auto& num_passengers : dp) {
-      if (num_passengers > capacity) return false;
-    }
-    */
   }
 };
 

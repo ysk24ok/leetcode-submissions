@@ -927,9 +927,13 @@ BINS += 1091/bfs_cpp
 1091/bfs_cpp: 1091/bfs.cpp
 	g++ $(CXXFLAGS) -o $@ $^
 
-BINS += 1094/solution_cpp
-1094/solution_cpp: 1094/solution.cpp
-	g++ $(CXXFLAGS) -o $@ $^
+BINS += 1094/count_passengers_at_all_locations_cpp
+1094/count_passengers_at_all_locations_cpp: 1094/count_passengers_at_all_locations.cpp
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+
+BINS += 1094/count_passengers_at_start_and_end_cpp
+1094/count_passengers_at_start_and_end_cpp: 1094/count_passengers_at_start_and_end.cpp
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
 BINS += 1143/dp_cpp
 1143/dp_cpp: 1143/dp.cpp

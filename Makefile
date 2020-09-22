@@ -425,6 +425,10 @@ BINS += 0229/majority_voting_cpp
 0229/majority_voting_cpp: 0229/majority_voting.cpp
 	g++ $(CXXFLAGS) -o $@ $^
 
+BINS += 0229/hashmap_cpp
+0229/hashmap_cpp: 0229/hashmap.cpp
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+
 BINS += 0230/dfs_cpp
 0230/dfs_cpp: 0230/dfs.cpp leetcode/tree.o
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)

@@ -570,6 +570,10 @@ BINS += 0387/hashmap_cpp
 0387/hashmap_cpp: 0387/hashmap.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
+BINS += 0389/hashmap_cpp
+0389/hashmap_cpp: 0389/hashmap.cpp
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+
 BINS += 0392/linear_search
 0392/linear_search: 0392/linear_search.cpp
 	g++ $(CXXFLAGS) -o $@ $^

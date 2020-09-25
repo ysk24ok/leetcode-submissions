@@ -329,6 +329,10 @@ BINS += 0174/recursion_with_memoization_cpp
 0174/recursion_with_memoization_cpp: 0174/recursion_with_memoization.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
+BINS += 0179/sort_cpp
+0179/sort_cpp: 0179/sort.cpp
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+
 BINS += 0187/map_cpp
 0187/map_cpp: 0187/map.cpp
 	g++ $(CXXFLAGS) -o $@ $^

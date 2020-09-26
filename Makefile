@@ -654,6 +654,10 @@ BINS += 0476/solution_cpp
 0476/solution_cpp: 0476/solution.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
+BINS += 0495/one_pass_cpp
+0495/one_pass_cpp: 0495/one_pass.cpp
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+
 BINS += 0516/dp_cpp
 0516/dp_cpp: 0516/dp.cpp
 	g++ $(CXXFLAGS) -o $@ $^

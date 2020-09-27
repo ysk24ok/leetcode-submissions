@@ -590,6 +590,10 @@ BINS += 0399/dfs_cpp
 0399/dfs_cpp: 0399/dfs.cpp
 	g++ $(CXXFLAGS) -o $@ $^
 
+BINS += 0399/bfs_cpp
+0399/bfs_cpp: 0399/bfs.cpp
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+
 BINS += 0402/stack_cpp
 0402/stack_cpp: 0402/stack.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)

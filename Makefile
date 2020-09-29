@@ -265,6 +265,10 @@ BINS += 0139/dp
 0139/dp: 0139/dp.cpp
 	g++ $(CXXFLAGS) -o $@ $^
 
+BINS += 0139/dp_with_trie_cpp
+0139/dp_with_trie_cpp: 0139/dp_with_trie.cpp
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+
 BINS += 0141/hash_table_cpp
 0141/hash_table_cpp: 0141/hash_table.cpp leetcode/linked_list.o
 	g++ $(CXXFLAGS) -I. -o $@ $^

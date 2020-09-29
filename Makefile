@@ -758,6 +758,10 @@ BINS += 0706/linked_list_without_rehashing_cpp
 0706/linked_list_without_rehashing_cpp: 0706/linked_list_without_rehashing.cpp
 	g++ $(CXXFLAGS) -o $@ $^
 
+BINS += 0713/two_pointers_cpp
+0713/two_pointers_cpp: 0713/two_pointers.cpp
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+
 BINS += 0714/dp_cpp
 0714/dp_cpp: 0714/dp.cpp
 	g++ $(CXXFLAGS) -o $@ $^

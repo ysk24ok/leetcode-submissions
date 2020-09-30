@@ -64,6 +64,10 @@ BINS += 0040/backtracking_cpp
 0040/backtracking_cpp: 0040/backtracking.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
+BINS += 0041/sort_cpp
+0041/sort_cpp: 0041/sort.cpp
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+
 BINS += 0046/solution_cpp
 0046/solution_cpp: 0046/solution.cpp
 	g++ $(CXXFLAGS) -o $@ $^

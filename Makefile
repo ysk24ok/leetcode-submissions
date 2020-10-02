@@ -60,6 +60,10 @@ BINS += 0039/backtracking_cpp
 0039/backtracking_cpp: 0039/backtracking.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
+BINS += 0039/queue_cpp
+0039/queue_cpp: 0039/queue.cpp
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+
 BINS += 0040/backtracking_cpp
 0040/backtracking_cpp: 0040/backtracking.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)

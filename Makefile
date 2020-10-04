@@ -1055,6 +1055,10 @@ BINS += 1284/solution_cpp
 1284/solution_cpp: 1284/solution.cpp
 	g++ $(CXXFLAGS) -o $@ $^
 
+BINS += 1288/sort_cpp
+1288/sort_cpp: 1288/sort.cpp
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+
 BINS += 1291/brute_force_cpp
 1291/brute_force_cpp: 1291/brute_force.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)

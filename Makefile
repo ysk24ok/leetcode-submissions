@@ -935,6 +935,10 @@ BINS += 1008/dfs_cpp
 1008/dfs_cpp: 1008/dfs.cpp leetcode/tree.o
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
+BINS += 1009/one_pass_cpp
+1009/one_pass_cpp: 1009/one_pass.cpp
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+
 BINS += 1022/bfs_cpp
 1022/bfs_cpp: 1022/bfs.cpp leetcode/tree.o
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)

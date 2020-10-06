@@ -754,6 +754,10 @@ BINS += 0700/recursive_cpp
 0700/recursive_cpp: 0700/recursive.cpp leetcode/tree.o
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
+BINS += 0701/recursive_cpp
+0701/recursive_cpp: 0701/recursive.cpp leetcode/tree.o
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+
 BINS += 0703/min_heap_cpp
 0703/min_heap_cpp: 0703/min_heap.cpp
 	g++ -std=c++11 -o $@ $^

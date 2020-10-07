@@ -116,6 +116,10 @@ BINS += 0060/solution_cpp
 0060/solution_cpp: 0060/solution.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
+BINS += 0061/two_pass_cpp
+0061/two_pass_cpp: 0061/two_pass.cpp leetcode/linked_list.o
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+
 BINS += 0062/dp_matrix
 0062/dp_matrix: 0062/dp_matrix.cpp
 	g++ $(CXXFLAGS) -o $@ $^

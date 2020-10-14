@@ -421,6 +421,10 @@ BINS += 0213/dp_cpp
 0213/dp_cpp: 0213/dp.cpp
 	g++ $(CXXFLAGS) -o $@ $^
 
+BINS += 0213/dp_constant_space_cpp
+0213/dp_constant_space_cpp: 0213/dp_constant_space.cpp
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+
 BINS += 0215/min_heap_cpp
 0215/min_heap_cpp: 0215/min_heap.cpp
 	g++ $(CXXFLAGS) -o $@ $^

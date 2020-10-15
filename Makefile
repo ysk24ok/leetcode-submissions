@@ -357,6 +357,10 @@ BINS += 0187/map_cpp
 0187/map_cpp: 0187/map.cpp
 	g++ $(CXXFLAGS) -o $@ $^
 
+BINS += 0189/inplace_cpp
+0189/inplace_cpp: 0189/inplace.cpp
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+
 BINS += 0191/solution
 0191/solution: 0191/solution.cpp
 	g++ $(CXXFLAGS) -o $@ $?

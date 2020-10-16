@@ -156,6 +156,10 @@ BINS += 0073/constant_space_complexity_cpp
 0073/constant_space_complexity_cpp: 0073/constant_space_complexity.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
+BINS += 0074/linear_search_cpp
+0074/linear_search_cpp: 0074/linear_search.cpp
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+
 # Dutch national flag problem
 BINS += 0075/counting_sort_cpp
 0075/counting_sort_cpp: 0075/counting_sort.cpp

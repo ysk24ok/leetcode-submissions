@@ -17,19 +17,9 @@ $ cd mybuild
 $ cmake ..
 $ make
 $ popd
+$ mkdir -p gtest/lib
 $ cp -R googletest-release-${GTEST_VERSION}/googletest/include gtest
-$ mkdir gtest/lib
 $ cp googletest-release-${GTEST_VERSION}/googletest/mybuild/libgtest* gtest/lib
 $ rm -rf googletest-release-${GTEST_VERSION}
 $ rm -f release-${GTEST_VERSION}.tar.gz
 ```
-
-## Solution
-
-* 23: Merge k Sorted Lists
-  - Python3
-    + Compare k nodes and iterate kN times
-  - C++
-    + Merge lists by divide-and-conquer method
-  - Go
-    + Sort nodes using priority queue

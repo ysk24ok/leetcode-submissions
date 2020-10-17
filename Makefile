@@ -357,9 +357,9 @@ BINS += 0179/sort_cpp
 0179/sort_cpp: 0179/sort.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
-BINS += 0187/map_cpp
-0187/map_cpp: 0187/map.cpp
-	g++ $(CXXFLAGS) -o $@ $^
+BINS += 0187/hashmap_cpp
+0187/hashmap_cpp: 0187/hashmap.cpp
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
 BINS += 0189/inplace_cpp
 0189/inplace_cpp: 0189/inplace.cpp

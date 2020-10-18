@@ -361,6 +361,10 @@ BINS += 0187/hashmap_cpp
 0187/hashmap_cpp: 0187/hashmap.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
+BINS += 0188/dp_cpp
+0188/dp_cpp: 0188/dp.cpp
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+
 BINS += 0189/inplace_cpp
 0189/inplace_cpp: 0189/inplace.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)

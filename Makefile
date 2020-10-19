@@ -1007,6 +1007,10 @@ BINS += 1071/gcd_cpp
 1071/gcd_cpp: 1071/gcd.cpp
 	g++ $(CXXFLAGS) -o $@ $^
 
+BINS += 1077/brute_force_cpp
+1077/brute_force_cpp: 1077/brute_force.cpp
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+
 BINS += 1091/bfs_cpp
 1091/bfs_cpp: 1091/bfs.cpp
 	g++ $(CXXFLAGS) -o $@ $^

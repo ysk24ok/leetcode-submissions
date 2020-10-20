@@ -257,6 +257,10 @@ BINS += 0130/dfs_cpp
 0130/dfs_cpp: 0130/dfs.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
+BINS += 0133/bfs_cpp
+0133/bfs_cpp: 0133/bfs.cpp
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+
 BINS += 0134/n_squared_cpp
 0134/n_squared_cpp: 0134/n_squared.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)

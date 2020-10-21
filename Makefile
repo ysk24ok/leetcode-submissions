@@ -822,6 +822,10 @@ BINS += 0733/bfs_cpp
 0733/bfs_cpp: 0733/bfs.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
+BINS += 0735/stack_cpp
+0735/stack_cpp: 0735/stack.cpp
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+
 BINS += 0743/dijkstra_cpp
 0743/dijkstra_cpp: 0743/dijkstra.cpp
 	g++ $(CXXFLAGS) -o $@ $^

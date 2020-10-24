@@ -934,6 +934,10 @@ BINS += 0930/prefix_sum_cpp
 0930/prefix_sum_cpp: 0930/prefix_sum.cpp
 	g++ $(CXXFLAGS) -o $@ $^
 
+BINS += 0948/two_pointers_cpp
+0948/two_pointers_cpp: 0948/two_pointers.cpp
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+
 BINS += 0950/solution
 0950/solution: 0950/solution.cpp
 	g++ $(CXXFLAGS) -o $@ $^

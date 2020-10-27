@@ -10,7 +10,7 @@ struct ListNode {
 
 ListNode* CreateListNode(const std::vector<int>& vec);
 
-void DeleteListNode(ListNode* node);
+void DeleteListNode(ListNode* node, size_t count = 0);
 
 void AssertListNodeEqual(ListNode* expected, ListNode* actual);
 

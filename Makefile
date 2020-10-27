@@ -305,6 +305,10 @@ BINS += 0142/hash_table_cpp
 0142/hash_table_cpp: 0142/hash_table.cpp leetcode/linked_list.o
 	g++ $(CXXFLAGS) -I. -o $@ $^
 
+BINS += 0142/two_pointers_cpp
+0142/two_pointers_cpp: 0142/two_pointers.cpp leetcode/linked_list.o
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+
 BINS += 0144/dfs_cpp
 0144/dfs_cpp: 0144/dfs.cpp leetcode/tree.o
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)

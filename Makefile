@@ -870,6 +870,10 @@ BINS += 0799/dp
 0799/dp: 0799/dp.cpp
 	g++ $(CXXFLAGS) -o $@ $^
 
+BINS += 0799/dp_lower_space_complexity_cpp
+0799/dp_lower_space_complexity_cpp: 0799/dp_lower_space_complexity.cpp
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+
 BINS += 0802/dfs_cpp
 0802/dfs_cpp: 0802/dfs.cpp
 	g++ $(CXXFLAGS) -o $@ $^

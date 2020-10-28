@@ -481,6 +481,10 @@ BINS += 0226/iterative_cpp
 0226/iterative_cpp: 0226/iterative.cpp leetcode/tree.o
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
+BINS += 0228/one_pass_cpp
+0228/one_pass_cpp: 0228/one_pass.cpp
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+
 BINS += 0229/majority_voting_cpp
 0229/majority_voting_cpp: 0229/majority_voting.cpp
 	g++ $(CXXFLAGS) -o $@ $^

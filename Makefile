@@ -898,6 +898,10 @@ BINS += 0849/linear_search
 0849/linear_search: 0849/linear_search.cpp
 	g++ $(CXXFLAGS) -o $@ $^
 
+BINS += 0849/group_by_zero_cpp
+0849/group_by_zero_cpp: 0849/group_by_zero.cpp
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+
 BINS += 0854/backtracking_cpp
 0854/backtracking_cpp: 0854/backtracking.cpp
 	g++ $(CXXFLAGS) -o $@ $^

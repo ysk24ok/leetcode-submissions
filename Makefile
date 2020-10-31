@@ -798,6 +798,10 @@ BINS += 0668/binary_search_cpp
 0668/binary_search_cpp: 0668/binary_search.cpp
 	g++ $(CXXFLAGS) -o $@ $^
 
+BINS += 0673/dp_cpp
+0673/dp_cpp: 0673/dp.cpp
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+
 BINS += 0678/stack_cpp
 0678/stack_cpp: 0678/stack.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)

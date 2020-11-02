@@ -337,6 +337,10 @@ BINS += 0146/hashmap_cpp
 0146/hashmap_cpp: 0146/hashmap.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
+BINS += 0147/solution_cpp
+0147/solution_cpp: 0147/solution.cpp leetcode/linked_list.o
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+
 BINS += 0148/quick_sort_cpp
 0148/quick_sort_cpp: 0148/quick_sort.cpp leetcode/linked_list.o
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)

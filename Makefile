@@ -626,6 +626,10 @@ BINS += 0368/recursion_with_memoization_cpp
 0368/recursion_with_memoization_cpp: 0368/recursion_with_memoization.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
+BINS += 0370/solution_cpp
+0370/solution_cpp: 0370/solution.cpp
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+
 BINS += 0376/dp_cpp
 0376/dp_cpp: 0376/dp.cpp
 	g++ $(CXXFLAGS) -o $@ $^

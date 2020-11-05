@@ -1099,6 +1099,10 @@ BINS += 0962/sort_cpp
 0962/sort_cpp: 0962/sort.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
+BINS += 1217/solution_cpp
+1217/solution_cpp: 1217/solution.cpp
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+
 BINS += 1221/solution
 1221/solution: 1221/solution.cpp
 	g++ $(CXXFLAGS) -o $@ $^

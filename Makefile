@@ -806,6 +806,10 @@ BINS += 0560/hashmap_cpp
 0560/hashmap_cpp: 0560/hashmap.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
+BINS += 0563/dfs_cpp
+0563/dfs_cpp: 0563/dfs.cpp leetcode/tree.o
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+
 BINS += 0567/sliding_window_cpp
 0567/sliding_window_cpp: 0567/sliding_window.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)

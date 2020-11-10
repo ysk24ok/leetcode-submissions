@@ -914,6 +914,10 @@ BINS += 0802/dfs_cpp
 0802/dfs_cpp: 0802/dfs.cpp
 	g++ $(CXXFLAGS) -o $@ $^
 
+BINS += 0832/solution_cpp
+0832/solution_cpp: 0832/solution.cpp
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+
 BINS += 0835/brute_force_cpp
 0835/brute_force_cpp: 0835/brute_force.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)

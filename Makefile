@@ -80,6 +80,10 @@ BINS += 0047/solution_cpp
 0047/solution_cpp: 0047/solution.cpp
 	g++ $(CXXFLAGS) -o $@ $^
 
+BINS += 0047/recursion_cpp
+0047/recursion_cpp: 0047/recursion.cpp
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+
 BINS += 0049/categorize_by_sorting_cpp
 0049/categorize_by_sorting_cpp: 0049/categorize_by_sorting.cpp
 	g++ $(CXXFLAGS) -o $@ $^

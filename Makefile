@@ -738,6 +738,10 @@ BINS += 0456/n_squared_cpp
 0456/n_squared_cpp: 0456/n_squared.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
+BINS += 0458/solution_cpp
+0458/solution_cpp: 0458/solution.cpp
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+
 BINS += 0467/dp_cpp
 0467/dp_cpp: 0467/dp.cpp
 	g++ $(CXXFLAGS) -o $@ $^

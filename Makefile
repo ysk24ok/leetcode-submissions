@@ -994,6 +994,10 @@ BINS += 0930/prefix_sum_cpp
 0930/prefix_sum_cpp: 0930/prefix_sum.cpp
 	g++ $(CXXFLAGS) -o $@ $^
 
+BINS += 0938/bottom_up_dfs_cpp
+0938/bottom_up_dfs_cpp: 0938/bottom_up_dfs.cpp leetcode/tree.o
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+
 BINS += 0948/two_pointers_cpp
 0948/two_pointers_cpp: 0948/two_pointers.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)

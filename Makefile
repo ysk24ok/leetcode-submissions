@@ -954,6 +954,10 @@ BINS += 0856/linear_search_with_recursion
 0856/linear_search_with_recursion: 0856/linear_search_with_recursion.cpp
 	g++ $(CXXFLAGS) -o $@ $?
 
+BINS += 0858/mathematical_cpp
+0858/mathematical_cpp: 0858/mathematical.cpp
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+
 BINS += 0859/one_pass_cpp
 0859/one_pass_cpp: 0859/one_pass.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)

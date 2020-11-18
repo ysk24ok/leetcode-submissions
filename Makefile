@@ -112,6 +112,10 @@ BINS += 0055/dp_bottom_up_cpp
 0055/dp_bottom_up_cpp: 0055/dp_bottom_up.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
+BINS += 0056/sort_cpp
+0056/sort_cpp: 0056/sort.cpp
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+
 BINS += 0058/one_pass_cpp
 0058/one_pass_cpp: 0058/one_pass.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)

@@ -670,6 +670,10 @@ BINS += 0392/follow_up
 0392/follow_up: 0392/follow_up.cpp
 	g++ $(CXXFLAGS) -o $@ $^
 
+BINS += 0394/stack_cpp
+0394/stack_cpp: 0394/stack.cpp
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+
 BINS += 0399/dfs_cpp
 0399/dfs_cpp: 0399/dfs.cpp
 	g++ $(CXXFLAGS) -o $@ $^

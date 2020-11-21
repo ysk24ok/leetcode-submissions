@@ -998,6 +998,14 @@ BINS += 0901/stack_cpp
 0901/stack_cpp: 0901/stack.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
+BINS += 0902/tle_cpp
+0902/tle_cpp: 0902/tle.cpp
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+
+BINS += 0902/dp_cpp
+0902/dp_cpp: 0902/dp.cpp
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+
 BINS += 0914/gcd_cpp
 0914/gcd_cpp: 0914/gcd.cpp
 	g++ $(CXXFLAGS) -o $@ $^

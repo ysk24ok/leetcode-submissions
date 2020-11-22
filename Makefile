@@ -730,6 +730,8 @@ BINS += 0799/dp
 
 0802/dfs_cpp: 0802/dfs.cpp
 	g++ $(CXXFLAGS) -o $@ $^
+0802/reverse_edges_cpp: 0802/reverse_edges.cpp
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
 0832/solution_cpp: 0832/solution.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)

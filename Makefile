@@ -806,6 +806,11 @@ BINS += 0856/linear_search_with_recursion
 0930/prefix_sum_cpp: 0930/prefix_sum.cpp
 	g++ $(CXXFLAGS) -o $@ $^
 
+0933/tle_cpp: 0933/tle.cpp
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+0933/queue_cpp: 0933/queue.cpp
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+
 0938/bottom_up_dfs_cpp: 0938/bottom_up_dfs.cpp leetcode/tree.o
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 

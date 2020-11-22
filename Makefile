@@ -741,6 +741,8 @@ BINS += 0799/dp
 
 0844/stack_cpp: 0844/stack.cpp
 	g++ $(CXXFLAGS) -o $@ $^
+0844/without_stack_cpp: 0844/without_stack.cpp
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
 BINS += 0849/linear_search
 0849/linear_search: 0849/linear_search.cpp

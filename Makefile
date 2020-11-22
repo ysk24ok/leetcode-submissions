@@ -784,6 +784,19 @@ BINS += 0856/linear_search_with_recursion
 0902/dp_cpp: 0902/dp.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
+0912/bubble_sort_cpp: 0912/bubble_sort.cpp
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+0912/selection_sort_cpp: 0912/selection_sort.cpp
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+0912/insertion_sort_cpp: 0912/insertion_sort.cpp
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+0912/merge_sort_cpp: 0912/merge_sort.cpp
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+0912/heap_sort_cpp: 0912/heap_sort.cpp
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+0912/quick_sort_cpp: 0912/quick_sort.cpp
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+
 0914/gcd_cpp: 0914/gcd.cpp
 	g++ $(CXXFLAGS) -o $@ $^
 

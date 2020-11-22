@@ -4,7 +4,6 @@ CPPFLAGS = -I. -Igtest/include
 LDFLAGS = -Lgtest/lib
 LDLIBS = -lgtest -lgtest_main -lpthread
 
-OBJS =
 BINS =
 TESTS =
 
@@ -1071,11 +1070,9 @@ BINS += 1255/backtracking
 1446/linear_search_cpp: 1446/linear_search.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
-OBJS += leetcode/tree.o
 leetcode/tree.o: leetcode/tree.cpp
 	g++ $(CXXFLAGS) -o $@ -c $?
 
-OBJS += leetcode/linked_list.o
 leetcode/linked_list.o: leetcode/linked_list.cpp
 	g++ $(CXXFLAGS) -o $@ -c $?
 
@@ -1100,4 +1097,4 @@ check: $(TESTS)
 
 .PHONY: clean
 clean:
-	rm -f */*_cpp */*_rs $(OBJS) $(BINS) $(TESTS)
+	rm -f */*_cpp */*_rs leetcode/*.o $(BINS) $(TESTS)

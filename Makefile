@@ -837,6 +837,11 @@ BINS += 0950/solution
 0950/queue_rs: 0950/queue.rs
 	rustc -o $@ $^
 
+0962/tle_cpp: 0962/tle.cpp
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+0962/sort_cpp: 0962/sort.cpp
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+
 0973/heap_cpp: 0973/heap.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
@@ -924,12 +929,6 @@ BINS += 0950/solution
 
 1143/dp_rs: 1143/dp.rs
 	rustc -o $@ $^
-
-0962/tle_cpp: 0962/tle.cpp
-	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
-
-0962/sort_cpp: 0962/sort.cpp
-	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
 1217/solution_cpp: 1217/solution.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)

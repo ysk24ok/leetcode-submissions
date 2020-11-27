@@ -538,6 +538,9 @@ BINS += 0392/follow_up
 0394/stack_cpp: 0394/stack.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
+0395/divide_and_conquer_cpp: 0395/divide_and_conquer.cpp
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+
 0399/dfs_cpp: 0399/dfs.cpp
 	g++ $(CXXFLAGS) -o $@ $^
 

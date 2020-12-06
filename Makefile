@@ -205,6 +205,9 @@ BINS += 0104/dfs
 0116/bfs_cpp: 0116/bfs.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
+0117/bfs_cpp: 0117/bfs.cpp
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+
 0121/one_pass_cpp: 0121/one_pass.cpp
 	g++ $(CXXFLAGS) -o $@ $^
 

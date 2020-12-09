@@ -324,6 +324,9 @@ BINS += 0155/two_vector_rs
 0169/boyer_moore_voting_cpp: 0169/boyer_moore_voting.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
+0173/stack_cpp: 0173/stack.cpp leetcode/tree.o
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+
 0174/recursion_with_memoization_cpp: 0174/recursion_with_memoization.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 

@@ -152,6 +152,9 @@ BINS += 0063/dp_two_vec
 0079/recursive_cpp: 0079/recursive.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
+0080/one_pass_cpp: 0080/one_pass.cpp
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+
 0081/binary_search_cpp: 0081/binary_search.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 

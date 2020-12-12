@@ -794,6 +794,9 @@ BINS += 0856/linear_search_with_recursion
 0859/one_pass_cpp: 0859/one_pass.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
+0865/dfs_cpp: 0865/dfs.cpp leetcode/tree.o
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+
 0871/priority_queue_cpp: 0871/priority_queue.cpp
 	g++ $(CXXFLAGS) -o $@ $^
 

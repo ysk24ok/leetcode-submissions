@@ -883,6 +883,9 @@ BINS += 0950/solution
 0976/solution_cpp: 0976/solution.cpp
 	g++ $(CXXFLAGS) -o $@ $^
 
+0977/two_pointers_cpp: 0977/two_pointers.cpp
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+
 0980/recursion_cpp: 0980/recursion.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 

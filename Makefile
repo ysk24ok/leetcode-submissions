@@ -183,6 +183,9 @@ BINS += 0097/backtracking_with_memoization
 0097/backtracking_with_memoization: 0097/backtracking_with_memoization.cpp
 	g++ $(CXXFLAGS) -o $@ $^
 
+0098/dfs_cpp: 0098/dfs.cpp leetcode/tree.o
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+
 0099/inorder_cpp: 0099/inorder.cpp leetcode/tree.o
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 

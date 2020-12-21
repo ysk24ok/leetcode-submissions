@@ -833,6 +833,9 @@ BINS += 0856/linear_search_with_recursion
 0902/dp_cpp: 0902/dp.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
+0910/sort_cpp: 0910/sort.cpp
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+
 0912/bubble_sort_cpp: 0912/bubble_sort.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 0912/selection_sort_cpp: 0912/selection_sort.cpp

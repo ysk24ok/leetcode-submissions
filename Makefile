@@ -205,6 +205,9 @@ BINS += 0104/dfs
 0108/solution_cpp: 0108/solution.cpp leetcode/linked_list.o
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
+0110/dfs_cpp: 0110/dfs.cpp leetcode/tree.o
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+
 0111/bottom_up_dfs_cpp: 0111/bottom_up_dfs.cpp leetcode/tree.o
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 

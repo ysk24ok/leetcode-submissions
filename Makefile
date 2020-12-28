@@ -742,6 +742,11 @@ BINS += 0392/follow_up
 0743/dijkstra_cpp: 0743/dijkstra.cpp
 	g++ $(CXXFLAGS) -o $@ $^
 
+0754/tle_cpp: 0754/tle.cpp
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+0754/mathematical_cpp: 0754/mathematical.cpp
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+
 0763/greedy_cpp: 0763/greedy.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 

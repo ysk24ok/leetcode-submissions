@@ -1164,6 +1164,9 @@ BINS += 1255/backtracking
 1446/linear_search_cpp: 1446/linear_search.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
+1457/top_down_dfs_with_set_cpp: 1457/top_down_dfs_with_set.cpp leetcode/tree.o
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+
 1492/stack_cpp: 1492/stack.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 

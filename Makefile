@@ -481,6 +481,9 @@ BINS += 0268/sum
 0287/constant_space_complexity_cpp: 0287/constant_space_complexity.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
+0289/inplace_cpp: 0289/inplace.cpp
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+
 0297/bfs_cpp: 0297/bfs.cpp leetcode/tree.o
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 

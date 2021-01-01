@@ -162,6 +162,9 @@ BINS += 0083/linked_list
 0083/linked_list: 0083/linked_list.cpp leetcode/linked_list.o
 	g++ $(CXXFLAGS) -o $@ $^
 
+0084/stack_cpp: 0084/stack.cpp
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+
 BINS += 0089/recursion
 0089/recursion: 0089/recursion.cpp
 	g++ $(CXXFLAGS) -o $@ $^

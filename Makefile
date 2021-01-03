@@ -664,6 +664,9 @@ BINS += 0392/follow_up
 0525/dp_rs: 0525/dp.rs
 	rustc -o $@ $^
 
+0526/backtracking_cpp: 0526/backtracking.cpp
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+
 0528/binary_search_cpp: 0528/binary_search.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 

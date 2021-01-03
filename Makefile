@@ -1077,6 +1077,11 @@ BINS += 1255/backtracking
 1377/solution_cpp: 1377/solution.cpp
 	g++ $(CXXFLAGS) -o $@ $^
 
+1379/dfs_cpp: 1379/dfs.cpp leetcode/tree.o
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+1379/bfs_cpp: 1379/bfs.cpp leetcode/tree.o
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+
 1389/solution_cpp: 1389/solution.cpp
 	g++ $(CXXFLAGS) -o $@ $^
 

@@ -1,8 +1,5 @@
-#include <algorithm>
-#include <cassert>
-#include <iostream>
-#include <limits>
-#include <numeric>
+#include <gtest/gtest.h>
+
 #include <vector>
 
 #include "leetcode/linked_list.hpp"
@@ -52,17 +49,17 @@ int main() {
   l1 = CreateListNode(v1);
   l2 = CreateListNode(v2);
   got = sol.mergeTwoLists(l1, l2);
-  assert(got->val == 1);
-  assert(got->next->val == 1);
-  assert(got->next->next->val == 2);
-  assert(got->next->next->next->val == 3);
-  assert(got->next->next->next->next->val == 4);
-  assert(got->next->next->next->next->next->val == 4);
-  assert(!got->next->next->next->next->next->next);
+  EXPECT_EQ(1, got->val);
+  EXPECT_EQ(1, got->next->val);
+  EXPECT_EQ(2, got->next->next->val);
+  EXPECT_EQ(3, got->next->next->next->val);
+  EXPECT_EQ(4, got->next->next->next->next->val);
+  EXPECT_EQ(4, got->next->next->next->next->next->val);
+  EXPECT_FALSE(got->next->next->next->next->next->next);
   DeleteListNode(l1);
   DeleteListNode(l2);
   DeleteListNode(got);
 
   got = sol.mergeTwoLists(nullptr, nullptr);
-  assert(!got);
+  EXPECT_FALSE(got);
 }

@@ -29,7 +29,7 @@ BINS += 0018/recursive_2sum
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
 0021/solution_cpp: 0021/solution.cpp leetcode/linked_list.o
-	g++ $(CXXFLAGS) -I. -o $@ $^
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 0021/heap_cpp: 0021/heap.cpp leetcode/linked_list.o
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 

@@ -163,9 +163,8 @@ BINS += 0063/dp_two_vec
 0082/inplace_cpp: 0082/inplace.cpp leetcode/linked_list.o
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
-BINS += 0083/linked_list
-0083/linked_list: 0083/linked_list.cpp leetcode/linked_list.o
-	g++ $(CXXFLAGS) -o $@ $^
+0083/inplace_cpp: 0083/inplace.cpp leetcode/linked_list.o
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
 0084/stack_cpp: 0084/stack.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)

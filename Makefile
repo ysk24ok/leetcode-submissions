@@ -7,6 +7,11 @@ LDLIBS = -lgtest -lgtest_main -lpthread
 BINS =
 TESTS =
 
+0003/sliding_window_cpp: 0003/sliding_window.cpp
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+0003/sliding_window_optimized_cpp: 0003/sliding_window_optimized.cpp
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+
 BINS += 0004/merge_and_sort
 0004/merge_and_sort: 0004/merge_and_sort.cpp
 	g++ $(CXXFLAGS) -o $@ $^

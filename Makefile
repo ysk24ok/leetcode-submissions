@@ -1199,6 +1199,9 @@ BINS += 1255/backtracking
 1640/hashmap_cpp: 1640/hashmap.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
+1662/two_pointers_cpp: 1662/two_pointers.cpp
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+
 leetcode/tree.o: leetcode/tree.cpp
 	g++ $(CXXFLAGS) -o $@ -c $?
 

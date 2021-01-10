@@ -250,6 +250,9 @@ BINS += 0104/dfs
 0125/two_pointers_cpp: 0125/two_pointers.cpp
 	g++ $(CXXFLAGS) -o $@ $^
 
+0127/bfs_cpp: 0127/bfs.cpp
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+
 0128/union_find_cpp: 0128/union_find.cpp
 	g++ $(CXXFLAGS) -o $@ $^
 

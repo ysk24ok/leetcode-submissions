@@ -174,6 +174,11 @@ BINS += 0063/dp_two_vec
 0084/stack_cpp: 0084/stack.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
+0088/linear_space_cpp: 0088/linear_space.cpp
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+0088/constant_space_cpp: 0088/constant_space.cpp
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+
 BINS += 0089/recursion
 0089/recursion: 0089/recursion.cpp
 	g++ $(CXXFLAGS) -o $@ $^

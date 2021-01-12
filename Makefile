@@ -7,6 +7,9 @@ LDLIBS = -lgtest -lgtest_main -lpthread
 BINS =
 TESTS =
 
+0002/solution_cpp: 0002/solution.cpp leetcode/linked_list.o
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+
 0003/sliding_window_cpp: 0003/sliding_window.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 0003/sliding_window_optimized_cpp: 0003/sliding_window_optimized.cpp

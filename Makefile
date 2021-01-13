@@ -849,6 +849,9 @@ BINS += 0856/linear_search_with_recursion
 0876/two_pointers_cpp: 0876/two_pointers.cpp leetcode/linked_list.o
 	g++ $(CXXFLAGS) -I. -o $@ $^
 
+0881/heap_cpp: 0881/heap.cpp
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+
 0886/backtracking_cpp: 0886/backtracking.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 

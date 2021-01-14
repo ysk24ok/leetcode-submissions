@@ -1213,6 +1213,11 @@ BINS += 1255/backtracking
 1640/hashmap_cpp: 1640/hashmap.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
+1658/prefix_sum_cpp: 1658/prefix_sum.cpp
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+1658/tle_cpp: 1658/tle.cpp
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+
 1662/two_pointers_cpp: 1662/two_pointers.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 

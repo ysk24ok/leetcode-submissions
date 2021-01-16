@@ -429,6 +429,8 @@ BINS += 0191/n_AND_n-1
 
 0215/min_heap_cpp: 0215/min_heap.cpp
 	g++ $(CXXFLAGS) -o $@ $^
+0215/sort_cpp: 0215/sort.cpp
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
 0216/recursive_cpp: 0216/recursive.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)

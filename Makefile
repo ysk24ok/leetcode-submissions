@@ -428,7 +428,7 @@ BINS += 0191/n_AND_n-1
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
 0215/min_heap_cpp: 0215/min_heap.cpp
-	g++ $(CXXFLAGS) -o $@ $^
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 0215/sort_cpp: 0215/sort.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 

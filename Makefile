@@ -1217,6 +1217,9 @@ BINS += 1255/backtracking
 1640/hashmap_cpp: 1640/hashmap.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
+1641/dfs_cpp: 1641/dfs.cpp
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+
 1646/linear_search_cpp: 1646/linear_search.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 

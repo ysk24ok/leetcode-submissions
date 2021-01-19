@@ -19,6 +19,9 @@ BINS += 0004/merge_and_sort
 0004/merge_and_sort: 0004/merge_and_sort.cpp
 	g++ $(CXXFLAGS) -o $@ $^
 
+0005/dp_cpp: 0005/dp.cpp
+	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+
 0011/two_pointers_cpp: 0011/two_pointers.cpp
 	g++ $(CXXFLAGS) -o $@ $^
 

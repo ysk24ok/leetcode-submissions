@@ -39,6 +39,9 @@ BINS += 0018/recursive_2sum
 0019/one_pass_cpp: 0019/one_pass.cpp leetcode/linked_list.o
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
+BINS += 0020/stack
+0020/stack: 0020/stack.cpp
+
 0021/solution_cpp: 0021/solution.cpp leetcode/linked_list.o
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 0021/heap_cpp: 0021/heap.cpp leetcode/linked_list.o

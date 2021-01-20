@@ -8,14 +8,24 @@ language=$1
 number=$2
 name=$3
 
+curdir=$(pwd)
 if [ $language = cpp ]; then
   ext=cpp
-  rule="$number/${name}_$ext: $number/$name.$ext"
-  cmd='$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)'
+  rule=$(cat << EOF
+\nBINS += $number/$name
+$number/$name: $number/$name.$ext
+EOF
+)
+  echo -e "$rule" >> $curdir/Makefile
 elif [ $language = rust ]; then
   ext=rs
-  rule="$number/${name}_$ext: $number/$name.$ext"
   cmd='rustc -o $@ $^'
+  rule=$(cat << EOF
+\n$number/${name}_$ext: $number/$name.$ext
+\t$cmd
+EOF
+)
+  echo -e "$rule" >> $curdir/Makefile
 elif [ $language = py ]; then
   ext=py
 else
@@ -23,15 +33,5 @@ else
   exit 1
 fi
 
-curdir=$(pwd)
 mkdir -p $curdir/$number
 cp $curdir/templates/template.$ext $number/$name.$ext
-if [ $language = py ]; then
-  exit 0
-fi
-rule=$(cat << EOF
-\n$rule
-\t$cmd
-EOF
-)
-echo -e "$rule" >> $curdir/Makefile

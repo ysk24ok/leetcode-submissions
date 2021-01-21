@@ -1237,6 +1237,9 @@ BINS += 1255/backtracking
 1662/two_pointers_cpp: 1662/two_pointers.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
+BINS += 1673/stack
+1673/stack: 1673/stack.cpp
+
 1679/hashmap_cpp: 1679/hashmap.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 

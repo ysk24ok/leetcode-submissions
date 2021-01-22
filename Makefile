@@ -1229,6 +1229,9 @@ BINS += 1255/backtracking
 1646/linear_search_cpp: 1646/linear_search.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
+BINS += 1657/hashmap
+1657/hashmap: 1657/hashmap.cpp
+
 1658/prefix_sum_cpp: 1658/prefix_sum.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 1658/tle_cpp: 1658/tle.cpp

@@ -1098,6 +1098,9 @@ BINS += 1255/backtracking
 1306/dfs_cpp: 1306/dfs.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
+BINS += 1329/sort
+1329/sort: 1329/sort.cpp
+
 1334/warshall_floyd_cpp: 1334/warshall_floyd.cpp
 	g++ $(CXXFLAGS) -o $@ $^
 

@@ -47,6 +47,9 @@ BINS += 0020/stack
 0021/heap_cpp: 0021/heap.cpp leetcode/linked_list.o
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
+BINS += 0023/heap
+0023/heap: 0023/heap.cpp leetcode/linked_list.o
+
 0024/recursion_cpp: 0024/recursion.cpp leetcode/linked_list.o
 	g++ $(CXXFLAGS) -I. -o $@ $^
 

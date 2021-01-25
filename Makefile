@@ -1202,6 +1202,9 @@ BINS += 1329/sort
 1430/dfs_cpp: 1430/dfs.cpp leetcode/tree.o
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
+BINS += 1437/linear_search
+1437/linear_search: 1437/linear_search.cpp
+
 1441/solution_cpp: 1441/solution.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 

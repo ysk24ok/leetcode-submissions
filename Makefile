@@ -1229,6 +1229,9 @@ BINS += 1437/linear_search
 1539/linear_search_cpp: 1539/linear_search.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
+BINS += 1631/dijkstra
+1631/dijkstra: 1631/dijkstra.cpp
+
 1640/hashmap_cpp: 1640/hashmap.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 

@@ -1255,6 +1255,9 @@ BINS += 1657/hashmap
 BINS += 1673/stack
 1673/stack: 1673/stack.cpp
 
+BINS += 1680/iterative
+1680/iterative: 1680/iterative.cpp
+
 1679/hashmap_cpp: 1679/hashmap.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 

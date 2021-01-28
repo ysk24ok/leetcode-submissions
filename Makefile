@@ -1252,6 +1252,9 @@ BINS += 1657/hashmap
 1662/two_pointers_cpp: 1662/two_pointers.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
+BINS += 1663/greedy
+1663/greedy: 1663/greedy.cpp
+
 BINS += 1673/stack
 1673/stack: 1673/stack.cpp
 

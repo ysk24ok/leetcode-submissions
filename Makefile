@@ -961,6 +961,9 @@ BINS += 0950/solution
 0986/two_pointers_cpp: 0986/two_pointers.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
+BINS += 0987/dfs_with_heap
+0987/dfs_with_heap: 0987/dfs_with_heap.cpp leetcode/tree.o
+
 0988/bottom_up_dfs_cpp: 0988/bottom_up_dfs.cpp leetcode/tree.o
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 

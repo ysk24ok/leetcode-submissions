@@ -1261,6 +1261,9 @@ BINS += 1663/greedy
 BINS += 1673/stack
 1673/stack: 1673/stack.cpp
 
+BINS += 1675/min_heap
+1675/min_heap: 1675/min_heap.cpp
+
 BINS += 1680/iterative
 1680/iterative: 1680/iterative.cpp
 

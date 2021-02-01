@@ -383,13 +383,10 @@ BINS += 0155/two_vector_rs
 0189/inplace_cpp: 0189/inplace.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
-BINS += 0191/solution
-0191/solution: 0191/solution.cpp
-	g++ $(CXXFLAGS) -o $@ $?
-
-BINS += 0191/n_AND_n-1
-0191/n_AND_n-1: 0191/n_AND_n-1.cpp
-	g++ $(CXXFLAGS) -o $@ $?
+BINS += 0191/loop
+0191/loop: 0191/loop.cpp
+BINS += 0191/bitmanip
+0191/bitmanip: 0191/bitmanip.cpp
 
 0198/dp_cpp: 0198/dp.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)

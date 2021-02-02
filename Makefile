@@ -739,6 +739,9 @@ BINS += 0392/follow_up
 0668/binary_search_cpp: 0668/binary_search.cpp
 	g++ $(CXXFLAGS) -o $@ $^
 
+BINS += 0669/dfs
+0669/dfs: 0669/dfs.cpp leetcode/tree.o
+
 0673/dp_cpp: 0673/dp.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 

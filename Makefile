@@ -308,8 +308,8 @@ BINS += 0139/dp
 0139/dp_with_trie_cpp: 0139/dp_with_trie.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
-0141/hash_table_cpp: 0141/hash_table.cpp leetcode/linked_list.o
-	g++ $(CXXFLAGS) -I. -o $@ $^
+BINS += 0141/hash_table
+0141/hash_table: 0141/hash_table.cpp leetcode/linked_list.o
 BINS += 0141/constant_space_complexity
 0141/constant_space_complexity: 0141/constant_space_complexity.cpp leetcode/linked_list.o
 

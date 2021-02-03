@@ -1,6 +1,8 @@
-#include <cassert>
-#include <iostream>
+#include <gtest/gtest.h>
+
+#include <cstdlib>
 #include <unordered_map>
+#include <vector>
 
 #include "leetcode/linked_list.hpp"
 
@@ -35,54 +37,24 @@ void DeleteListNode(vector<ListNode*> nodes) {
 
 int main() {
   Solution sol;
-  vector<int> nums;
-  vector<ListNode*> nodes;
-  ListNode* dummy = new ListNode(0);
-  ListNode* node;
+  ListNode* head;
+  bool expected;
 
-  node = dummy;
-  nums = {3,2,0,-4};
-  nodes = {};
-  for (auto& num : nums) {
-    node->next = new ListNode(num);
-    nodes.push_back(node->next);
-    node = node->next;
-  }
-  node->next = nodes[1];
-  assert(dummy->next->val == 3);
-  assert(dummy->next->next->val == 2);
-  assert(dummy->next->next->next->val == 0);
-  assert(dummy->next->next->next->next->val == -4);
-  assert(dummy->next->next->next->next->next->val == 2);
-  assert(sol.hasCycle(dummy->next));
-  DeleteListNode(nodes);
+  head = CreateListNode({3, 2, 0, -4}), expected = true;
+  head->next->next->next->next = head->next;
+  EXPECT_EQ(expected, sol.hasCycle(head));
+  head->next->next->next->next = nullptr;
+  DeleteListNode(head);
 
-  node = dummy;
-  nums = {1,2};
-  nodes = {};
-  for (auto& num : nums) {
-    node->next = new ListNode(num);
-    nodes.push_back(node->next);
-    node = node->next;
-  }
-  node->next = nodes[0];
-  assert(dummy->next->val == 1);
-  assert(dummy->next->next->val == 2);
-  assert(dummy->next->next->next->val == 1);
-  assert(sol.hasCycle(dummy->next));
-  DeleteListNode(nodes);
+  head = CreateListNode({1, 2}), expected = true;
+  head->next->next = head;
+  EXPECT_EQ(expected, sol.hasCycle(head));
+  head->next->next = nullptr;
+  DeleteListNode(head);
 
-  node = dummy;
-  nums = {1};
-  nodes = {};
-  for (auto& num : nums) {
-    node->next = new ListNode(num);
-    nodes.push_back(node->next);
-    node = node->next;
-  }
-  assert(dummy->next->val == 1);
-  assert(!sol.hasCycle(dummy->next));
-  DeleteListNode(nodes);
+  head = CreateListNode({1}), expected = false;
+  EXPECT_EQ(expected, sol.hasCycle(head));
+  DeleteListNode(head);
 
-  delete dummy;
+  exit(EXIT_SUCCESS);
 }

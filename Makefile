@@ -396,6 +396,9 @@ BINS += 0191/bitmanip
 0198/dp_constant_space_cpp: 0198/dp_constant_space.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
+BINS += 0199/bfs
+0199/bfs: 0199/bfs.cpp leetcode/tree.o
+
 0200/dfs_cpp: 0200/dfs.cpp
 	g++ $(CXXFLAGS) -o $@ $^
 

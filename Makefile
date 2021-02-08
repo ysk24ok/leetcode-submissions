@@ -515,6 +515,9 @@ BINS += 0268/sum
 0283/solution_cpp: 0283/solution.cpp
 	g++ $(CXXFLAGS) -o $@ $^
 
+BINS += 0284/solution
+0284/solution: 0284/solution.cpp
+
 # Floyd's Tortoise and Hare
 0287/constant_space_complexity_cpp: 0287/constant_space_complexity.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)

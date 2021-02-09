@@ -711,6 +711,9 @@ BINS += 0392/follow_up
 0532/sort_cpp: 0532/sort.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
+BINS += 0538/dfs
+0538/dfs: 0538/dfs.cpp leetcode/tree.o
+
 0540/binary_search_cpp: 0540/binary_search.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 

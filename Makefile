@@ -297,6 +297,9 @@ BINS += 0104/dfs
 0137/hash_table_cpp: 0137/hash_table.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
+BINS += 0138/hash_table
+0138/hash_table: 0138/hash_table.cpp
+
 BINS += 0139/dfs
 0139/dfs: 0139/dfs.cpp
 	g++ $(CXXFLAGS) -o $@ $^

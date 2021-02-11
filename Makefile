@@ -502,6 +502,11 @@ BINS += 0199/bfs
 0239/deque_cpp: 0239/deque.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
+BINS += 0242/sort 0242/hash_table 0242/two_hash_tables
+0242/sort: 0242/sort.cpp
+0242/hash_table: 0242/hash_table.cpp
+0242/two_hash_tables: 0242/two_hash_tables.cpp
+
 BINS += 0268/sum
 0268/sum: 0268/sum.cpp
 	g++ $(CXXFLAGS) -o $@ $^

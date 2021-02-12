@@ -1135,6 +1135,10 @@ BINS += 1329/sort
 1334/warshall_floyd_cpp: 1334/warshall_floyd.cpp
 	g++ $(CXXFLAGS) -o $@ $^
 
+BINS += 1342/iterative 1342/bitmanip
+1342/iterative: 1342/iterative.cpp
+1342/bitmanip: 1342/bitmanip.cpp
+
 1374/solution_cpp: 1374/solution.cpp
 	g++ $(CXXFLAGS) -o $@ $^
 

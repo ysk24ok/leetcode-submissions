@@ -1046,8 +1046,8 @@ BINS += 0987/dfs_with_heap
 1077/brute_force_cpp: 1077/brute_force.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
-1091/bfs_cpp: 1091/bfs.cpp
-	g++ $(CXXFLAGS) -o $@ $^
+BINS += 1091/bfs
+1091/bfs: 1091/bfs.cpp
 
 1094/count_passengers_at_all_locations_cpp: 1094/count_passengers_at_all_locations.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)

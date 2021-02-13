@@ -1,61 +1,69 @@
-#include <algorithm>
-#include <cassert>
-#include <iostream>
+#include <gtest/gtest.h>
+
+#include <array>
 #include <queue>
+#include <tuple>
 #include <vector>
 
 using namespace std;
 
-vector<vector<int>> d = {
-  {1,1},{1,0},{0,1},{0,-1},{-1,0},{-1,-1},{1,-1},{-1,1}
+array<pair<int, int>, 8> directions = {
+  make_pair(1, 1), {1, 0}, {1, -1}, {0, -1},
+  {-1, -1}, {-1, 0}, {-1, 1}, {0, 1}
 };
 
 class Solution {
  public:
   int shortestPathBinaryMatrix(vector<vector<int>>& grid) {
-    if (grid.size() == 0) return 0;
-    size_t m = grid.size(), n = grid[0].size();
+    const size_t m = grid.size();
     queue<tuple<size_t, size_t, int>> q;
-    q.push(make_tuple(0, 0, 1));
-    int ret = -1;
+    if (grid[0][0] == 0) {
+      q.push(make_tuple(0, 0, 1));
+      grid[0][0] = 1;
+    }
     while (!q.empty()) {
-      tuple<size_t, size_t, int> t = q.front();
+      size_t i = get<0>(q.front());
+      size_t j = get<1>(q.front());
+      int length = get<2>(q.front());
       q.pop();
-      size_t i = get<0>(t), j = get<1>(t);
-      int len = get<2>(t);
-      if (grid[i][j] == 1) continue;
-      if (i == m - 1 && j == n - 1) {
-        ret = len;
-        break;
+      if (i == m - 1 && j == m - 1) {
+        return length;
       }
-      grid[i][j] = 1;
-      for (auto& vec : d) {
-        int new_i = i + vec[0];
-        int new_j = j + vec[1];
-        if (new_i < 0 || new_i >= m || new_j < 0 || new_j >= n) continue;
-        q.push(make_tuple(new_i, new_j, len+1));
+      for (const auto& direction : directions) {
+        size_t new_i = i + direction.first;
+        size_t new_j = j + direction.second;
+        if (new_i >= m || new_j >= m) {
+          continue;
+        }
+        if (grid[new_i][new_j] == 0) {
+          q.push({new_i, new_j, length + 1});
+          grid[new_i][new_j] = 1;
+        }
       }
     }
-    return ret;
+    return -1;
   }
 };
 
 int main() {
   Solution sol;
   vector<vector<int>> grid;
+  int expected;
 
   grid = {
     {0,1},
     {1,0}
   };
-  assert(sol.shortestPathBinaryMatrix(grid) == 2);
+  expected = 2;
+  EXPECT_EQ(expected, sol.shortestPathBinaryMatrix(grid));
 
   grid = {
     {0,0,0},
     {1,1,0},
     {1,1,0}
   };
-  assert(sol.shortestPathBinaryMatrix(grid) == 4);
+  expected = 4;
+  EXPECT_EQ(expected, sol.shortestPathBinaryMatrix(grid));
 
   grid = {
     {0,1,1,0,0,1},
@@ -65,18 +73,21 @@ int main() {
     {1,1,0,1,1,0},
     {1,1,1,0,0,0},
   };
-  assert(sol.shortestPathBinaryMatrix(grid) == 8);
+  expected = 8;
+  EXPECT_EQ(expected, sol.shortestPathBinaryMatrix(grid));
 
   grid = {
     {1,0,0},
     {1,1,0},
     {1,1,0}
   };
-  assert(sol.shortestPathBinaryMatrix(grid) == -1);
+  expected = -1;
+  EXPECT_EQ(expected, sol.shortestPathBinaryMatrix(grid));
 
   grid = {
     {0,0},
     {0,1}
   };
-  assert(sol.shortestPathBinaryMatrix(grid) == -1);
+  expected = -1;
+  EXPECT_EQ(expected, sol.shortestPathBinaryMatrix(grid));
 }

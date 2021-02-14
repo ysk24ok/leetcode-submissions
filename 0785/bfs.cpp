@@ -1,5 +1,6 @@
-#include <cassert>
-#include <iostream>
+#include <gtest/gtest.h>
+
+#include <cstdlib>
 #include <queue>
 #include <vector>
 
@@ -37,19 +38,22 @@ class Solution {
 int main() {
   Solution sol;
   vector<vector<int>> graph;
+  bool expected;
 
-  graph = {{1,3},{0,2},{1,3},{0,2}};
-  assert(sol.isBipartite(graph));
+  graph = {{1, 3}, {0, 2}, {1, 3}, {0, 2}}, expected = true;
+  EXPECT_EQ(expected, sol.isBipartite(graph));
 
-  graph = {{1,2,3},{0,2},{0,1,3},{0,2}};
-  assert(!sol.isBipartite(graph));
+  graph = {{1, 2, 3}, {0, 2}, {0, 1, 3}, {0, 2}}, expected = false;
+  EXPECT_EQ(expected, sol.isBipartite(graph));
 
-  graph = {{1,2},{0,2},{0,1}};
-  assert(!sol.isBipartite(graph));
+  graph = {{1,2},{0,2},{0,1}},expected = false;
+  EXPECT_EQ(expected, sol.isBipartite(graph));
 
-  graph = {{1},{0}};
-  assert(sol.isBipartite(graph));
+  graph = {{1}, {0}}, expected = true;
+  EXPECT_EQ(expected, sol.isBipartite(graph));
 
-  graph = {{},{2,3},{1,3},{1,2}};
-  assert(!sol.isBipartite(graph));
+  graph = {{}, {2, 3}, {1, 3}, {1, 2}}, expected = false;
+  EXPECT_EQ(expected, sol.isBipartite(graph));
+
+  exit(EXIT_SUCCESS);
 }

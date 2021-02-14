@@ -820,10 +820,8 @@ BINS += 0669/dfs
 0771/hashset_cpp: 0771/hashset.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
-0785/bfs_cpp: 0785/bfs.cpp
-	g++ $(CXXFLAGS) -o $@ $^
-
-BINS += 0785/dfs
+BINS += 0785/bfs 0785/dfs
+0785/bfs: 0785/bfs.cpp
 0785/dfs: 0785/dfs.cpp
 
 0787/bellman_ford_cpp: 0787/bellman_ford.cpp

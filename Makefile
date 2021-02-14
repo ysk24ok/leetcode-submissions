@@ -823,6 +823,9 @@ BINS += 0669/dfs
 0785/bfs_cpp: 0785/bfs.cpp
 	g++ $(CXXFLAGS) -o $@ $^
 
+BINS += 0785/dfs
+0785/dfs: 0785/dfs.cpp
+
 0787/bellman_ford_cpp: 0787/bellman_ford.cpp
 	g++ $(CXXFLAGS) -o $@ $^
 

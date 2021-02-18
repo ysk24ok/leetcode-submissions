@@ -635,6 +635,9 @@ BINS += 0392/follow_up
 0406/heap_cpp: 0406/heap.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
+BINS += 0413/dp_constant_space
+0413/dp_constant_space: 0413/dp_constant_space.cpp
+
 0416/dp_cpp: 0416/dp.cpp
 	g++ $(CXXFLAGS) -o $@ $^
 

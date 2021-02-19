@@ -1091,6 +1091,9 @@ BINS += 1224/solution
 1232/solution_cpp: 1232/solution.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
+BINS += 1249/stack
+1249/stack: 1249/stack.cpp
+
 BINS += 1252/solution
 1252/solution: 1252/solution.cpp
 	g++ $(CXXFLAGS) -o $@ $^

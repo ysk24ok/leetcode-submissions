@@ -25,6 +25,9 @@ BINS += 0004/merge_and_sort
 0011/two_pointers_cpp: 0011/two_pointers.cpp
 	g++ $(CXXFLAGS) -o $@ $^
 
+BINS += 0013/linear_search
+0013/linear_search: 0013/linear_search.cpp
+
 BINS += 0018/brute_force
 0018/brute_force: 0018/brute_force.cpp
 	g++ $(CXXFLAGS) -o $@ $^

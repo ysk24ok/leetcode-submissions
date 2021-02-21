@@ -1009,6 +1009,9 @@ BINS += 0987/dfs_with_heap
 0988/top_down_dfs_cpp: 0988/top_down_dfs.cpp leetcode/tree.o
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
+BINS += 0991/greedy
+0991/greedy: 0991/greedy.cpp
+
 0993/dfs_cpp: 0993/dfs.cpp leetcode/tree.o
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 

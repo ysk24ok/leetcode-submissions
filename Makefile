@@ -713,6 +713,9 @@ BINS += 0413/dp_constant_space
 0520/solution_cpp: 0520/solution.cpp
 	g++ $(CXXFLAGS) -o $@ $^
 
+BINS += 0524/additional_vector
+0524/additional_vector: 0524/additional_vector.cpp
+
 0525/dp_cpp: 0525/dp.cpp
 	g++ $(CXXFLAGS) -o $@ $^
 

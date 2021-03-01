@@ -758,6 +758,9 @@ BINS += 0538/dfs
 0563/dfs_cpp: 0563/dfs.cpp leetcode/tree.o
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
+BINS += 0575/hashset
+0575/hashset: 0575/hashset.cpp
+
 BINS += 0594/hash_table
 0594/hash_table: 0594/hash_table.cpp
 

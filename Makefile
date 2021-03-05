@@ -773,6 +773,9 @@ BINS += 0594/hash_table
 0630/greedy_cpp: 0630/greedy.cpp
 	g++ $(CXXFLAGS) -o $@ $^
 
+BINS += 0637/bfs
+0637/bfs: 0637/bfs.cpp leetcode/tree.o
+
 0668/binary_search_cpp: 0668/binary_search.cpp
 	g++ $(CXXFLAGS) -o $@ $^
 

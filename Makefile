@@ -867,6 +867,9 @@ BINS += 0799/dp
 0804/hashset_cpp: 0804/hashset.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
+BINS += 0820/trie
+0820/trie: 0820/trie.cpp
+
 BINS += 0821/queue
 0821/queue: 0821/queue.cpp
 

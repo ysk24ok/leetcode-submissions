@@ -1164,6 +1164,9 @@ BINS += 1255/backtracking
 BINS += 1329/sort
 1329/sort: 1329/sort.cpp
 
+BINS += 1332/solution
+1332/solution: 1332/solution.cpp
+
 1334/warshall_floyd_cpp: 1334/warshall_floyd.cpp
 	g++ $(CXXFLAGS) -o $@ $^
 

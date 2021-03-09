@@ -770,6 +770,9 @@ BINS += 0594/hash_table
 0567/sliding_window_cpp: 0567/sliding_window.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
+BINS += 0623/bfs
+0623/bfs: 0623/bfs.cpp leetcode/tree.o
+
 0630/greedy_cpp: 0630/greedy.cpp
 	g++ $(CXXFLAGS) -o $@ $^
 

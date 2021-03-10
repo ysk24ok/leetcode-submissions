@@ -779,6 +779,10 @@ BINS += 0623/bfs
 BINS += 0637/bfs
 0637/bfs: 0637/bfs.cpp leetcode/tree.o
 
+BINS += 0645/sort 0645/hashmap
+0645/sort: 0645/sort.cpp
+0645/hashmap: 0645/hashmap.cpp
+
 0668/binary_search_cpp: 0668/binary_search.cpp
 	g++ $(CXXFLAGS) -o $@ $^
 

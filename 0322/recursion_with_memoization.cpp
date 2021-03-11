@@ -1,6 +1,5 @@
-#include <algorithm>
-#include <cassert>
-#include <iostream>
+#include "gtest/gtest.h"
+
 #include <numeric>
 #include <vector>
 
@@ -32,19 +31,20 @@ class Solution {
 int main() {
   Solution sol;
   vector<int> coins;
+  int amount, expected;
 
-  coins = {1,2,5};
-  assert(sol.coinChange(coins, 11) == 3);
+  coins = {1, 2, 5}, amount = 11, expected = 3;
+  EXPECT_EQ(expected, sol.coinChange(coins, amount));
 
-  coins = {2};
-  assert(sol.coinChange(coins, 3) == -1);
+  coins = {2}, amount = 3, expected = -1;
+  EXPECT_EQ(expected, sol.coinChange(coins, amount));
 
-  // This is a counterexample of a greedy method
-  //   If solved in a greedy way, 153 = 100x1 + 30x1 + 1x23 (total 25)
-  //   but actually 153 = 30x5 + 1x3 (total 8)
-  coins = {1, 30, 100};
-  assert(sol.coinChange(coins, 153) == 8);
+  // This is a counterexample of a greedy method.
+  // If solved in a greedy way, 153 = 100x1 + 30x1 + 1x23 (total 25)
+  // but actually 153 = 30x5 + 1x3 (total 8).
+  coins = {1, 30, 100}, amount = 153, expected = 8;
+  EXPECT_EQ(expected, sol.coinChange(coins, amount));
 
-  coins = {186,419,83,408};
-  assert(sol.coinChange(coins, 6249) == 20);
+  coins = {186, 419, 83, 408}, amount = 6249, expected = 20;
+  EXPECT_EQ(expected, sol.coinChange(coins, amount));
 }

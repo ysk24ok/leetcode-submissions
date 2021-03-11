@@ -561,8 +561,9 @@ BINS += 0300/dp
 0309/dp_cpp: 0309/dp.cpp
 	g++ $(CXXFLAGS) -o $@ $^
 
-BINS += 0322/recursion_with_memoization
+BINS += 0322/recursion_with_memoization 0322/dp
 0322/recursion_with_memoization: 0322/recursion_with_memoization.cpp
+0322/dp: 0322/dp.cpp
 
 0328/constant_space_cpp: 0328/constant_space.cpp leetcode/linked_list.o
 	g++ $(CXXFLAGS) -I. -o $@ $^ -Igtest/include -Lgtest/lib -lgtest -lgtest_main

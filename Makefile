@@ -881,6 +881,9 @@ BINS += 0820/trie
 BINS += 0821/queue
 0821/queue: 0821/queue.cpp
 
+BINS += 0823/dp
+0823/dp: 0823/dp.cpp
+
 0832/solution_cpp: 0832/solution.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 

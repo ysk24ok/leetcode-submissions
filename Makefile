@@ -1351,6 +1351,9 @@ BINS += 1680/iterative
 1679/hashmap_cpp: 1679/hashmap.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
+BINS += 1721/two_pointers
+1721/two_pointers: 1721/two_pointers.cpp leetcode/linked_list.o
+
 leetcode/tree.o: leetcode/tree.cpp
 	g++ $(CXXFLAGS) -o $@ -c $?
 

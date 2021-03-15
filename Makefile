@@ -732,6 +732,9 @@ BINS += 0524/additional_vector
 0532/sort_cpp: 0532/sort.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
+BINS += 0535/hashmap
+0535/hashmap: 0535/hashmap.cpp
+
 BINS += 0538/dfs
 0538/dfs: 0538/dfs.cpp leetcode/tree.o
 

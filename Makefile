@@ -699,6 +699,9 @@ BINS += 0413/dp_constant_space
 0476/solution_cpp: 0476/solution.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
+BINS += 0478/rectangular_coordinates
+0478/rectangular_coordinates: 0478/rectangular_coordinates.cpp
+
 0495/one_pass_cpp: 0495/one_pass.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 

@@ -598,6 +598,9 @@ BINS += 0322/recursion_with_memoization 0322/dp
 0376/dp_cpp: 0376/dp.cpp
 	g++ $(CXXFLAGS) -o $@ $^
 
+BINS += 0376/dp_constant_space
+0376/dp_constant_space: 0376/dp_constant_space.cpp
+
 0380/hashmap_cpp: 0380/hashmap.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 

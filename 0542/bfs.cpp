@@ -1,9 +1,10 @@
+#include "gtest/gtest.h"
+
 #include <algorithm>
+#include <cstdlib>
 #include <limits>
 #include <queue>
 #include <vector>
-
-#include "gtest/gtest.h"
 
 using namespace std;
 
@@ -104,4 +105,6 @@ int main() {
     {3,2,2,1,0,1,0,0,1,1}
   };
   EXPECT_EQ(expected, sol.updateMatrix(matrix));
+
+  exit(EXIT_SUCCESS);
 }

@@ -1,8 +1,9 @@
+#include "gtest/gtest.h"
+
 #include <algorithm>
+#include <cstdlib>
 #include <limits>
 #include <vector>
-
-#include "gtest/gtest.h"
 
 using namespace std;
 
@@ -245,4 +246,6 @@ int main() {
     {0,1,0,1,1,1,1,1,1,1,0,1,1,1,0,1,0,1,0,0,1,1,0,1,1,0,1,0,0,0,0,0,0,0,1,0,0,1,0,1,0,0,0,1,1,0,1,1,1,0,1,1,0,1,0,1,0,0,0,1,0,1,1,0,0,0,1,0,0,1,0,0,0,0,0,0,1,1,0,1,1,0,0,1,0,1,0,1,1,0,1,1,0,1,1,1,1,0,1,1}
   };
   sol.updateMatrix(matrix);
+
+  exit(EXIT_SUCCESS);
 }

@@ -745,9 +745,10 @@ BINS += 0538/dfs
 0540/binary_search_cpp: 0540/binary_search.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
-BINS += 0542/bfs 0542/dfs
+BINS += 0542/bfs 0542/dfs 0542/dp
 0542/bfs: 0542/bfs.cpp
 0542/dfs: 0542/dfs.cpp
+0542/dp: 0542/dp.cpp
 
 0543/dfs_cpp: 0543/dfs.cpp leetcode/tree.o
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)

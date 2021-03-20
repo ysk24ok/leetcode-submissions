@@ -48,10 +48,9 @@ BINS += 0018/recursive_2sum
 BINS += 0020/stack
 0020/stack: 0020/stack.cpp
 
-0021/solution_cpp: 0021/solution.cpp leetcode/linked_list.o
-	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
-0021/heap_cpp: 0021/heap.cpp leetcode/linked_list.o
-	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+BINS += 0021/heap 0021/solution
+0021/heap: 0021/heap.cpp leetcode/linked_list.o
+0021/solution: 0021/solution.cpp leetcode/linked_list.o
 
 BINS += 0023/heap
 0023/heap: 0023/heap.cpp leetcode/linked_list.o

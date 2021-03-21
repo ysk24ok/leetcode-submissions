@@ -1363,6 +1363,18 @@ BINS += 1680/iterative
 BINS += 1721/two_pointers
 1721/two_pointers: 1721/two_pointers.cpp leetcode/linked_list.o
 
+BINS += 1800/linear_search
+1800/linear_search: 1800/linear_search.cpp
+
+BINS += 1801/two_heaps
+1801/two_heaps: 1801/two_heaps.cpp
+
+BINS += 1802/binary_search
+1802/binary_search: 1802/binary_search.cpp
+
+BINS += 1803/trie
+1803/trie: 1803/trie.cpp
+
 leetcode/tree.o: leetcode/tree.cpp
 	g++ $(CXXFLAGS) -o $@ -c $?
 

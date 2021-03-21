@@ -927,6 +927,9 @@ BINS += 0856/linear_search_with_recursion
 0865/dfs_cpp: 0865/dfs.cpp leetcode/tree.o
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
+BINS += 0869/counting
+0869/counting: 0869/counting.cpp
+
 0871/priority_queue_cpp: 0871/priority_queue.cpp
 	g++ $(CXXFLAGS) -o $@ $^
 

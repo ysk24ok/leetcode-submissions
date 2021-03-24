@@ -930,6 +930,9 @@ BINS += 0856/linear_search_with_recursion
 BINS += 0869/counting
 0869/counting: 0869/counting.cpp
 
+BINS += 0870/multiset
+0870/multiset: 0870/multiset.cpp
+
 0871/priority_queue_cpp: 0871/priority_queue.cpp
 	g++ $(CXXFLAGS) -o $@ $^
 

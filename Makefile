@@ -658,6 +658,9 @@ BINS += 0413/dp_constant_space
 0416/recursion_without_memoization_rs: 0416/recursion_without_memoization.rs
 	rustc -o $@ $^
 
+BINS += 0417/bfs
+0417/bfs: 0417/bfs.cpp
+
 0421/brute_force_cpp: 0421/brute_force.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 

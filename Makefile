@@ -985,6 +985,9 @@ BINS += 0870/multiset
 0914/gcd_cpp: 0914/gcd.cpp
 	g++ $(CXXFLAGS) -o $@ $^
 
+BINS += 0916/hashmap
+0916/hashmap: 0916/hashmap.cpp
+
 0918/dp_cpp: 0918/dp.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 

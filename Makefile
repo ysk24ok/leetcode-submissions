@@ -793,6 +793,9 @@ BINS += 0645/sort 0645/hashmap
 0645/sort: 0645/sort.cpp
 0645/hashmap: 0645/hashmap.cpp
 
+BINS += 0647/brute_force
+0647/brute_force: 0647/brute_force.cpp
+
 0668/binary_search_cpp: 0668/binary_search.cpp
 	g++ $(CXXFLAGS) -o $@ $^
 

@@ -667,6 +667,9 @@ BINS += 0417/bfs
 0421/trie_cpp: 0421/trie.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
+BINS += 0423/one_pass
+0423/one_pass: 0423/one_pass.cpp
+
 0438/tle_cpp: 0438/tle.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 

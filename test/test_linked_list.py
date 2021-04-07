@@ -1,4 +1,4 @@
-from leetcode.linked_list import LinkedList2String, String2LinkedList
+from leetcode import LinkedList2String, String2LinkedList
 
 
 def test_String2LinkedList_even():

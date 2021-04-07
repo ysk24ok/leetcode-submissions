@@ -1,4 +1,4 @@
-from leetcode.tree import String2Tree
+from leetcode import String2Tree
 
 
 def test_String2Tree():

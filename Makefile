@@ -1337,6 +1337,10 @@ BINS += 1461/hashset
 1492/stack_cpp: 1492/stack.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
+BINS += 1531/dp 1531/recursive
+1531/dp: 1531/dp.cpp
+1531/recursive: 1531/recursive.cpp
+
 1539/linear_search_cpp: 1539/linear_search.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 

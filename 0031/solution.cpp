@@ -1,4 +1,6 @@
-#include <cassert>
+#include <gtest/gtest.h>
+
+#include <cstdlib>
 #include <iostream>
 #include <vector>
 
@@ -53,51 +55,63 @@ class Solution {
 
 int main() {
   Solution sol;
-  vector<int> d;
+  vector<int> d, expected;
 
-  /*
-  d = {1};
+  d = {1}, expected = {1};
   sol.nextPermutation(d);
-  assert(d[0] == 1);
-  d = {1, 2};
+  EXPECT_EQ(expected, d);
+
+  d = {1, 2}, expected = {2, 1};
   sol.nextPermutation(d);
-  assert(d[0] == 2 and d[1] == 1);
-  d = {1, 2, 3};
+  EXPECT_EQ(expected, d);
+
+  d = {1, 2, 3}, expected = {1, 3, 2};
   sol.nextPermutation(d);
-  assert(d[0] == 1 and d[1] == 3 and d[2] == 2);
-  d = {1, 3, 2};
+  EXPECT_EQ(expected, d);
+
+  d = {1, 3, 2}, expected = {2, 1, 3};
   sol.nextPermutation(d);
-  assert(d[0] == 2 and d[1] == 1 and d[2] == 3);
-  d = {2, 1, 3};
+  EXPECT_EQ(expected, d);
+
+  d = {2, 1, 3}, expected = {2, 3, 1};
   sol.nextPermutation(d);
-  assert(d[0] == 2 and d[1] == 3 and d[2] == 1);
-  */
-  d = {2, 3, 1};
+  EXPECT_EQ(expected, d);
+
+  d = {2, 3, 1}, expected = {3, 1, 2};
   sol.nextPermutation(d);
-  assert(d[0] == 3 and d[1] == 1 and d[2] == 2);
-  d = {3, 1, 2};
+  EXPECT_EQ(expected, d);
+
+  d = {3, 1, 2}, expected = {3, 2, 1};
   sol.nextPermutation(d);
-  assert(d[0] == 3 and d[1] == 2 and d[2] == 1);
-  d = {3, 2, 1};
+  EXPECT_EQ(expected, d);
+
+  d = {3, 2, 1}, expected = {1, 2, 3};
   sol.nextPermutation(d);
-  assert(d[0] == 1 and d[1] == 2 and d[2] == 3);
-  d = {1, 1, 5};
+  EXPECT_EQ(expected, d);
+
+  d = {1, 1, 5}, expected = {1, 5, 1};
   sol.nextPermutation(d);
-  assert(d[0] == 1 and d[1] == 5 and d[2] == 1);
-  d = {1, 5, 1};
+  EXPECT_EQ(expected, d);
+
+  d = {1, 5, 1}, expected = {5, 1, 1};
   sol.nextPermutation(d);
-  cout << d[0] << d[1] << d[2] << endl;
-  assert(d[0] == 5 and d[1] == 1 and d[2] == 1);
-  d = {5, 1, 1};
+  EXPECT_EQ(expected, d);
+
+  d = {5, 1, 1}, expected = {1, 1, 5};
   sol.nextPermutation(d);
-  assert(d[0] == 1 and d[1] == 1 and d[2] == 5);
-  d = {1, 2, 3, 4};
+  EXPECT_EQ(expected, d);
+
+  d = {1, 2, 3, 4}, expected = {1, 2, 4, 3};
   sol.nextPermutation(d);
-  assert(d[0] == 1 and d[1] == 2 and d[2] == 4 and d[3] == 3);
-  d = {1, 2, 4, 3};
+  EXPECT_EQ(expected, d);
+
+  d = {1, 2, 4, 3}, expected = {1, 3, 2, 4};
   sol.nextPermutation(d);
-  assert(d[0] == 1 and d[1] == 3 and d[2] == 2 and d[3] == 4);
-  d = {4, 3, 2, 1};
+  EXPECT_EQ(expected, d);
+
+  d = {4, 3, 2, 1}, expected = {1, 2, 3, 4};
   sol.nextPermutation(d);
-  assert(d[0] == 1 and d[1] == 2 and d[2] == 3 and d[3] == 4);
+  EXPECT_EQ(expected, d);
+
+  exit(EXIT_SUCCESS);
 }

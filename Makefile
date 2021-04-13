@@ -61,7 +61,6 @@ BINS += 0023/heap
 
 BINS += 0031/solution
 0031/solution: 0031/solution.cpp
-	g++ -std=c++11 -o $@ $^
 
 0033/binary_search_cpp: 0033/binary_search.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)

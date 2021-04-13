@@ -59,8 +59,10 @@ BINS += 0023/heap
 0024/recursion_cpp: 0024/recursion.cpp leetcode/linked_list.o
 	g++ $(CXXFLAGS) -I. -o $@ $^
 
-BINS += 0031/solution
+BINS += 0031/solution 0031/solution_rs
 0031/solution: 0031/solution.cpp
+0031/solution_rs: 0031/solution.rs
+	rustc -o $@ $^
 
 0033/binary_search_cpp: 0033/binary_search.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)

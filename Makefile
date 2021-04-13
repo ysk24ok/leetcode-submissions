@@ -1397,18 +1397,14 @@ BINS += 1803/trie
 1803/trie: 1803/trie.cpp
 
 leetcode/tree.o: leetcode/tree.cpp
-	g++ $(CXXFLAGS) -o $@ -c $?
 
 leetcode/linked_list.o: leetcode/linked_list.cpp
-	g++ $(CXXFLAGS) -o $@ -c $?
 
 TESTS += test/linked_list_test
 test/linked_list_test: test/linked_list_test.cpp leetcode/linked_list.o
-	g++ -o $@ $^ $(CXXFLAGS) -Igtest/include -Lgtest/lib -lgtest -lgtest_main -lpthread
 
 TESTS += test/tree_test
 test/tree_test: test/tree_test.cpp leetcode/tree.o
-	g++ -o $@ $^ $(CXXFLAGS) -Igtest/include -Lgtest/lib -lgtest -lgtest_main -lpthread
 
 .PHONY: all
 all: $(BINS) $(TESTS)

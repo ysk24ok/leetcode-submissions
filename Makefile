@@ -196,11 +196,9 @@ BINS += 0063/dp_two_vec
 0088/constant_space_cpp: 0088/constant_space.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
-BINS += 0089/brute_force
+BINS += 0089/brute_force 0089/recursion
 0089/brute_force: 0089/brute_force.cpp
-BINS += 0089/recursion
 0089/recursion: 0089/recursion.cpp
-	g++ $(CXXFLAGS) -o $@ $^
 
 0094/recursive_cpp: 0094/recursive.cpp leetcode/tree.o
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)

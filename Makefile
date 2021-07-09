@@ -549,7 +549,6 @@ BINS += 0284/solution
 
 BINS += 0300/dp
 0300/dp: 0300/dp.cpp
-	g++ $(CXXFLAGS) -o $@ $^
 
 0300/dp_rs: 0300/dp.rs
 	rustc -o $@ $^

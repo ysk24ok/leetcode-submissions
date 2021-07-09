@@ -1,27 +1,25 @@
+#include <gtest/gtest.h>
+
 #include <algorithm>
-#include <cassert>
-#include <iostream>
-#include <limits>
 #include <vector>
 
 using namespace std;
 
+// time complexity: O(N^2)
+// space complexity: O(N)
 class Solution {
  public:
   int lengthOfLIS(vector<int>& nums) {
-    if (nums.size() == 0) return 0;
+    vector<int> length(nums.size(), 1);
     int ret = 1;
-    vector<int> lengthIS(nums.size(), 1);
-    for (int idx = 1; idx < nums.size(); idx++) {
-      for (int subidx = 0; subidx < idx; subidx++) {
-        if (nums[idx] <= nums[subidx])
+    for (size_t i = 1; i < nums.size(); ++i) {
+      for (size_t j = 0; j < i; ++j) {
+        if (nums[j] >= nums[i]) {
           continue;
-        int new_length = lengthIS[subidx] + 1;
-        if (new_length > lengthIS[idx])
-          lengthIS[idx] = new_length;
+        }
+        length[i] = max(length[j] + 1, length[i]);
       }
-      if (lengthIS[idx] > ret)
-        ret = lengthIS[idx];
+      ret = max(length[i], ret);
     }
     return ret;
   }
@@ -29,20 +27,22 @@ class Solution {
 
 int main() {
   Solution sol;
-  vector<int> d;
+  vector<int> nums;
+  int expected;
 
-  d = {10, 9, 2, 5, 3, 7, 101, 18};
-  assert(sol.lengthOfLIS(d) == 4);
+  nums = {10, 9, 2, 5, 3, 7, 101, 18};
+  expected = 4;
+  EXPECT_EQ(expected, sol.lengthOfLIS(nums));
 
-  d = {};
-  assert(sol.lengthOfLIS(d) == 0);
+  nums = {0};
+  expected = 1;
+  EXPECT_EQ(expected, sol.lengthOfLIS(nums));
 
-  d = {0};
-  assert(sol.lengthOfLIS(d) == 1);
+  nums = {5, 4, 3, 2, 1};
+  expected = 1;
+  EXPECT_EQ(expected, sol.lengthOfLIS(nums));
 
-  d = {5, 4, 3, 2, 1};
-  assert(sol.lengthOfLIS(d) == 1);
-
-  d = {6, 7, 8, 9, 1, 1, 2, 3, 4, 5};
-  assert(sol.lengthOfLIS(d) == 5);
+  nums = {6, 7, 8, 9, 1, 1, 2, 3, 4, 5};
+  expected = 5;
+  EXPECT_EQ(expected, sol.lengthOfLIS(nums));
 }

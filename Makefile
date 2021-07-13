@@ -547,14 +547,12 @@ BINS += 0284/solution
 0299/one_pass_cpp: 0299/one_pass.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
-BINS += 0300/dp
+BINS += 0300/dp 0300/faster_dp
 0300/dp: 0300/dp.cpp
+0300/faster_dp_cpp: 0300/faster_dp.cpp
 
 0300/dp_rs: 0300/dp.rs
 	rustc -o $@ $^
-
-0300/faster_dp_cpp: 0300/faster_dp.cpp
-	g++ $(CXXFLAGS) -o $@ $^
 
 0309/dp_cpp: 0309/dp.cpp
 	g++ $(CXXFLAGS) -o $@ $^

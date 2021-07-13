@@ -1,23 +1,28 @@
+#include <gtest/gtest.h>
+
 #include <algorithm>
-#include <cassert>
 #include <iterator>
 #include <limits>
 #include <vector>
 
 using namespace std;
 
-// dp[i] is the smallest element in nums
-// with which increasing substrings whose length is i+1 end.
-//  nums: [4, 2, 3, 1, 5]
-//  dp[0]: 1
-//  dp[1]: 3  (2,3),(2,5),(3,5),(1,5)
-//  dp[2]: 5  (2,3,5)
-// time complexity: O(nlogn)
-// space complexity: O(n)
+// `dp` stores an increasing substring.
+// At every `i`, we can use binary search
+// to find where to insert `nums[i]`.
+//
+// Say nums = [4, 2, 3, 1, 5],
+//   i = 0: dp = [4]
+//   i = 1: dp = [2]
+//   i = 2: dp = [2, 3]
+//   i = 3: dp = [1, 3]
+//   i = 4: dp = [1, 3, 5]
+//
+// time complexity: O(N * logN)
+// space complexity: O(N)
 class Solution {
  public:
   int lengthOfLIS(vector<int>& nums) {
-    if (nums.size() == 0) return 0;
     vector<int> dp(nums.size(), numeric_limits<int>::max());
     int ret = 0;
     for (size_t i = 0; i < nums.size(); i++) {
@@ -33,19 +38,21 @@ class Solution {
 int main() {
   Solution sol;
   vector<int> nums;
+  int expected;
 
-  nums = {};
-  assert(sol.lengthOfLIS(nums) == 0);
+  nums = {2, 2};
+  expected = 1;
+  EXPECT_EQ(expected, sol.lengthOfLIS(nums));
 
-  nums = {2,2};
-  assert(sol.lengthOfLIS(nums) == 1);
+  nums = {4, 2, 3, 1, 5};
+  expected = 3;
+  EXPECT_EQ(expected, sol.lengthOfLIS(nums));
 
-  nums = {4,2,3,1,5};
-  assert(sol.lengthOfLIS(nums) == 3);
+  nums = {10, 9, 2, 5, 3, 7, 101, 18};
+  expected = 4;
+  EXPECT_EQ(expected, sol.lengthOfLIS(nums));
 
-  nums = {10,9,2,5,3,7,101,18};
-  assert(sol.lengthOfLIS(nums) == 4);
-
-  nums = {1,3,6,7,9,4,10,5,6};
-  assert(sol.lengthOfLIS(nums) == 6);
+  nums = {1, 3, 6, 7, 9, 4, 10, 5, 6};
+  expected = 6;
+  EXPECT_EQ(expected, sol.lengthOfLIS(nums));
 }

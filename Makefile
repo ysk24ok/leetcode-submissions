@@ -248,6 +248,9 @@ BINS += 0104/dfs
 0111/top_down_dfs_cpp: 0111/top_down_dfs.cpp leetcode/tree.o
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
+BINS += 0113/dfs
+0113/dfs: 0113/dfs.cpp leetcode/tree.o
+
 0116/bfs_cpp: 0116/bfs.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 

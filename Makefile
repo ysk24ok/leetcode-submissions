@@ -947,6 +947,9 @@ BINS += 0870/multiset
 0876/two_pointers_cpp: 0876/two_pointers.cpp leetcode/linked_list.o
 	g++ $(CXXFLAGS) -I. -o $@ $^
 
+BINS += 0877/dp
+0877/dp: 0877/dp.cpp
+
 0881/heap_cpp: 0881/heap.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 

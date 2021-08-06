@@ -669,6 +669,9 @@ BINS += 0417/bfs
 BINS += 0423/one_pass
 0423/one_pass: 0423/one_pass.cpp
 
+BINS += 0429/bfs
+0429/bfs: 0429/bfs.cpp leetcode/n_ary_tree.o
+
 0438/tle_cpp: 0438/tle.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 

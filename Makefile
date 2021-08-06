@@ -1399,12 +1399,17 @@ BINS += 1802/binary_search
 BINS += 1803/trie
 1803/trie: 1803/trie.cpp
 
-leetcode/tree.o: leetcode/tree.cpp
-
 leetcode/linked_list.o: leetcode/linked_list.cpp
+
+leetcode/n_ary_tree.o: leetcode/n_ary_tree.cpp
+
+leetcode/tree.o: leetcode/tree.cpp
 
 TESTS += test/linked_list_test
 test/linked_list_test: test/linked_list_test.cpp leetcode/linked_list.o
+
+TESTS += test/n_ary_tree_test
+test/n_ary_tree_test: test/n_ary_tree_test.cpp leetcode/n_ary_tree.o
 
 TESTS += test/tree_test
 test/tree_test: test/tree_test.cpp leetcode/tree.o

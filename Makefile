@@ -1028,6 +1028,9 @@ BINS += 0950/solution
 0950/queue_rs: 0950/queue.rs
 	rustc -o $@ $^
 
+BINS += 0954/hashmap
+0954/hashmap: 0954/hashmap.cpp
+
 0962/tle_cpp: 0962/tle.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 0962/sort_cpp: 0962/sort.cpp

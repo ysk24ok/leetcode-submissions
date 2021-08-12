@@ -92,11 +92,9 @@ BINS += 0031/solution
 0047/recursion_cpp: 0047/recursion.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
-0049/categorize_by_sorting_cpp: 0049/categorize_by_sorting.cpp
-	g++ $(CXXFLAGS) -o $@ $^
-
-0049/categorize_by_count_cpp: 0049/categorize_by_count.cpp
-	g++ $(CXXFLAGS) -o $@ $^
+BINS += 0049/categorize_by_count 0049/categorize_by_sorting
+0049/categorize_by_sorting: 0049/categorize_by_sorting.cpp
+0049/categorize_by_count: 0049/categorize_by_count.cpp
 
 BINS += 0053/dp
 0053/dp: 0053/dp.cpp

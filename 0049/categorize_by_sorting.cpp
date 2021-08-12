@@ -1,7 +1,6 @@
+#include <gtest/gtest.h>
+
 #include <algorithm>
-#include <cassert>
-#include <iostream>
-#include <iterator>
 #include <unordered_map>
 #include <vector>
 
@@ -10,43 +9,36 @@ using namespace std;
 class Solution {
  public:
   vector<vector<string>> groupAnagrams(vector<string>& strs) {
-    unordered_map<string, vector<string>> group;
-    for (auto&& str : strs) {
+    unordered_map<string, size_t> group;
+    vector<vector<string>> ret;
+    for (const auto& str : strs) {
       string s = str;
       sort(s.begin(), s.end());
-      group[s].push_back(str);
+      if (group.find(s) != group.end()) {
+        ret[group[s]].push_back(str);
+      } else {
+        ret.push_back({str});
+        group[s] = ret.size() - 1;
+      }
     }
-    vector<vector<string>> values;
-    values.reserve(group.size());
-    for (auto&& pair: group) {
-      values.push_back(pair.second);
-    }
-    return values;
+    return ret;
   }
 };
 
-void Print(vector<vector<string>> groups) {
-  for (auto&& group: groups) {
-    copy(group.begin(), group.end(), ostream_iterator<string>(cout, ","));
-    cout << endl;
-  }
-  cout << endl;
-}
-
 int main() {
   Solution sol;
-  vector<vector<string>> got;
+  vector<vector<string>> expected;
   vector<string> d;
 
   d = {"eat", "tea", "tan", "ate", "nat", "bat"};
-  got = sol.groupAnagrams(d);
-  Print(got);
+  expected = {{"eat", "tea", "ate"}, {"tan", "nat"}, {"bat"}};
+  EXPECT_EQ(expected, sol.groupAnagrams(d));
 
   d = {"", "b", ""};
-  got = sol.groupAnagrams(d);
-  Print(got);
+  expected = {{"", ""}, {"b"}};
+  EXPECT_EQ(expected, sol.groupAnagrams(d));
 
   d = {"tea", "and", "ace", "ad", "eat", "dans"};
-  got = sol.groupAnagrams(d);
-  Print(got);
+  expected = {{"tea", "eat"}, {"and"}, {"ace"}, {"ad"}, {"dans"}};
+  EXPECT_EQ(expected, sol.groupAnagrams(d));
 }

@@ -152,8 +152,8 @@ BINS += 0063/dp_two_vec
 0072/dp_cpp: 0072/dp.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
-0073/solution_cpp: 0073/solution.cpp
-	g++ $(CXXFLAGS) -o $@ $^
+BINS += 0073/additional_space
+0073/additional_space: 0073/additional_space.cpp
 
 0073/constant_space_complexity_cpp: 0073/constant_space_complexity.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)

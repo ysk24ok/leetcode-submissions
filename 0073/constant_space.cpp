@@ -15,7 +15,7 @@ class Solution {
     bool update_col0 = false;
     // set marker
     // Whether to update the first column depends on `update_col0`, not matrix[i][0]
-    // because setting matrix[0][0] to 0 leads to incorrect updating the first row
+    // because setting matrix[0][0] to 0 leads to incorrect updating the first column
     for (size_t i = 0; i < m; ++i) {
       if (matrix[i][0] == 0) { update_col0 = true; }
       for (size_t j = 1; j < n; ++j) {

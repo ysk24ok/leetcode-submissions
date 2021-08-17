@@ -1335,6 +1335,10 @@ BINS += 1437/linear_search
 1446/linear_search_cpp: 1446/linear_search.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
+BINS += 1448/bottom_up_dfs 1448/top_down_dfs
+1448/bottom_up_dfs: 1448/bottom_up_dfs.cpp leetcode/*.o
+1448/top_down_dfs: 1448/top_down_dfs.cpp leetcode/*.o
+
 1457/top_down_dfs_with_set_cpp: 1457/top_down_dfs_with_set.cpp leetcode/tree.o
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 

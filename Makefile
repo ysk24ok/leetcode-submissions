@@ -199,6 +199,9 @@ BINS += 0089/brute_force 0089/recursion
 0089/brute_force: 0089/brute_force.cpp
 0089/recursion: 0089/recursion.cpp
 
+BINS += 0091/recursion_with_memoization
+0091/recursion_with_memoization: 0091/recursion_with_memoization.cpp
+
 0094/recursive_cpp: 0094/recursive.cpp leetcode/tree.o
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 

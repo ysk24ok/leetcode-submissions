@@ -803,8 +803,9 @@ BINS += 0645/sort 0645/hashmap
 BINS += 0647/brute_force
 0647/brute_force: 0647/brute_force.cpp
 
-BINS += 0648/dfs
+BINS += 0648/dfs 0648/dfs_with_stack
 0648/dfs: 0648/dfs.cpp leetcode/tree.o
+0648/dfs_with_stack: 0648/dfs_with_stack.cpp leetcode/tree.o
 
 0668/binary_search_cpp: 0668/binary_search.cpp
 	g++ $(CXXFLAGS) -o $@ $^

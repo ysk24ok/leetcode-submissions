@@ -749,6 +749,9 @@ BINS += 0524/additional_vector
 BINS += 0535/hashmap
 0535/hashmap: 0535/hashmap.cpp
 
+BINS += 0537/solution
+0537/solution: 0537/solution.cpp
+
 BINS += 0538/dfs
 0538/dfs: 0538/dfs.cpp leetcode/tree.o
 

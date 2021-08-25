@@ -796,6 +796,10 @@ BINS += 0623/bfs
 0630/greedy_cpp: 0630/greedy.cpp
 	g++ $(CXXFLAGS) -o $@ $^
 
+BINS += 0633/hashset 0633/sqrt
+0633/hashset: 0633/hashset.cpp
+0633/sqrt: 0633/sqrt.cpp
+
 BINS += 0637/bfs
 0637/bfs: 0637/bfs.cpp leetcode/tree.o
 

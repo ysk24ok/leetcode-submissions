@@ -787,6 +787,9 @@ BINS += 0575/hashset
 BINS += 0594/hash_table
 0594/hash_table: 0594/hash_table.cpp
 
+0598/solution_rs: 0598/solution.rs
+	rustc -o $@ $^
+
 0605/linear_pass_cpp: 0605/linear_pass.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 

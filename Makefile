@@ -781,6 +781,11 @@ BINS += 0542/bfs 0542/dfs 0542/dp
 0563/dfs_cpp: 0563/dfs.cpp leetcode/tree.o
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
+BINS += 0565/recursive
+0565/recursive: 0565/recursive.cpp
+0565/iterative_rs: 0565/iterative.rs
+	rustc -o $@ $^
+
 BINS += 0575/hashset
 0575/hashset: 0575/hashset.cpp
 

@@ -881,6 +881,9 @@ BINS += 0669/dfs
 0763/greedy_cpp: 0763/greedy.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
+0764/dp_rs: 0764/dp.rs
+	rustc -o $@ $^
+
 0771/hashmap_cpp: 0771/hashmap.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 

@@ -1026,6 +1026,9 @@ BINS += 0877/dp
 BINS += 0916/hashmap
 0916/hashmap: 0916/hashmap.cpp
 
+0917/two_pointers_rs: 0917/two_pointers.rs
+	rustc -o $@ $^
+
 0918/dp_cpp: 0918/dp.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 

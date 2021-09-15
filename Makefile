@@ -1078,6 +1078,9 @@ BINS += 0954/hashmap
 0977/two_pointers_cpp: 0977/two_pointers.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
+0978/dp_rs: 0978/dp.rs
+	rustc -o $@ $^
+
 0980/recursion_cpp: 0980/recursion.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 

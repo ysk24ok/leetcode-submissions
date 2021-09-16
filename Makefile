@@ -112,6 +112,9 @@ BINS += 0053/dp
 0053/dp_constant_space_cpp: 0053/dp_constant_space.cpp
 	g++ $(CXXFLAGS) -o $@ $^ -Igtest/include -Lgtest/lib -lgtest -lgtest_main
 
+0054/recursive_rs: 0054/recursive.rs
+	rustc -o $@ $^
+
 0055/dp_cpp: 0055/dp.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 

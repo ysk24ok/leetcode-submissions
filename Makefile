@@ -593,6 +593,9 @@ BINS += 0322/recursion_with_memoization 0322/dp
 0344/two_pointers_cpp: 0344/two_pointers.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
+0350/hashmap_rs: 0350/hashmap.rs
+	rustc -o $@ $^
+
 0367/binary_search_cpp: 0367/binary_search.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 

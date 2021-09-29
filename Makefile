@@ -870,6 +870,9 @@ BINS += 0669/dfs
 0714/dp_cpp: 0714/dp.cpp
 	g++ $(CXXFLAGS) -o $@ $^
 
+BINS += 0725/two_pass
+0725/two_pass: 0725/two_pass.cpp leetcode/linked_list.o
+
 0733/bfs_cpp: 0733/bfs.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 

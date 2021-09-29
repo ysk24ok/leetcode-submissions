@@ -24,6 +24,19 @@ TEST(CreateListNodeTest, vector_whose_size_is_1) {
   DeleteListNode(got);
 }
 
+TEST(CreateListNodeTest, when_there_is_a_cycle) {
+  std::vector<int> vec = {1, 2, 3};
+  ListNode* got = CreateListNode(vec);
+  got->next->next->next = got;
+  EXPECT_EQ(1, got->val);
+  EXPECT_EQ(2, got->next->val);
+  EXPECT_EQ(3, got->next->next->val);
+  EXPECT_EQ(1, got->next->next->next->val);
+  EXPECT_EQ(2, got->next->next->next->next->val);
+  EXPECT_EQ(3, got->next->next->next->next->next->val);
+  DeleteListNode(got, vec.size());
+}
+
 TEST(CreateListNodeTest, empty_vector) {
   std::vector<int> vec = {};
   ListNode* got = CreateListNode(vec);

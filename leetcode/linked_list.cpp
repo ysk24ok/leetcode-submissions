@@ -23,7 +23,7 @@ void DeleteListNode(ListNode* node, size_t count) {
   size_t nodes_deleted = 0;
   while (node) {
     // deal with cycle
-    if (count >= 0 && nodes_deleted == count) { break; }
+    if (count > 0 && nodes_deleted == count) { break; }
     ListNode* next = node->next;
     delete node;
     node = next;

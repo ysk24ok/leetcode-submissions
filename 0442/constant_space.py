@@ -1,6 +1,8 @@
 from typing import List
 
 
+# https://leetcode.com/problems/find-all-duplicates-in-an-array/discuss/92390/Python-O(n)-time-O(1)-space
+# If the element is found for the second time, the value at the corresponding index is negative.
 class Solution:
     def findDuplicates(self, nums: List[int]) -> List[int]:
         ret = []

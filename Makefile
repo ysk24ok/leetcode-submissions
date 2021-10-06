@@ -689,6 +689,9 @@ BINS += 0429/bfs
 0438/sliding_window_cpp: 0438/sliding_window.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
+0442/hashset_rs: 0442/hashset.rs
+	rustc -o $@ $^
+
 0445/reverse_cpp: 0445/reverse.cpp leetcode/linked_list.o
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 

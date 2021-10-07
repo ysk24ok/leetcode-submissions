@@ -180,6 +180,8 @@ BINS += 0073/additional_space 0073/constant_space
 
 0079/recursive_cpp: 0079/recursive.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+0079/recursive_rs: 0079/recursive.rs
+	rustc -o $@ $^
 
 0080/one_pass_cpp: 0080/one_pass.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)

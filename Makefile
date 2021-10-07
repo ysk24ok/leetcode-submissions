@@ -178,8 +178,8 @@ BINS += 0073/additional_space 0073/constant_space
 0077/recursion_cpp: 0077/recursion.cpp
 	g++ $(CXXFLAGS) -o $@ $^
 
-0079/recursive_cpp: 0079/recursive.cpp
-	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+BINS += 0079/recursive
+0079/recursive: 0079/recursive.cpp
 0079/recursive_rs: 0079/recursive.rs
 	rustc -o $@ $^
 

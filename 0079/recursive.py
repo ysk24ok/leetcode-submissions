@@ -34,9 +34,9 @@ if __name__ == '__main__':
       ['A','D','E','E']
     ]
     word = 'ABCCED'
-    #assert sol.exist(board, word)
+    assert sol.exist(board, word)
     word = 'SEE'
-    #assert sol.exist(board, word)
+    assert sol.exist(board, word)
     word = 'ABCB'
     assert not sol.exist(board, word)
 

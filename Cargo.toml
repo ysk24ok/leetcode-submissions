@@ -9,4 +9,8 @@ edition = "2018"
 name = "leetcode"
 path = "leetcode/lib.rs"
 
+[[bin]]
+name = "0101_dfs"
+path = "0101/dfs.rs"
+
 [dependencies]

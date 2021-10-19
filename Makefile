@@ -7,23 +7,21 @@ LDLIBS = -lgtest -lgtest_main -lpthread
 BINS =
 TESTS =
 
-0002/solution_cpp: 0002/solution.cpp leetcode/linked_list.o
-	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+BINS += 0002/solution
+0002/solution: 0002/solution.cpp leetcode/linked_list.o
 
-0003/sliding_window_cpp: 0003/sliding_window.cpp
-	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
-0003/sliding_window_optimized_cpp: 0003/sliding_window_optimized.cpp
-	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+BINS += 0003/sliding_window 0003/sliding_window_optimized
+0003/sliding_window: 0003/sliding_window.cpp
+0003/sliding_window_optimized: 0003/sliding_window_optimized.cpp
 
 BINS += 0004/merge_and_sort
 0004/merge_and_sort: 0004/merge_and_sort.cpp
-	g++ $(CXXFLAGS) -o $@ $^
 
-0005/dp_cpp: 0005/dp.cpp
-	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+BINS += 0005/dp
+0005/dp: 0005/dp.cpp
 
-0011/two_pointers_cpp: 0011/two_pointers.cpp
-	g++ $(CXXFLAGS) -o $@ $^
+BINS += 0011/two_pointers
+0011/two_pointers: 0011/two_pointers.cpp
 
 BINS += 0012/solution
 0012/solution: 0012/solution.cpp

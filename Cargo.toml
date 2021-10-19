@@ -13,4 +13,8 @@ path = "leetcode/lib.rs"
 name = "0101_dfs"
 path = "0101/dfs.rs"
 
+[[bin]]
+name = "0496_stack"
+path = "0496/stack.rs"
+
 [dependencies]

@@ -10,11 +10,107 @@ name = "leetcode"
 path = "leetcode/lib.rs"
 
 [[bin]]
+name = "0026_solution"
+path = "0026/solution.rs"
+
+[[bin]]
+name = "0027_two_pointers"
+path = "0027/two_pointers.rs"
+
+[[bin]]
+name = "0053_dp"
+path = "0053/dp.rs"
+
+[[bin]]
+name = "0054_recursive"
+path = "0054/recursive.rs"
+
+[[bin]]
+name = "0062_dp_two_vec"
+path = "0062/dp_two_vec.rs"
+
+[[bin]]
+name = "0063_dp_two_vec"
+path = "0063/dp_two_vec.rs"
+
+[[bin]]
 name = "0101_dfs"
 path = "0101/dfs.rs"
 
 [[bin]]
+name = "0155_two_vector"
+path = "0155/two_vector.rs"
+
+[[bin]]
+name = "0200_dfs"
+path = "0200/dfs.rs"
+
+[[bin]]
+name = "0202_solution"
+path = "0202/solution.rs"
+
+[[bin]]
+name = "0238_solution"
+path = "0238/solution.rs"
+
+[[bin]]
+name = "0300_dp"
+path = "0300/dp.rs"
+
+[[bin]]
+name = "0350_hashmap"
+path = "0350/hashmap.rs"
+
+[[bin]]
+name = "0416_dp"
+path = "0416/dp.rs"
+
+[[bin]]
+name = "0416_recursion"
+path = "0416/recursion.rs"
+
+[[bin]]
+name = "0416_recursion_without_memoization"
+path = "0416/recursion_without_memoization.rs"
+
+[[bin]]
+name = "0442_hashset"
+path = "0442/hashset.rs"
+
+[[bin]]
 name = "0496_stack"
 path = "0496/stack.rs"
+
+[[bin]]
+name = "0525_dp"
+path = "0525/dp.rs"
+
+[[bin]]
+name = "0565_iterative"
+path = "0565/iterative.rs"
+
+[[bin]]
+name = "0598_solution"
+path = "0598/solution.rs"
+
+[[bin]]
+name = "0764_dp"
+path = "0764/dp.rs"
+
+[[bin]]
+name = "0917_two_pointers"
+path = "0917/two_pointers.rs"
+
+[[bin]]
+name = "0950_queue"
+path = "0950/queue.rs"
+
+[[bin]]
+name = "0978_dp"
+path = "0978/dp.rs"
+
+[[bin]]
+name = "1143_dp"
+path = "1143/dp.rs"
 
 [dependencies]

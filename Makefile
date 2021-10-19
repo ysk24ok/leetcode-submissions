@@ -59,12 +59,6 @@ BINS += 0023/heap
 0024/recursion_cpp: 0024/recursion.cpp leetcode/linked_list.o
 	g++ $(CXXFLAGS) -I. -o $@ $^
 
-0026/solution_rs: 0026/solution.rs
-	rustc -o $@ $^
-
-0027/two_pointers_rs: 0027/two_pointers.rs
-	rustc -o $@ $^
-
 BINS += 0031/solution
 0031/solution: 0031/solution.cpp
 
@@ -106,14 +100,8 @@ BINS += 0053/dp
 0053/dp: 0053/dp.cpp
 	g++ $(CXXFLAGS) -o $@ $^
 
-0053/dp_rs: 0053/dp.rs
-	rustc -o $@ $^
-
 0053/dp_constant_space_cpp: 0053/dp_constant_space.cpp
 	g++ $(CXXFLAGS) -o $@ $^ -Igtest/include -Lgtest/lib -lgtest -lgtest_main
-
-0054/recursive_rs: 0054/recursive.rs
-	rustc -o $@ $^
 
 0055/dp_cpp: 0055/dp.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
@@ -143,17 +131,9 @@ BINS += 0062/dp_matrix
 0062/dp_vector_cpp: 0062/dp_vector.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
-BINS += 0062/dp_two_vec
-0062/dp_two_vec: 0062/dp_two_vec.rs
-	rustc -o $@ $^
-
 BINS += 0063/dp_matrix
 0063/dp_matrix: 0063/dp_matrix.cpp
 	g++ $(CXXFLAGS) -o $@ $^
-
-BINS += 0063/dp_two_vec
-0063/dp_two_vec: 0063/dp_two_vec.rs
-	rustc -o $@ $^
 
 0064/dp_cpp: 0064/dp.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
@@ -180,8 +160,6 @@ BINS += 0073/additional_space 0073/constant_space
 
 BINS += 0079/recursive
 0079/recursive: 0079/recursive.cpp
-0079/recursive_rs: 0079/recursive.rs
-	rustc -o $@ $^
 
 0080/one_pass_cpp: 0080/one_pass.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
@@ -375,10 +353,6 @@ BINS += 0153/binary_search
 0155/two_stacks_cpp: 0155/two_stacks.cpp
 	g++ $(CXXFLAGS) -o $@ $^
 
-BINS += 0155/two_vector_rs
-0155/two_vector_rs: 0155/two_vector.rs
-	rustc -o $@ $^
-
 0165/solution_cpp: 0165/solution.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
@@ -423,17 +397,11 @@ BINS += 0199/bfs
 0200/dfs_cpp: 0200/dfs.cpp
 	g++ $(CXXFLAGS) -o $@ $^
 
-0200/dfs_rs: 0200/dfs.rs
-	rustc -o $@ $^
-
 0201/solution_cpp: 0201/solution.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
 0202/solution_cpp: 0202/solution.cpp
 	g++ $(CXXFLAGS) -o $@ $^
-
-0202/solution_rs: 0202/solution.rs
-	rustc -o $@ $^
 
 0204/solution_cpp: 0204/solution.cpp
 	g++ $(CXXFLAGS) -o $@ $^
@@ -514,9 +482,6 @@ BINS += 0199/bfs
 0238/solution_cpp: 0238/solution.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
-0238/solution_rs: 0238/solution.rs
-	rustc -o $@ $^
-
 0239/deque_cpp: 0239/deque.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
@@ -564,9 +529,6 @@ BINS += 0300/dp 0300/faster_dp
 0300/dp: 0300/dp.cpp
 0300/faster_dp_cpp: 0300/faster_dp.cpp
 
-0300/dp_rs: 0300/dp.rs
-	rustc -o $@ $^
-
 0309/dp_cpp: 0309/dp.cpp
 	g++ $(CXXFLAGS) -o $@ $^
 
@@ -594,9 +556,6 @@ BINS += 0322/recursion_with_memoization 0322/dp
 
 0344/two_pointers_cpp: 0344/two_pointers.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
-
-0350/hashmap_rs: 0350/hashmap.rs
-	rustc -o $@ $^
 
 0367/binary_search_cpp: 0367/binary_search.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
@@ -661,15 +620,6 @@ BINS += 0413/dp_constant_space
 0416/dp_cpp: 0416/dp.cpp
 	g++ $(CXXFLAGS) -o $@ $^
 
-0416/dp_rs: 0416/dp.rs
-	rustc -o $@ $^
-
-0416/recursion_rs: 0416/recursion.rs
-	rustc -o $@ $^
-
-0416/recursion_without_memoization_rs: 0416/recursion_without_memoization.rs
-	rustc -o $@ $^
-
 BINS += 0417/bfs
 0417/bfs: 0417/bfs.cpp
 
@@ -690,9 +640,6 @@ BINS += 0429/bfs
 
 0438/sliding_window_cpp: 0438/sliding_window.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
-
-0442/hashset_rs: 0442/hashset.rs
-	rustc -o $@ $^
 
 0445/reverse_cpp: 0445/reverse.cpp leetcode/linked_list.o
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
@@ -748,9 +695,6 @@ BINS += 0524/additional_vector
 0525/dp_cpp: 0525/dp.cpp
 	g++ $(CXXFLAGS) -o $@ $^
 
-0525/dp_rs: 0525/dp.rs
-	rustc -o $@ $^
-
 0526/backtracking_cpp: 0526/backtracking.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
@@ -794,17 +738,12 @@ BINS += 0542/bfs 0542/dfs 0542/dp
 
 BINS += 0565/recursive
 0565/recursive: 0565/recursive.cpp
-0565/iterative_rs: 0565/iterative.rs
-	rustc -o $@ $^
 
 BINS += 0575/hashset
 0575/hashset: 0575/hashset.cpp
 
 BINS += 0594/hash_table
 0594/hash_table: 0594/hash_table.cpp
-
-0598/solution_rs: 0598/solution.rs
-	rustc -o $@ $^
 
 0605/linear_pass_cpp: 0605/linear_pass.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
@@ -894,9 +833,6 @@ BINS += 0725/two_pass
 
 0763/greedy_cpp: 0763/greedy.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
-
-0764/dp_rs: 0764/dp.rs
-	rustc -o $@ $^
 
 0771/hashmap_cpp: 0771/hashmap.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
@@ -1040,9 +976,6 @@ BINS += 0877/dp
 BINS += 0916/hashmap
 0916/hashmap: 0916/hashmap.cpp
 
-0917/two_pointers_rs: 0917/two_pointers.rs
-	rustc -o $@ $^
-
 0918/dp_cpp: 0918/dp.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
@@ -1069,9 +1002,6 @@ BINS += 0950/solution
 0950/solution: 0950/solution.cpp
 	g++ $(CXXFLAGS) -o $@ $^
 
-0950/queue_rs: 0950/queue.rs
-	rustc -o $@ $^
-
 BINS += 0954/hashmap
 0954/hashmap: 0954/hashmap.cpp
 
@@ -1091,9 +1021,6 @@ BINS += 0954/hashmap
 
 0977/two_pointers_cpp: 0977/two_pointers.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
-
-0978/dp_rs: 0978/dp.rs
-	rustc -o $@ $^
 
 0980/recursion_cpp: 0980/recursion.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
@@ -1179,9 +1106,6 @@ BINS += 1091/bfs
 
 1143/dp_cpp: 1143/dp.cpp
 	g++ $(CXXFLAGS) -o $@ $^
-
-1143/dp_rs: 1143/dp.rs
-	rustc -o $@ $^
 
 1217/solution_cpp: 1217/solution.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
@@ -1484,4 +1408,4 @@ check: $(TESTS)
 
 .PHONY: clean
 clean:
-	rm -f */*_cpp */*_rs leetcode/*.o $(BINS) $(TESTS)
+	rm -f */*_cpp leetcode/*.o $(BINS) $(TESTS)

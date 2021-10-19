@@ -10,7 +10,6 @@ struct Solution;
  * dp_up[k] = if (arr[k - 1] < arr[k]) dp_down[k-1] + 1 else 1
  * dp_down[k] = if (arr[k - 1] > arr[k]) dp_up[k-1] + 1 else 1
  */
-*/
 impl Solution {
     pub fn max_turbulence_size(arr: Vec<i32>) -> i32 {
         let (mut dp_down, mut dp_up) = (vec![1; arr.len()], vec![1; arr.len()]);

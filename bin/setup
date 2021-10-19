@@ -19,13 +19,13 @@ EOF
   echo -e "$rule" >> $curdir/Makefile
 elif [ $language = rust ]; then
   ext=rs
-  cmd='rustc -o $@ $^'
-  rule=$(cat << EOF
-\n$number/${name}_$ext: $number/$name.$ext
-\t$cmd
+  field=$(cat << EOF
+\n[[bin]]
+name = "${number}_${name}"
+path = "${number}/${name}.${ext}"
 EOF
 )
-  echo -e "$rule" >> $curdir/Makefile
+  echo -e "${field}" >> ${curdir}/Cargo.toml
 elif [ $language = py ]; then
   ext=py
 else

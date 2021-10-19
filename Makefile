@@ -7,6 +7,9 @@ LDLIBS = -lgtest -lgtest_main -lpthread
 BINS =
 TESTS =
 
+BINS += 0001/hashmap
+0001/hashmap: 0001/hashmap.cpp
+
 BINS += 0002/solution
 0002/solution: 0002/solution.cpp leetcode/linked_list.o
 

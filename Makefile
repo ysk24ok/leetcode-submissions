@@ -32,6 +32,9 @@ BINS += 0012/solution
 BINS += 0013/linear_search
 0013/linear_search: 0013/linear_search.cpp
 
+BINS += 0015/hashmap
+0015/hashmap: 0015/hashmap.cpp
+
 BINS += 0018/brute_force
 0018/brute_force: 0018/brute_force.cpp
 	g++ $(CXXFLAGS) -o $@ $^

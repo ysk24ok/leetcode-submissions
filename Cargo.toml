@@ -110,6 +110,10 @@ name = "0978_dp"
 path = "0978/dp.rs"
 
 [[bin]]
+name = "0980_recursion"
+path = "0980/recursion.rs"
+
+[[bin]]
 name = "1143_dp"
 path = "1143/dp.rs"
 

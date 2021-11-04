@@ -612,6 +612,9 @@ BINS += 0392/follow_up
 0402/stack_cpp: 0402/stack.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
+BINS += 0404/dfs
+0404/dfs: 0404/dfs.cpp leetcode/tree.o
+
 0406/sort_cpp: 0406/sort.cpp
 	g++ $(CXXFLAGS) -o $@ $^
 

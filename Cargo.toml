@@ -74,6 +74,14 @@ name = "0416_recursion_without_memoization"
 path = "0416/recursion_without_memoization.rs"
 
 [[bin]]
+name = "0441_linear_search"
+path = "0441/linear_search.rs"
+
+[[bin]]
+name = "0441_binary_search"
+path = "0441/binary_search.rs"
+
+[[bin]]
 name = "0442_hashset"
 path = "0442/hashset.rs"
 

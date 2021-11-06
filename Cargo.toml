@@ -90,6 +90,10 @@ name = "0496_stack"
 path = "0496/stack.rs"
 
 [[bin]]
+name = "0509_recursion"
+path = "0509/recursion.rs"
+
+[[bin]]
 name = "0525_dp"
 path = "0525/dp.rs"
 

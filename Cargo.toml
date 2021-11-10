@@ -46,6 +46,10 @@ name = "0101_dfs"
 path = "0101/dfs.rs"
 
 [[bin]]
+name = "0122_simple_one_pass"
+path = "0122/simple_one_pass.rs"
+
+[[bin]]
 name = "0155_two_vector"
 path = "0155/two_vector.rs"
 

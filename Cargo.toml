@@ -34,6 +34,10 @@ name = "0063_dp_two_vec"
 path = "0063/dp_two_vec.rs"
 
 [[bin]]
+name = "0070_recursion_with_memoization"
+path = "0070/recursion_with_memoization.rs"
+
+[[bin]]
 name = "0096_dp"
 path = "0096/dp.rs"
 

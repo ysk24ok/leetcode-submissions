@@ -847,6 +847,9 @@ BINS += 0725/two_pass
 0771/hashset_cpp: 0771/hashset.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
+BINS += 0779/recursion
+0779/recursion: 0779/recursion.cpp
+
 BINS += 0784/bfs 0784/dfs
 0784/bfs: 0784/bfs.cpp
 0784/dfs: 0784/dfs.cpp

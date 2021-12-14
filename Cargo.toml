@@ -134,6 +134,10 @@ name = "0917_two_pointers"
 path = "0917/two_pointers.rs"
 
 [[bin]]
+name = "0938_bottom_up_dfs"
+path = "0938/bottom_up_dfs.rs"
+
+[[bin]]
 name = "0950_queue"
 path = "0950/queue.rs"
 

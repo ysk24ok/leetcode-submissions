@@ -198,6 +198,9 @@ BINS += 0091/recursion_with_memoization
 0094/iterative_cpp: 0094/iterative.cpp leetcode/tree.o
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
+BINS += 0095/recursion_without_memoization
+0095/recursion_without_memoization: 0095/recursion_without_memoization.cpp leetcode/tree.o
+
 0096/recursion_with_memoization_cpp: 0096/recursion_with_memoization.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 

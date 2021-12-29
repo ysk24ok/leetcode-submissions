@@ -246,8 +246,8 @@ BINS += 0104/dfs
 BINS += 0113/dfs
 0113/dfs: 0113/dfs.cpp leetcode/tree.o
 
-0116/bfs_cpp: 0116/bfs.cpp
-	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+BINS += 0116/bfs
+0116/bfs: 0116/bfs.cpp
 
 0117/bfs_cpp: 0117/bfs.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)

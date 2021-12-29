@@ -49,7 +49,7 @@ class Solution {
 };
 
 void DeleteNode(Node* node) {
-  if (!node) { return ; }
+  if (!node) { return; }
   DeleteNode(node->left);
   DeleteNode(node->right);
   delete node;
@@ -64,14 +64,16 @@ int main() {
   root->right = new Node(3);
   root->left->left = new Node(4);
   root->left->right = new Node(5);
+  root->right->left = new Node(6);
   root->right->right = new Node(7);
   got = sol.connect(root);
   EXPECT_FALSE(root->next);
   EXPECT_EQ(3, root->left->next->val);
   EXPECT_FALSE(root->left->next->next);
   EXPECT_EQ(5, root->left->left->next->val);
-  EXPECT_EQ(7, root->left->left->next->next->val);
-  EXPECT_FALSE(root->left->left->next->next->next);
+  EXPECT_EQ(6, root->left->left->next->next->val);
+  EXPECT_EQ(7, root->left->left->next->next->next->val);
+  EXPECT_FALSE(root->left->left->next->next->next->next);
   DeleteNode(root);
 
   EXPECT_FALSE(sol.connect(nullptr));

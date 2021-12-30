@@ -540,6 +540,9 @@ BINS += 0300/dp 0300/faster_dp
 0309/dp_cpp: 0309/dp.cpp
 	g++ $(CXXFLAGS) -o $@ $^
 
+BINS += 0310/topological_sort
+0310/topological_sort: 0310/topological_sort.cpp
+
 BINS += 0322/recursion_with_memoization 0322/dp
 0322/recursion_with_memoization: 0322/recursion_with_memoization.cpp
 0322/dp: 0322/dp.cpp

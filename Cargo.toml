@@ -78,6 +78,10 @@ name = "0300_dp"
 path = "0300/dp.rs"
 
 [[bin]]
+name = "0310_topological_sort"
+path = "0310/topological_sort.rs"
+
+[[bin]]
 name = "0350_hashmap"
 path = "0350/hashmap.rs"
 

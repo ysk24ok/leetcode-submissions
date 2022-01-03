@@ -26,6 +26,8 @@ path = "${number}/${name}.${ext}"
 EOF
 )
   echo -e "${field}" >> ${curdir}/Cargo.toml
+elif [ $language = go ]; then
+  ext=go
 elif [ $language = py ]; then
   ext=py
 else

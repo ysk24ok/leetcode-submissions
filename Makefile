@@ -1067,8 +1067,8 @@ BINS += 0991/greedy
 0993/dfs_cpp: 0993/dfs.cpp leetcode/tree.o
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
-0997/solution_cpp: 0997/solution.cpp
-	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+BINS += 0997/one_array
+0997/one_array: 0997/one_array.cpp
 
 1008/top_down_cpp: 1008/top_down.cpp leetcode/tree.o
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)

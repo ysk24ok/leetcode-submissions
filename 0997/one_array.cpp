@@ -1,6 +1,5 @@
 #include <gtest/gtest.h>
 
-#include <unordered_map>
 #include <vector>
 
 using namespace std;
@@ -8,19 +7,17 @@ using namespace std;
 class Solution {
  public:
   int findJudge(int N, vector<vector<int>>& trust) {
-    vector<bool> candidates(N+1, true);
-    unordered_map<int, int> trusted;
-    for (const auto& t : trust) {
-      candidates[t[0]] = false;
-      trusted[t[1]]++;
+    vector<int> vertices(N+1);
+    for (const auto& p : trust) {
+      vertices[p[0]]--;
+      vertices[p[1]]++;
     }
-    int ret = -1;
-    for (size_t i = 1; i <= N; ++i) {
-      if (candidates[i] && trusted[i] == N - 1) {
-        ret = i;
+    for (int i = 1; i <= N; ++i) {
+      if (vertices[i] == N - 1) {
+        return i;
       }
     }
-    return ret;
+    return -1;
   }
 };
 

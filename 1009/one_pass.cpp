@@ -1,24 +1,24 @@
 #include <gtest/gtest.h>
 
-#include <cmath>
 #include <cstdlib>
 
 using namespace std;
 
 class Solution {
  public:
-  int bitwiseComplement(int N) {
-    if (N == 0) { return 1; }
+  int bitwiseComplement(int n) {
+    if (n == 0) {
+      return 1;
+    }
     int ret = 0;
-    bool complement = false;
-    for (int i = 30; i >= 0; --i) {
-      int b = pow(2, i);
-      if (N >= b) {
-        N -= b;
-        complement = true;
-      } else if (complement) {
-        ret += b;
+    for (int i = 0; i < 32; ++i) {
+      if (n == 0) {
+        break;
       }
+      if ((n & 1) == 0) {
+        ret += (1 << i);
+      }
+      n >>= 1;
     }
     return ret;
   }
@@ -26,24 +26,20 @@ class Solution {
 
 int main() {
   Solution sol;
-  int N;
+  int n;
   int expected;
 
-  N = 5;
-  expected = 2;
-  EXPECT_EQ(expected, sol.bitwiseComplement(N));
+  n = 5, expected = 2;
+  EXPECT_EQ(expected, sol.bitwiseComplement(n));
 
-  N = 7;
-  expected = 0;
-  EXPECT_EQ(expected, sol.bitwiseComplement(N));
+  n = 7, expected = 0;
+  EXPECT_EQ(expected, sol.bitwiseComplement(n));
 
-  N = 10;
-  expected = 5;
-  EXPECT_EQ(expected, sol.bitwiseComplement(N));
+  n = 10, expected = 5;
+  EXPECT_EQ(expected, sol.bitwiseComplement(n));
 
-  N = 0;
-  expected = 1;
-  EXPECT_EQ(expected, sol.bitwiseComplement(N));
+  n = 0, expected = 1;
+  EXPECT_EQ(expected, sol.bitwiseComplement(n));
 
   exit(EXIT_SUCCESS);
 }

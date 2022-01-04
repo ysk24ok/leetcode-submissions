@@ -1076,8 +1076,8 @@ BINS += 0997/one_array
 1008/dfs_cpp: 1008/dfs.cpp leetcode/tree.o
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
-1009/one_pass_cpp: 1009/one_pass.cpp
-	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+BINS += 1009/one_pass
+1009/one_pass: 1009/one_pass.cpp
 
 1010/hashmap_cpp: 1010/hashmap.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)

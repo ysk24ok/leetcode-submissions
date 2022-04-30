@@ -157,4 +157,8 @@ path = "0980/recursion.rs"
 name = "1143_dp"
 path = "1143/dp.rs"
 
+[[bin]]
+name = "1202_dfs"
+path = "1202/dfs.rs"
+
 [dependencies]

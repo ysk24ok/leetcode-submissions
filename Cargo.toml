@@ -50,6 +50,10 @@ name = "0096_recursion_with_memoization"
 path = "0096/recursion_with_memoization.rs"
 
 [[bin]]
+name = "0097_dp_2d"
+path = "0097/dp_2d.rs"
+
+[[bin]]
 name = "0101_dfs"
 path = "0101/dfs.rs"
 

@@ -165,4 +165,8 @@ path = "1143/dp.rs"
 name = "1202_dfs"
 path = "1202/dfs.rs"
 
+[[bin]]
+name = "1461_rolling_hash"
+path = "1461/rolling_hash.rs"
+
 [dependencies]

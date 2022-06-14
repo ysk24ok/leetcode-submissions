@@ -130,6 +130,10 @@ name = "0565_iterative"
 path = "0565/iterative.rs"
 
 [[bin]]
+name = "0583_dp_2d"
+path = "0583/dp_2d.rs"
+
+[[bin]]
 name = "0598_solution"
 path = "0598/solution.rs"
 

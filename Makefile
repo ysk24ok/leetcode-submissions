@@ -759,6 +759,9 @@ BINS += 0565/recursive
 BINS += 0575/hashset
 0575/hashset: 0575/hashset.cpp
 
+BINS += 0583/dp_2d
+0583/dp_2d: 0583/dp_2d.cpp
+
 BINS += 0594/hash_table
 0594/hash_table: 0594/hash_table.cpp
 

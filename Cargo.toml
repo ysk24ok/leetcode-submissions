@@ -177,4 +177,8 @@ path = "1461/rolling_hash.rs"
 name = "1642_heap"
 path = "1642/heap.rs"
 
+[[bin]]
+name = "1647_greedy"
+path = "1647/greedy.rs"
+
 [dependencies]

@@ -1,8 +1,10 @@
 CXX = g++
-CXXFLAGS = -std=c++11 -g -fsanitize=address,leak
+CXXFLAGS = -std=c++14 -g -fsanitize=address,leak
 CPPFLAGS = -I. -Igtest/include
 LDFLAGS = -Lgtest/lib
 LDLIBS = -lgtest -lgtest_main -lpthread
+
+GTEST_VERSION := 1.16.0
 
 BINS =
 TESTS =
@@ -1432,3 +1434,16 @@ check: $(TESTS)
 .PHONY: clean
 clean:
 	rm -f */*_cpp leetcode/*.o $(BINS) $(TESTS)
+
+.PHONY: build-gtest
+build-gtest:
+	curl -OL https://github.com/google/googletest/archive/refs/tags/v$(GTEST_VERSION).tar.gz
+	tar zxvf v$(GTEST_VERSION).tar.gz
+	# https://github.com/google/googletest/issues/3509
+	vim googletest-${GTEST_VERSION}/googletest/CMakeLists.txt
+	cd googletest-${GTEST_VERSION}/googletest && mkdir mybuild && cd mybuild && cmake .. && make
+	mkdir -p gtest/lib
+	cp -R googletest-${GTEST_VERSION}/googletest/include gtest
+	cp googletest-${GTEST_VERSION}/googletest/mybuild/lib/libgtest* gtest/lib
+	rm -rf googletest-${GTEST_VERSION}
+	rm -f v${GTEST_VERSION}.tar.gz

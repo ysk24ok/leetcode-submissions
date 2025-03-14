@@ -40,6 +40,9 @@ BINS += 0015/hashmap
 BINS += 0015/two_pointers
 0015/two_pointers: 0015/two_pointers.cpp
 
+BINS += 0016/two_pointers
+0016/two_pointers: 0016/two_pointers.cpp
+
 BINS += 0018/brute_force
 0018/brute_force: 0018/brute_force.cpp
 	g++ $(CXXFLAGS) -o $@ $^

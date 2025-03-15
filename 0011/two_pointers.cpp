@@ -1,14 +1,6 @@
+#include <gtest/gtest.h>
+
 #include <algorithm>
-#include <cassert>
-#include <iostream>
-#include <limits>
-#include <numeric>
-#include <queue>
-#include <set>
-#include <stack>
-#include <string>
-#include <unordered_map>
-#include <utility>
 #include <vector>
 
 using namespace std;
@@ -16,14 +8,14 @@ using namespace std;
 class Solution {
  public:
   int maxArea(vector<int>& height) {
-    int left = 0, right = height.size() - 1;
+    int l = 0, r = height.size() - 1;
     int max_area = 0;
     int cur_area;
-    while (left < right) {
-      cur_area = min(height[left], height[right]) * (right - left);
+    while (l < r) {
+      cur_area = min(height[l], height[r]) * (r - l);
       max_area = max(cur_area, max_area);
-      if (height[left] < height[right]) left++;
-      else right--;
+      if (height[l] < height[r]) l++;
+      else r--;
     }
     return max_area;
   }
@@ -34,11 +26,13 @@ int main() {
   vector<int> height;
 
   height = {1,8,6,2,5,4,8,3,7};
-  assert(sol.maxArea(height) == 49);
+  EXPECT_EQ(sol.maxArea(height), 49);
 
   height = {};
-  assert(sol.maxArea(height) == 0);
+  EXPECT_EQ(sol.maxArea(height), 0);
 
   height = {4,3,2,1};
-  assert(sol.maxArea(height) == 4);
+  EXPECT_EQ(sol.maxArea(height), 4);
+
+  exit(EXIT_SUCCESS);
 }

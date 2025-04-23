@@ -108,6 +108,12 @@ BINS += 0049/categorize_by_count 0049/categorize_by_sorting
 0049/categorize_by_sorting: 0049/categorize_by_sorting.cpp
 0049/categorize_by_count: 0049/categorize_by_count.cpp
 
+BINS += 0050/n
+0050/n: 0050/n.cpp
+
+BINS += 0050/logn
+0050/logn: 0050/logn.cpp
+
 BINS += 0053/dp
 0053/dp: 0053/dp.cpp
 	g++ $(CXXFLAGS) -o $@ $^

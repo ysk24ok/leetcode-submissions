@@ -1,5 +1,6 @@
 #include <gtest/gtest.h>
 
+#include <unordered_set>
 #include <vector>
 
 using namespace std;
@@ -7,9 +8,15 @@ using namespace std;
 class Solution {
  public:
   int singleNumber(vector<int>& nums) {
-    int ret = 0;
-    for (const auto& num : nums) ret ^= num;
-    return ret;
+    unordered_set<int> set;
+    for (const auto& num : nums) {
+      if (set.find(num) != set.end()) {
+        set.erase(num);
+      } else {
+        set.insert(num);
+      }
+    }
+    return *set.begin();
   }
 };
 

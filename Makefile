@@ -306,11 +306,9 @@ BINS += 0116/bfs 0116/bfs_without_queue
 0134/n_squared_cpp: 0134/n_squared.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
-0136/hash_table_cpp: 0136/hash_table.cpp
-	g++ $(CXXFLAGS) -o $@ $^
-
-0136/bitmanip_cpp: 0136/bitmanip.cpp
-	g++ $(CXXFLAGS) -o $@ $^
+BINS += 0136/bitmanip 0136/hashset
+0136/bitmanip: 0136/bitmanip.cpp
+0136/hashset: 0136/hashset.cpp
 
 0137/hash_table_cpp: 0137/hash_table.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)

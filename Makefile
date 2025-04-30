@@ -310,8 +310,8 @@ BINS += 0136/bitmanip 0136/hashset
 0136/bitmanip: 0136/bitmanip.cpp
 0136/hashset: 0136/hashset.cpp
 
-0137/hash_table_cpp: 0137/hash_table.cpp
-	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
+BINS += 0137/hashmap
+0137/hashmap: 0137/hashmap.cpp
 
 BINS += 0138/hash_table
 0138/hash_table: 0138/hash_table.cpp

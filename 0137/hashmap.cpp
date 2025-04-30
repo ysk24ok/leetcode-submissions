@@ -1,9 +1,7 @@
-#include <algorithm>
-#include <cstdlib>
+#include <gtest/gtest.h>
+
 #include <unordered_map>
 #include <vector>
-
-#include "gtest/gtest.h"
 
 using namespace std;
 

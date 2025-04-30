@@ -310,7 +310,8 @@ BINS += 0136/bitmanip 0136/hashset
 0136/bitmanip: 0136/bitmanip.cpp
 0136/hashset: 0136/hashset.cpp
 
-BINS += 0137/hashmap
+BINS += 0137/bitmanip 0137/hashmap
+0137/bitmanip: 0137/bitmanip.cpp
 0137/hashmap: 0137/hashmap.cpp
 
 BINS += 0138/hash_table

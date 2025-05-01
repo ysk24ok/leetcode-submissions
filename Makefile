@@ -156,6 +156,9 @@ BINS += 0063/dp_matrix
 0064/dp_cpp: 0064/dp.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 
+BINS += 0071/solution
+0071/solution: 0071/solution.cpp
+
 0072/dp_cpp: 0072/dp.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 

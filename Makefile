@@ -43,6 +43,9 @@ BINS += 0015/two_pointers
 BINS += 0016/two_pointers
 0016/two_pointers: 0016/two_pointers.cpp
 
+BINS += 0017/bfs
+0017/bfs: 0017/bfs.cpp
+
 BINS += 0018/brute_force
 0018/brute_force: 0018/brute_force.cpp
 	g++ $(CXXFLAGS) -o $@ $^

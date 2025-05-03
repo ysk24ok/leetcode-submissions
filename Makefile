@@ -15,9 +15,10 @@ BINS += 0001/hashmap
 BINS += 0002/solution
 0002/solution: 0002/solution.cpp leetcode/linked_list.o
 
-BINS += 0003/sliding_window 0003/sliding_window_optimized
+BINS += 0003/sliding_window 0003/sliding_window_optimized 0003/sliding_window_with_hashset
 0003/sliding_window: 0003/sliding_window.cpp
 0003/sliding_window_optimized: 0003/sliding_window_optimized.cpp
+0003/sliding_window_with_hashset: 0003/sliding_window_with_hashset.cpp
 
 BINS += 0004/merge_and_sort
 0004/merge_and_sort: 0004/merge_and_sort.cpp

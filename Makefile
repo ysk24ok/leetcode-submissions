@@ -381,6 +381,10 @@ BINS += 0153/binary_search
 0155/two_stacks_cpp: 0155/two_stacks.cpp
 	g++ $(CXXFLAGS) -o $@ $^
 
+BINS += 0160/hashset 0160/constant_memory
+0160/hashset: 0160/hashset.cpp leetcode/linked_list.o
+0160/constant_memory: 0160/constant_memory.cpp leetcode/linked_list.o
+
 0165/solution_cpp: 0165/solution.cpp
 	$(CXX) $^ -o $@ $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LDLIBS)
 

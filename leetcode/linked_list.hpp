@@ -1,3 +1,4 @@
+#include <cstdlib>
 #include <vector>
 
 namespace LeetCode {
@@ -15,5 +16,15 @@ ListNode* CreateListNode(const std::vector<int>& vec);
 void DeleteListNode(ListNode* node, size_t count = 0);
 
 void AssertListNodeEqual(ListNode* expected, ListNode* actual);
+
+// Used by 0160
+void CreateTwoListNodesWithIntersection(
+  const std::vector<int>& vecA,
+  const std::vector<int>& vecB,
+  size_t skipA,
+  size_t skipB,
+  ListNode* heads[]
+);
+void DeleteTwoListNodesWithIntersection(ListNode* heads[], size_t skipA, size_t skipB);
 
 } // namespace LeetCode

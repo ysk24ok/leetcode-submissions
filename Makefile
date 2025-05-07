@@ -26,6 +26,10 @@ BINS += 0004/merge_and_sort
 BINS += 0005/dp
 0005/dp: 0005/dp.cpp
 
+BINS += 0009/to_string 0009/as_int
+0009/to_string: 0009/to_string.cpp
+0009/as_int: 0009/as_int.cpp
+
 BINS += 0011/two_pointers
 0011/two_pointers: 0011/two_pointers.cpp
 

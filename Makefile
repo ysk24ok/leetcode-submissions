@@ -23,8 +23,9 @@ BINS += 0003/sliding_window 0003/sliding_window_optimized 0003/sliding_window_wi
 BINS += 0004/merge_and_sort
 0004/merge_and_sort: 0004/merge_and_sort.cpp
 
-BINS += 0005/dp
+BINS += 0005/dp 0005/manacher
 0005/dp: 0005/dp.cpp
+0005/manacher: 0005/manacher.cpp
 
 BINS += 0009/to_string 0009/as_int
 0009/to_string: 0009/to_string.cpp
